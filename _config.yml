@@ -1,13 +1,14 @@
 # Site settings
-title: Fe Blog  #你博客的标题
-SEOTitle: Fe的博客 | Fe Blog  #显示在浏览器上搜索的时候显示的标题
+title: 枫叶 Blog  #你博客的标题
+SEOTitle: 枫叶博客 | wjw Blog  #显示在浏览器上搜索的时候显示的标题
 header-img: img/404-bg.jpg #显示在首页的背景图片
-email: fedemo@foxmail.com
+# email: fedemo@foxmail.com
+email: 821060818@qq.com
 description: "Every failure is leading towards success." #网站介绍
-keyword: "Fe,Fe Blog,Fe的博客,JAVA,fedemo" #关键词
-url: "http://fedemo.top"          # your host, for absolute URL
+keyword: "fengye,fengye Blog,枫叶博客,JAVA,wjw" #关键词
+url: "http://wjw0315.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/FeDemo/fedemo.github.io.git" # you code repository
+github_repo: "https://github.com/wjw0315/wjw0315.github.io" # you code repository
 
 # Sidebar settings侧边栏
 sidebar: true                           # whether or not using Sidebar.
@@ -19,11 +20,11 @@ sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in b
 # SNS settings社交账号
 RSS: false
 # weibo_username:
-zhihu_username:    fedemo
-github_username:    FeDemo
+zhihu_username:    伍嘉威
+github_username:    wjw0315
 # facebook_username:
-jianshu_username:   57064928f3a8
-#twitter_username:   fedemo
+jianshu_username:   双子枫叶
+#twitter_username:   
 
 
 
@@ -57,18 +58,18 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: '75ef4c0ecfb2cd85a8f0'    #生成的clientID
-  clientSecret: 'b51aa6b7351f3b3b7a0940714af8489fddb5f905'   #同上
-  repo: Blog_Gitalk    #仓库名称
-  owner: FeDemo    #github用户名
-  admin: FeDemo
+  clientID: 'fd347cbf658c06941c72'    #生成的clientID
+  clientSecret: 'fa681d6d6c12ae7aaf819c961902e7a74dd60e17'   #同上
+  repo: wjw0315.github.io    #仓库名称(存放评论的项目名称)
+  owner: wjw0315    #github用户名
+  admin: wjw0315
 
 
 
 
 # Analytics settings 百度统计track_id
 # Baidu Analytics
-ba_track_id: ced86d2ada092fb3a0d736f793d90120
+#ba_track_id: ced86d2ada092fb3a0d736f793d90120
 
 # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
@@ -94,12 +95,12 @@ service-worker: true
 friends: [
     {
         title: "Fe",
-        href: "/"
+        href: "http://wwsocool.com"
     },{
         title: "BY Blog",
-        href: "http://qiubaiying.top/"
+        href: "/"
     },{
         title: "Hux Blog",
-        href: "https://huangxuan.me/"
+        href: "/"
     }
 ]
