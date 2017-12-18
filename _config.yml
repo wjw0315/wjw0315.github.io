@@ -1,0 +1,105 @@
+# Site settings
+title: Fe Blog  #你博客的标题
+SEOTitle: Fe的博客 | Fe Blog  #显示在浏览器上搜索的时候显示的标题
+header-img: img/404-bg.jpg #显示在首页的背景图片
+email: fedemo@foxmail.com
+description: "Every failure is leading towards success." #网站介绍
+keyword: "Fe,Fe Blog,Fe的博客,JAVA,fedemo" #关键词
+url: "http://fedemo.top"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/FeDemo/fedemo.github.io.git" # you code repository
+
+# Sidebar settings侧边栏
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "Goals determine what you going to be!"
+sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# SNS settings社交账号
+RSS: false
+# weibo_username:
+zhihu_username:    fedemo
+github_username:    FeDemo
+# facebook_username:
+jianshu_username:   57064928f3a8
+#twitter_username:   fedemo
+
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+# 评论系统
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: '75ef4c0ecfb2cd85a8f0'    #生成的clientID
+  clientSecret: 'b51aa6b7351f3b3b7a0940714af8489fddb5f905'   #同上
+  repo: Blog_Gitalk    #仓库名称
+  owner: FeDemo    #github用户名
+  admin: FeDemo
+
+
+
+
+# Analytics settings 百度统计track_id
+# Baidu Analytics
+ba_track_id: ced86d2ada092fb3a0d736f793d90120
+
+# Google Analytics
+# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+# ga_domain: auto
+
+
+
+
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends好友链接
+friends: [
+    {
+        title: "Fe",
+        href: "/"
+    },{
+        title: "BY Blog",
+        href: "http://qiubaiying.top/"
+    },{
+        title: "Hux Blog",
+        href: "https://huangxuan.me/"
+    }
+]
