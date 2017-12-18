@@ -95,7 +95,7 @@ service-worker: true
 # Friends好友链接
 friends: [
     {
-        title: "Fe",
+        title: "fengye",
         href: "http://wwsocool.com"
     },{
         title: "BY Blog",
