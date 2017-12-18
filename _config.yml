@@ -20,10 +20,10 @@ sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in b
 # SNS settings社交账号
 RSS: false
 # weibo_username:
-zhihu_username:    伍嘉威
+zhihu_username:    activities
 github_username:    wjw0315
 # facebook_username:
-jianshu_username:   双子枫叶
+jianshu_username:   timeline
 #twitter_username:   
 
 
