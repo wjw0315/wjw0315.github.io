@@ -12,7 +12,8 @@ github_repo: "https://github.com/wjw0315/wjw0315.github.io" # you code repositor
 
 # Sidebar settings侧边栏
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "个人简历"
+sidebar-jianli-url: "http://wwsocool.com/jianli"
 sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
