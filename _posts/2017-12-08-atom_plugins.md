@@ -119,11 +119,3 @@ TypeError: Cannot read property 'addFrame' of undefined
 apm install atom-miku
 如果apm不能识别请用 npm install atom-miku
 ```
-
-## Star
-
-如果觉得这篇教程还有点用，请点播关注，给我的[github仓库](https://github.com/FeDemo/fedemo.github.io) 点个 **star** 吧！
-
-![](https://raw.githubusercontent.com/FeDemo/posts_img/master/star.png)
-
-点上面 **↑** 那个星星

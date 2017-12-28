@@ -86,10 +86,3 @@ b.
 select pin , name from people where pin = :blk1.ot_ind;
 select pin , name from people where pin = :blk1.ov_ind;
 ```
-## Star
-
-如果觉得这篇教程还有点用，请点播关注，给我的[github仓库](https://github.com/FeDemo/fedemo.github.io) 点个 **star** 吧！
-
-![](https://raw.githubusercontent.com/FeDemo/posts_img/master/star.png)
-
-点上面 **↑** 那个星星

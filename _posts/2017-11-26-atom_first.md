@@ -191,10 +191,3 @@ Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格�
 ![ctrl+shift+m](https://raw.githubusercontent.com/FeDemo/posts_img/master/2017-11-26-atom_first/3.png)  
 
 对,那些表格就是这样画出来的,是不是很棒
-## Star
-
-如果觉得这篇教程还有点用，请点播关注，给我的[github仓库](https://github.com/FeDemo/fedemo.github.io) 点个 **star** 吧！
-
-![](https://raw.githubusercontent.com/FeDemo/posts_img/master/star.png)
-
-点上面 **↑** 那个星星

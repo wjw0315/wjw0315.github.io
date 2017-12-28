@@ -129,13 +129,3 @@ sql语句:
 |:-:|:-:|
 |1|	张一//1//河南~赵三//3//新疆~张四//2//福建|
 |2|	王五//1//北京~李六//3//河北~孙二//2//南京|
-
-
-## Star
-好了,现在就已经完成了整个对语句的拼接了.  
-
-如果觉得这篇教程还有点用，请点播关注，给我的[github仓库](https://github.com/FeDemo/fedemo.github.io) 点个 **star** 吧！
-
-![](https://raw.githubusercontent.com/FeDemo/posts_img/master/star.png)
-
-点上面 **↑** 那个星星
