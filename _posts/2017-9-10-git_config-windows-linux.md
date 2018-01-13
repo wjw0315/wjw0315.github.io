@@ -9,7 +9,7 @@ catalog: true
 tags:
     - Git
 ---
-##Git的基础配置：
+## Git的基础配置：
 
 1、配置用户名（提交时会进行引用）
 >Git config --global user.name "wjw0215"
@@ -35,7 +35,7 @@ tags:
 >Git config --global core.ignorecase false
  
 
-##git ssh key pair 配置：
+## git ssh key pair 配置：
 
 1、在Linux的命令行下，或者Windows上的Git bash 命令行窗口中键入：
 >ssh-keygen -t rsa -C "821060818@qq.com"
@@ -51,9 +51,9 @@ tags:
 
  
 
-Git的验证：
+## Git的验证：
 
->Git -–version 出现版本信息就是安装成功。
+Git -–version 出现版本信息就是安装成功。
 
 Git的常用命令：
 
