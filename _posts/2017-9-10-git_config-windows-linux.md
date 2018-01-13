@@ -53,7 +53,7 @@ tags:
 
 ## Git的验证：
 
-Git -–version 出现版本信息就是安装成功。
+Git --version 出现版本信息就是安装成功。
 
 Git的常用命令：
 
