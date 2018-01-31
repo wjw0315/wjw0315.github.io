@@ -24,7 +24,7 @@ tags:
 
 <a href="http://sspai.com/25137/" target="view_window">MarkDown</a> 是一种轻量级的「标记语言」，很简单。<a href="http://sspai.com/25137/" target="view_window">花半个小时看一下</a>就能熟练使用了
 
-##这是页头的格式
+## 这是页头的格式
   ```
   ---
   layout:     post                  #不要管他
@@ -40,9 +40,9 @@ tags:
   ```
 按格式创建文章后，提交保存。进入你的博客主页，新的文章将会出现在你的主页上.
 
-##mackdown基本语法格式<br><br>
+## mackdown基本语法格式<br><br>
 
-###标题
+### 标题
 这是最为常用的格式，在平时常用的的文本编辑器中大多是这样实现的：输入文本、选中文本、设置标题格式。
 
 而在 Markdown 中，你只需要在文本前面加上 ** # ** 即可，同理、你还可以增加二级标题、三级标题、四级标题、五级标题和六级标题，总共六级，只需要增加 ** # ** 即可，标题字号相应降低。
@@ -53,7 +53,7 @@ tags:
 
 ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/1.png)
 
-###列表
+### 列表
 列表格式也很常用，在 Markdown 中，你只需要在文字前面加上 ** - ** 就可以了。<br>
 如果你希望有序列表，
 也可以在文字前面加上 ` 1. 2. 3. ` 就可以了，
@@ -63,7 +63,7 @@ tags:
 列表案例截图如下：
 ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/2.png)
 
-###链接和图片
+### 链接和图片
 在 Markdown 中，插入链接不需要其他按钮，你只需要使用 ` [显示文本](链接地址) ` 这样的语法即可，例如：<br>
 ` [简书](http://www.jianshu.com) `
 
@@ -71,7 +71,7 @@ tags:
 
 ` ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/1.png) `
 
-###引用
+### 引用
 
 在我们写作的时候经常需要引用他人的文字，这个时候引用这个格式就很有必要了，在 Markdown 中，你只需要在你希望引用的文字前面加上 ` > ` 就好了，例如：
 
@@ -81,7 +81,7 @@ tags:
 
 >一盏灯， 一片昏黄
 
-###斜体和粗体
+### 斜体和粗体
 
 Markdown 的粗体和斜体也非常简单，用两个 ` * ` 包含一段文本就是粗体的语法，用一个 ` * ` 包含一段文本就是斜体的语法。例如：
 
@@ -91,7 +91,7 @@ Markdown 的粗体和斜体也非常简单，用两个 ` * ` 包含一段文本�
 
 *一盏灯*， **一片昏黄**
 
-###代码引用
+### 代码引用
 
 需要引用代码时，如果引用的语句只有一段，不分行，可以用 ` 将语句包起来。
 如果引用的语句为多行，可以将```置于这段代码的首行和末行。
@@ -99,7 +99,7 @@ Markdown 的粗体和斜体也非常简单，用两个 ` * ` 包含一段文本�
 
 ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/3.png)
 
-###表格
+### 表格
 
 相关代码：
 
@@ -112,11 +112,11 @@ Markdown 的粗体和斜体也非常简单，用两个 ` * ` 包含一段文本�
 ```
 显示结果为
 
-|Tables|Are|Cool|
-|：-：|:-:|：-:|
-|col 3 is|right-aligned|$1600|
-|col 2 is|centered|$12|
-|zebra stripes|are neat|$1|
+|Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 相关代码：
 
