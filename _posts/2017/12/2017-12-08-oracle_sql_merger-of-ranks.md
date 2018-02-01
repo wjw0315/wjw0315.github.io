@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Oracle SQL实现对行列的合并
+title:      Oracle SQL实现对行列的合并(转)
 subtitle:   oracle_sql_merger of ranks
 date:       2017-12-08
 author:     Fe

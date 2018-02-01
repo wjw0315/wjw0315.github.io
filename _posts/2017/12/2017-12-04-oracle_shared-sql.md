@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Oracle SQL优化之共享SQL语句
+title:      Oracle SQL优化之共享SQL语句（转）
 subtitle:   oracle_shared sql
 date:       2017-12-04
 author:     Fe
