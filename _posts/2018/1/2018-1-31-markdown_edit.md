@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Mackdown语法写博客
-subtitle:   mackdown_edit
+title:      Markdown语法写博客
+subtitle:   markdown_edit
 date:       2018-1-31
 author:     wjw
 header-img: img/post-bg-rwd.jpg
@@ -9,7 +9,7 @@ catalog: true
 tags:
     - mackdown
 ---
->下面是基本mackdown编写博文的教程  
+>下面是基本markdown编写博文的教程  
 
 -
 ## 文章的格式
@@ -28,19 +28,19 @@ tags:
   ```
   ---
   layout:     post                  #不要管他
-  title:      Mackdown语法写博客      #标题
-  subtitle:   mackdown_edit         #别名,简介,标题下面的那一行字
+  title:      Markdown语法写博客      #标题
+  subtitle:   markdown_edit         #别名,简介,标题下面的那一行字
   date:       2018-1-31             #发表时间
   author:     wjw                   #作者
   header-img: img/post-bg-rwd.jpg   #背景图片
   catalog: true                     #是否开启目录       
   tags:                             #标签,可以有多个
-      - mackdown
+      - markdown
   ---
   ```
 按格式创建文章后，提交保存。进入你的博客主页，新的文章将会出现在你的主页上.
 
-## mackdown基本语法格式<br><br>
+## markdown基本语法格式<br><br>
 
 ### 标题
 这是最为常用的格式，在平时常用的的文本编辑器中大多是这样实现的：输入文本、选中文本、设置标题格式。
@@ -51,7 +51,7 @@ tags:
 
 你可以你的编辑器中尝试输入这六级标题，可以参考下方的截图：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/1.png)
+![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/1.png)
 
 ### 列表
 列表格式也很常用，在 Markdown 中，你只需要在文字前面加上 **-** 就可以了。<br>
@@ -61,7 +61,7 @@ tags:
 >注：`-、1.` 和文本之间要保留一个字符的空格。
 
 列表案例截图如下：
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/2.png)
+![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/2.png)
 
 ### 链接和图片
 在 Markdown 中，插入链接不需要其他按钮，你只需要使用 `[显示文本](链接地址)` 这样的语法即可，例如：<br>
@@ -69,7 +69,7 @@ tags:
 
 在 Markdown 中，插入图片不需要其他按钮，你只需要使用 `[图片上传失败...(image-5fdc5-1510890177031)]` 这样的语法即可，例如：
 
-`![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/1.png)`
+`![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/1.png)`
 
 ### 引用
 
@@ -97,7 +97,7 @@ Markdown 的粗体和斜体也非常简单，用两个 `*` 包含一段文本就
 如果引用的语句为多行，可以将```置于这段代码的首行和末行。
 代码引用的案例截图：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-mackdown_edit/3.png)
+![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/3.png)
 
 ### 表格
 
