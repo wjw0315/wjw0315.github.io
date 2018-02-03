@@ -7,7 +7,7 @@ author:     wjw
 header-img: img/post-bg-rwd.jpg
 catalog: true
 tags:
-    - mackdown
+    - markdown
 ---
 >下面是基本markdown编写博文的教程  
 
