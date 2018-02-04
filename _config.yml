@@ -2,11 +2,11 @@
 title: MapleBlog  #你博客的标题
 SEOTitle: 枫叶博客 | wjw Blog  #显示在浏览器上搜索的时候显示的标题
 header-img: img/home-bg-new.jpg #显示在首页的背景图片
-# email: fedemo@foxmail.com
+
 email: 821060818@qq.com
 description: "Every failure is leading towards success." #网站介绍
 keyword: "MapleBlog,fengye Blog,枫叶博客,JAVA,wjw" #关键词
-url: "http://wjw0315.github.io"          # your host, for absolute URL
+url: "http://wjwcloud.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/wjw0315/wjw0315.github.io" # you code repository
 
@@ -59,8 +59,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: '31534893c7a12ceb3d33'    #生成的clientID
-  clientSecret: '1fd637886899b0223d0dadc22b55cd5b0a5900dd'   #同上
+  clientID: 'f7537253b7d79b78a45e'    #生成的clientID
+  clientSecret: '202a0555113df2ed2f81f6149c526b0f9cbb1650'   #同上
   repo: blog_gitalk    #仓库名称(存放评论的项目名称)
   owner: wjw0315    #github用户名
   admin: wjw0315
@@ -97,7 +97,7 @@ service-worker: true
 friends: [
     {
         title: "fengye",
-        href: "http://wwsocool.com"
+        href: "http://wjwcolud.com"
     },{
         title: "Maple Blog",
         href: "/"
