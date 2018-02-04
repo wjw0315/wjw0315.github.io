@@ -59,9 +59,9 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 'fd347cbf658c06941c72'    #生成的clientID
-  clientSecret: 'fa681d6d6c12ae7aaf819c961902e7a74dd60e17'   #同上
-  repo: wjw0315.github.io    #仓库名称(存放评论的项目名称)
+  clientID: '31534893c7a12ceb3d33'    #生成的clientID
+  clientSecret: '1fd637886899b0223d0dadc22b55cd5b0a5900dd'   #同上
+  repo: blog_gitalk    #仓库名称(存放评论的项目名称)
   owner: wjw0315    #github用户名
   admin: wjw0315
 
@@ -99,10 +99,10 @@ friends: [
         title: "fengye",
         href: "http://wwsocool.com"
     },{
-        title: "BY Blog",
+        title: "Maple Blog",
         href: "/"
     },{
-        title: "Hux Blog",
+        title: "--- Blog",
         href: "/"
     }
 ]
