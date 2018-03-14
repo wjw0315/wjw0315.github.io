@@ -1,7 +1,7 @@
   ---
   layout:     post                  
   title:      字符串反转      
-  subtitle:   字符串反转输出         
+  subtitle:   StrReverse         
   date:       2018-3-13             
   author:     wjw                   
   header-img: img/post-bg-rwd.jpg  
