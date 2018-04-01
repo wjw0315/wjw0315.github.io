@@ -1,4 +1,4 @@
- ---
+---
 layout:     post
 title:      字符串反转
 subtitle:   StrReverse     
@@ -8,11 +8,10 @@ header-img: img/post-bg-rwd.jpg
 catalog: true
 tags:
     - Java基础
-    
 --- 
+> 字符串的反转
 
-  
-  ## 字符串反转输出
+  ## 字符串反转输出
   
   ### 方法一：使用循环
   
