@@ -1,18 +1,18 @@
-  ---
-  layout:     post                  
-  title:      ×Ö·û´®·´×ª      
-  subtitle:   StrReverse         
-  date:       2018-3-13             
-  author:     wjw                   
-  header-img: img/post-bg-rwd.jpg  
-  catalog: true                          
-  tags:                             
-      - Java»ù´¡
-  ---
+ ---
+layout:     post
+title:      å­—ç¬¦ä¸²åè½¬
+subtitle:   StrReverse     
+date:       2018-3-13 
+author:     wjw
+header-img: img/post-bg-rwd.jpg 
+catalog: true
+tags:
+    - JavaåŸºç¡€
+--- 
   
-  ## ×Ö·û´®·´×ªÊä³ö
+  ## å­—ç¬¦ä¸²åè½¬è¾“å‡º
   
-  ### ·½·¨Ò»£ºÊ¹ÓÃÑ­»·
+  ### æ–¹æ³•ä¸€ï¼šä½¿ç”¨å¾ªç¯
   
  ```
  public class fanzhuan {
@@ -25,26 +25,26 @@
 			result+=c[i];
 			
 		}
-		System.out.println("Ô­×Ö·û´®Îª£º"+s);
+		System.out.println("åŸå­—ç¬¦ä¸²ä¸ºï¼š"+s);
 		return result;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("½á¹ûÎª£º"+fz());
+		System.out.println("ç»“æœä¸ºï¼š"+fz());
 	}
 
 }
 
  ```
  
- ### ·½·¨¶ş£ºÊ¹ÓÃAPI
+ ### æ–¹æ³•äºŒï¼šä½¿ç”¨API
  
  ```
  public static String fzapi(){
 		String s="sasjdglhaslh";
 		String c=new StringBuffer(s).reverse().toString();
-		System.out.println("Ô­×Ö·û´®Îª£º"+s);
+		System.out.println("åŸå­—ç¬¦ä¸²ä¸ºï¼š"+s);
 		return c;
 		
 	}
