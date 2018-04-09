@@ -475,3 +475,14 @@ public class SocketTestTwo {
 
 以上代码运行效果和前一种方式完全一样。 
 但是注意此种方法和使用mina结构的客户端中有一处不同：对于心跳包的判断。本教程中服务端选用了mina自带的编解码器，通过换行符来区分上下两条消息，也就是每一条消息后面会带上一个换行符，所以在使用java普通的socket来连接时，判断心跳包不再是判断是否为“1111”，而是“1111\n”。对比mina结构的客户端中并不需要加上换行符是因为客户端中绑定了相同的编解码器。
+
+工程应该配置有如下log4j的配置文件才能看到一样的打印结
+
+```
+log4j.rootLogger=WARN,stdout
+
+log4j.appender.stdout = org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout = org.apache.log4j.PatternLayout
+log4j.appender.stdout.Threshold=WARN
+log4j.appender.stdout.layout.ConversionPattern = [%-5p] [%d{yyyy-MM-dd HH\:mm\:ss,SSS}] [%x]
+```
