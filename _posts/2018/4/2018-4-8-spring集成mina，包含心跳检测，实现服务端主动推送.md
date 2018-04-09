@@ -1,6 +1,6 @@
 ---
 layout: post
-title: spring集成mina，包含心跳检测，实现服务端主动推送
+title: spring集成mina
 subtitle: spring集成mina，包含心跳检测，实现服务端主动推送
 date: 2018-4-8
 author: wjw
