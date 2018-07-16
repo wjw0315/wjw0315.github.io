@@ -1,8 +1,8 @@
 ---
 layout:     post                  
-title:      Javaºó¶Ë½âÎöÇ°¶Ë´«ÈëJson      
+title:      Javaåç«¯è§£æå‰ç«¯ä¼ å…¥Json      
 subtitle:   update_batch         
-date:       2018-7-13             
+date:       2018-7-16             
 author:     wjw                   
 header-img: img/post-bg-rwd.jpg  
 catalog: true                          
@@ -11,11 +11,11 @@ tags:
 - Java
 ---
   
->Ê¹ÓÃJson¿â
+>ä½¿ç”¨Jsonåº“
 
-### Ò»£º
+### ä¸€ï¼š
 
-Ç°¶Ë´«Öµ£º
+å‰ç«¯ä¼ å€¼ï¼š
 
 
 ```
@@ -36,13 +36,13 @@ tags:
 
 ```
 
-ºó¶Ë½âÎö£º
+åç«¯è§£æï¼š
 
 ```
 public void ***(){
 		String formdata = getPara("formdata");
 	        JSONObject jo = JSONObject.fromObject(formdata);
-		//½«json×Ö·û´®×ª³Éjson¶ÔÏóºó±éÀú¼üÖµ¶Ô
+		//å°†jsonå­—ç¬¦ä¸²è½¬æˆjsonå¯¹è±¡åéå†é”®å€¼å¯¹
 		 Map<String, Object> map =jo;
 		 Record r = new Record();
                 for (Entry<String, Object> entry : map.entrySet()) {  
@@ -52,15 +52,15 @@ public void ***(){
 
 ```
 
-### ¶ş£º
+### äºŒï¼š
 
-Ç°¶ËformdataÖĞµÄjsonÊı¾İ£º
+å‰ç«¯formdataä¸­çš„jsonæ•°æ®ï¼š
 
 ```
  "[{\"rect\":{\"left\":\"372\",\"top\":\"28\",\"width\":\"67\",\"height\":\"56\"},\"word\":\"N\"},{\"rect\":{\"left\":\"335\",\"top\":\"87\",\"width\":\"144\",\"height\":\"21\"},\"word\":\"\\u7f51\\u9f99\\u7f51\\u7edc\\u6709\\u9650\\u516c\\u53f8\"},{\"rect\":{\"left\":\"334\",\"top\":\"106\",\"width\":\"145\",\"height\":\"18\"},\"word\":\" Netdragon Websoft in,\"}]";
 ```
 
-ºóÌ¨½âÎö£º
+åå°è§£æï¼š
 
 ```
 String jsons=request.getParameter("formdata");
@@ -71,16 +71,16 @@ JSONArray js = new JSONArray(jsons);
         }
 ```
 
-### Èı£º
+### ä¸‰ï¼š
 
-Ç°¶Ë´«Öµ£º
+å‰ç«¯ä¼ å€¼ï¼š
 
 ```
 url: http://localhost:8080/xxx/***!addOrder
 json:{"addOrder":xxx}
 ```
 
-ºó¶Ë½âÎö£º
+åç«¯è§£æï¼š
 
 ```
 public class OrderAction{
@@ -91,7 +91,7 @@ public class OrderAction{
 }
 ```
 
-ParameterUtilÀà:
+ParameterUtilç±»:
 
 ```
 public class ParameterUtil {
