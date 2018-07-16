@@ -17,14 +17,16 @@ body{height:3000px;}
     z-index: 1;
 }
 #rocket-to-top .level-3 {
+ transform: scale(0.5);
     background: none repeat scroll 0 0 transparent;
     cursor: pointer;
     display: block;
     height: 150px;
     z-index: 2;
 }
-/*download by www.sucaijiayuan.com*/
+
 #rocket-to-top {
+ transform: scale(0.5);
     background: url("../images/rocket_button_up.png") no-repeat scroll 0 0 transparent;
     cursor: default;
     display: block;
