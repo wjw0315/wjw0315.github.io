@@ -4,7 +4,7 @@ description: "Surrender! Or more combat-worthy than enemy!"
 ---
 <!--ÖÃ¶¥ÎÄÕÂ-->
 {% for post in paginator.posts %}
-   {% if post.stickie != true %}
+   {% if post.stickie == false %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
