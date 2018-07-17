@@ -202,8 +202,8 @@
 {% endif %}
 
 
-<!-- Baidu Tongji -->
-{% if site.ba_track_id %}
+<!-- Baidu Tongji 调用配置文件的版本-->
+<!-- {% if site.ba_track_id %}
 <script>
     // dynamic User by Hux
     var _baId = '{{ site.ba_track_id }}';
@@ -217,9 +217,20 @@
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
-{% endif %}
+{% endif %} -->
 
+<!--百度统计写死的版本-->
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e94ecb3bd260c2ac7b40431d45bc0e25";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--end-->
 
 <!-- Side Catalog -->
 {% if page.catalog %}
