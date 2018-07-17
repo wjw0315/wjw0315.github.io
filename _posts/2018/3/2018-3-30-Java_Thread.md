@@ -6,6 +6,7 @@ date:       2018-3-30
 author:     wjw
 header-img: img/post-bg-rwd.jpg 
 catalog: true
+stickie: true
 tags:
     - java进阶
 --- 

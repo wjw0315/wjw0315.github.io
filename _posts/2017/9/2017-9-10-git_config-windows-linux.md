@@ -6,6 +6,7 @@ date:       2017-09-10
 author:     wjw
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
+stickie: true
 tags:
     - Git
 ---

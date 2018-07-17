@@ -6,6 +6,7 @@ date:       2017-12-04
 author:     Fe
 header-img: img/post-bg-coffee.jpeg
 catalog: true
+stickie: true
 tags:
     - Oracle
 ---

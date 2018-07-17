@@ -6,6 +6,7 @@ date:       2017-12-14
 author:     yanchengyc
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
+stickie: true
 tags:
     - Git
 ---

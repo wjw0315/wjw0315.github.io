@@ -6,6 +6,7 @@ date: 2018-4-8
 author: wjw
 header-img: img/post-bg-rwd.jpg
 catalog: true
+stickie: true
 tags:
 - socket
 ---

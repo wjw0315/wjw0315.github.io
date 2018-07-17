@@ -5,7 +5,8 @@ subtitle:   update_batch
 date:       2018-7-13             
 author:     wjw                   
 header-img: img/post-bg-rwd.jpg  
-catalog: true                          
+catalog: true    
+stickie: true                      
 tags:                             
 - Mybatis 
 - 数据库

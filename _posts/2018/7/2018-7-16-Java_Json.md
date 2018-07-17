@@ -5,7 +5,8 @@ subtitle:   Java_Json
 date:       2018-7-16             
 author:     wjw                   
 header-img: img/post-bg-rwd.jpg  
-catalog: true                          
+catalog: true 
+stickie: true                         
 tags:                             
 - Json 
 - Java

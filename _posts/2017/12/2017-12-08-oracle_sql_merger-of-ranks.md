@@ -6,6 +6,7 @@ date:       2017-12-08
 author:     Fe
 header-img: img/post-bg-sql.jpg
 catalog: true
+stickie: true
 tags:
     - Oracle
     - SQL

@@ -6,6 +6,7 @@ date:       2018-2-1
 author:     wjw
 header-img: img/home-bg-o.jpg
 catalog: true
+stickie: true
 tags:
     - MapleBlog
 ---
