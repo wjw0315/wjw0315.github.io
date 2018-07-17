@@ -7,7 +7,6 @@ description: "Surrender! Or more combat-worthy than enemy!"
 	<a href="https://github.com/wjw0315/wjw0315.github.io/blob/master/_posts/2016/6/2016-6-6-menu.md">Ä¿ Â¼</a>
 </div>
 <!--ÖÃ¶¥ÎÄÕÂ-->
-<!--
  {% if post.stickie == false %}
 {% for post in paginator.posts %}
 <div class="post-preview">
@@ -31,10 +30,9 @@ description: "Surrender! Or more combat-worthy than enemy!"
 <hr>
 {% endfor %}
  {% endif %}
- -->
 <!--ÖÃ¶¥ÎÄÕÂend-->
 <!--ÆÕÍ¨ÎÄÕÂ-->
-
+   {% if post.stickie == true %}
 {% for post in paginator.posts %}
 
 <div class="post-preview">
@@ -58,7 +56,7 @@ description: "Surrender! Or more combat-worthy than enemy!"
 <hr>
 
 {% endfor %}
-
+  {% endif %}
 <!--ÆÕÍ¨ÎÄÕÂend-->
 
 <!-- Pager -->
