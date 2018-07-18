@@ -4,115 +4,81 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
-                    {% if site.RSS %}
-                    <li>
-                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    <!-- add jianshu add target = "_blank" to <a> by BY -->
-                    {% if site.jianshu_username %}
-                            <li>
-                                <a target="_blank" href="http://www.jianshu.com/users/24e33de59ec9/{{ site.jianshu_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
-                                    </span>
-                                </a>
-                            </li>
-                    {% endif %}
-                    {% if site.twitter_username %}
-                    <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-
-                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
-                    {% if site.zhihu_username %}
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/wu-jia-wei-45-1/{{ site.zhihu_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.weibo_username %}
-                    <li>
-                        <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-
-
-                    {% if site.facebook_username %}
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.github_username %}
-                    <li>
-                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.linkedin_username %}
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
+                  {% if site.RSS %}
+                  <li>
+                      <a style="text-decoration:none;" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                              <i class="iconfont icon-rss icon-2x"></i>
+                      </a>
+                  </li>
+                  {% endif %}
+                    <!-- add coding  by Fe -->
+                  {% if site.coding_username %}
+                  <li>
+                      <a target="_blank" style="text-decoration:none;" style="text-decoration:none;" href="https://coding.net/u/{{ site.coding_username }}/project">
+                          <i class="iconfont icon-CN_codingnet icon-2x"></i>
+                      </a>
+                  </li>
+                  {% endif %}
+                  {% if site.zhihu_username %}
+                  <li>
+                      <a target="_blank" style="text-decoration:none;" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                            <i class="iconfont icon-zhihu icon-2x"></i>
+                      </a>
+                  </li>
+                  {% endif %}
+                  {% if site.weibo_username %}
+                  <li>
+                      <a target="_blank" style="text-decoration:none;" href="http://weibo.com/{{ site.weibo_username }}">
+                            <i class="iconfont icon-weibo icon-2x"></i>
+                      </a>
+                  </li>
+                  {% endif %}
+                  {% if site.facebook_username %}
+                  <li>
+                      <a target="_blank" style="text-decoration:none;" href="https://www.facebook.com/{{ site.facebook_username }}">
+                          <i class="iconfont icon-facebook3 icon-2x"></i>
+                      </a>
+                  </li>
+                  {% endif %}
+                  {% if site.twitter_username %}
+                  <li>
+                      <a style="text-decoration:none;" href="https://twitter.com/{{ site.twitter_username }}">
+                            <i class="iconfont icon-tuitetwitter43 icon-2x"></i>
+                      </a>
+                  </li>
+                  {% endif %}
+                  {% if site.github_username %}
+                  <li>
+                      <a style="text-decoration:none;" target="_blank" href="https://github.com/{{ site.github_username }}">
+                            <i class="iconfont icon-GitHub icon-2x"></i>
+                      </a>
+                  </li>
+                  {% endif %}
                 </ul>
+
+                {% if site.Coding_Pages %}
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    Theme on <a href="{{ site.github_repo }}">GitHub</a> |
-                    <iframe
+                    Hosted by <a target="_blank" href="https://pages.coding.me" >Coding Pages</a> |
+                    Theme on <a target="_blank" href="https://github.com/{{ site.github_username }}/{{ site.github_repo }}.git/">GitHub</a>
+                </p>
+                {% else %}
+                <p class="copyright text-muted">
+
+                    Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}   |
+                    Theme on <a href="{{ site.github_repo }}">GitHub</a>
+                    <!-- <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_username }}.github.io&type=star&count=true" >
-                    </iframe>
-                </p>
+                        src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_repo }}&type=star&count=true" >
+                    </iframe> -->
+                  </p>
+                {% endif %}
             </div>
         </div>
     </div>
 </footer>
-
-<!-- jQuery -->
-<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="{{ "/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Service Worker -->
 {% if site.service-worker %}
@@ -176,10 +142,10 @@
 
 <!--fastClick.js -->
 <script>
-    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
+    // async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    //     var $nav = document.querySelector("nav");
+    //     if($nav) FastClick.attach($nav);
+    // })
 </script>
 
 
@@ -202,20 +168,23 @@
 {% endif %}
 
 
-<!-- Baidu Tongji 调用配置文件的版本-->
+<!-- Baidu Tongji -->
+{% if site.ba_track_id %}
+<script>
+    // dynamic User by Hux
+    var _baId = '{{ site.ba_track_id }}';
 
-   //   {% if site.ba_track_id %}
-    //  <script>
-    //  var _baId = '{{ site.ba_track_id }}';
-    //   var _hmt = _hmt || [];
-     //   (function() {
-   //       var hm = document.createElement("script");
-    //      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-    //      var s = document.getElementsByTagName("script")[0];
-      //   s.parentNode.insertBefore(hm, s);
-    //    })();
-   //     </script>
-  //      {% endif %} 
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+{% endif %}
+
 
 
 <!-- Side Catalog -->
@@ -264,48 +233,8 @@
     });
 </script>
 {% endif %}
-<!-- 搜索插件search start -->
-{% if site.search %}
-<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
-      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
-    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
-
-    <div style="position: fixed; top: 16px; right: 16px;">
-        <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
-    </div>
-</div>
-
-<div style="position: fixed; right: 16px; bottom: 20px;">
-    <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
-</div>
-
-<link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}">
-
-<script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
+<!-- 百度推送链接插件 start -->
+{% if site.baidu_js_push %}
+    {% include plugins/baidu_js_push.html %}
 {% endif %}
-<!-- 搜索插件end -->
-<!--返回到顶部start-->
-
-<!--<div><a title="返回顶部" style="position: fixed; left:0;bottom:0;" onclick="window.scrollTo('0','0')" >返回顶部</a></div>-->
-
-<div style="display: none;" id="rocket-to-top">
-<div style="opacity:0;display: block;" class="level-2"></div>
-<div class="level-3"></div>
-</div>
-
-<link href="/top/css/index.css" rel="stylesheet" type="text/css" />
-<script src="top/js/jquery.js?v=1.83.min" type="text/javascript"></script>
-<script src="/top/js/sucaijiayuan.js"></script>
-<!--返回到顶部end-->
-<!--百度统计写死的版本-->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?e94ecb3bd260c2ac7b40431d45bc0e25";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!--end-->
+<!-- end -->

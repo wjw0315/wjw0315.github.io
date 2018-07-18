@@ -8,13 +8,19 @@ description: "Every failure is leading towards success." #网站介绍
 keyword: "MapleBlog,fengye Blog,枫叶博客,JAVA,wjw" #关键词
 url: "http://wjwcloud.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/wjw0315/wjw0315.github.io" # you code repository
+github_repo: "blog" # you code repository
+author: Mr.W
+
+# 是否托管在Coding_Pages
+Coding_Pages: true
+
+#  是否开启百度自动推送JS代码
+baidu_js_push: false
 
 # Sidebar settings侧边栏
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "个人简历"
-sidebar-jianli-url: "http://wwsocool.com/jianli"
-sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Goals determine what you going to be!"
+sidebar-avatar: /img/avatar_p11179162.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -26,7 +32,7 @@ github_username:    wjw0315
 # facebook_username:
 jianshu_username:   timeline
 #twitter_username:   
-
+# coding_username: 
 
 
 
@@ -41,7 +47,8 @@ anchorjs: true                          # if you want to customize anchor. check
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+# gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 
 
@@ -70,7 +77,7 @@ gitalk:
 
 # Analytics settings 百度统计track_id
 # Baidu Analytics
-ba_track_id: 'e94ecb3bd260c2ac7b40431d45bc0e25'
+ba_track_id: e94ecb3bd260c2ac7b40431d45bc0e25
 
 # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
@@ -82,7 +89,7 @@ ba_track_id: 'e94ecb3bd260c2ac7b40431d45bc0e25'
 
 # Featured Tags
 featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
+featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
 
 #search plugins
 search: true                            # 是否使用搜索插件

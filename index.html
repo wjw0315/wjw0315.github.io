@@ -1,14 +1,9 @@
 ---
 layout: page
 description: "Surrender! Or more combat-worthy than enemy!"
+head_padding: 55px
 ---
-<!--ÖÃ¶¥ÎÄÕÂ-->
-
-<!--ÖÃ¶¥ÎÄÕÂend-->
-<!--ÆÕÍ¨ÎÄÕÂ-->
-
 {% for post in paginator.posts %}
-
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -28,10 +23,7 @@ description: "Surrender! Or more combat-worthy than enemy!"
     </p>
 </div>
 <hr>
-
 {% endfor %}
-
-<!--ÆÕÍ¨ÎÄÕÂend-->
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}

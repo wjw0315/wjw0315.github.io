@@ -17,13 +17,9 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                          <!-- Jump to  top    by-Fe -->
-                        <a href="javascript:scroll(0,0)">Top</a>
-                    </li>
-                    <li>
                         <a href="{{ site.baseurl }}/">Home</a>
                     </li>
-                    {% for page in site.pages %}{% if page.title %}
+                    {% for page in site.pages %}{% if page.nav %}
                     <li>
                         <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                     </li>

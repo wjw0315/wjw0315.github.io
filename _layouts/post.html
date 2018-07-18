@@ -45,6 +45,11 @@ layout: default
             </div>
         </div>
     </div>
+    <div align="right">
+      <a id="cb-search-btn"  style="text-decoration:none;" href="javascript:">
+        <i  class="iconfont icon-icon-chaxun icon-2x" title="双击ctrl试一下" style="color:#FFFF"></i>
+      </a>&nbsp;&nbsp;&nbsp;
+    </div>
 </header>
 
 <!-- Post Content -->
@@ -57,14 +62,20 @@ layout: default
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
-
-				{{ content }}
-
-
+                <div id="content">
+				              {{ content }}
+                </div>
+              <!-- add 版权申明 by Fe -->
+              <br>
+              {% if site.author==page.author %}
+                  <blockquote><p>版权声明</p></blockquote>
+                  <p>本文为博主<strong>{{page.author}}</strong>原创文章，转载请注明出处
+                      <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.title}}">
+                          {{ page.url | prepend: site.url | replace: '//', '/' }}
+                      </a>
+                  </p>
+              {% endif %}
                 <hr style="visibility: hidden;">
-
-
-
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -85,7 +96,7 @@ layout: default
                     {% endif %}
                 </ul>
 
-                <!--Gitalk评论start  -->
+                <!--Gitalk评论start  by Fe-->
                 {% if site.gitalk.enable %}
                   <!-- 引入Gitalk评论插件  -->
                   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
@@ -133,7 +144,30 @@ layout: default
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 sidebar-container">
+                <!-- Date(日期归档)  start-->
+                <!-- author: Fe -->
+                <section>
+                    <hr class="hidden-sm hidden-xs">
 
+                    <h5><a href="{{'/date/' | prepend: site.baseurl }}">My Date</a></h5>
+
+                    <div class="tags">
+
+                      {% for post in site.posts %}
+                        {% capture ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+                        {% if yearmonth != ym %}
+                          {% assign yearmonth = ym %}
+
+                          <a href="/date/#a{{ ym }}" rel="5">{{ post.date | date: "%Y年%m月" }}</a>
+
+                        {% endif %}
+                      {% endfor %}
+
+
+
+                    </div>
+                </section>
+                <!-- Date end-->
                 <!-- Featured Tags -->
                 {% if site.featured-tags %}
                 <section>
@@ -141,7 +175,7 @@ layout: default
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
         				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
+                            {% if tag[1].size > site.featured-condition-size %}
                 				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
@@ -157,7 +191,7 @@ layout: default
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                        <li><a target="_blank" href="{{friend.href}}">{{friend.title}}</a></li>
                     {% endfor %}
                 </ul>
                 {% endif %}
@@ -169,7 +203,12 @@ layout: default
 
 
 
-
+<script>
+window.onload = function(){
+    //所有文章内a标签都为新建窗口打开
+    $("#content a").attr("target","_blank");
+}
+</script>
 {% if site.anchorjs %}
 <!-- async load function -->
 <script>

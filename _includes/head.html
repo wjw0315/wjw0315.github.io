@@ -1,23 +1,27 @@
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <!-- <meta name="google-site-verification" content="" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
-    <meta name="keywords"  content="{{ site.keyword }}">
+    {% if page.keywords_post %}
+        <meta name="keywords" content="{{page.keywords_post}},{{site.github_username}}">
+    {% else %}
+        <meta name="keywords" content="{{ site.keyword }}">
+    {% endif %}
     <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
-
+    <meta name="toTop" content="true">
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
 
     <!-- Web App Manifest -->
-    <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json">
+    <!-- <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json"> -->
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
 
     <!-- Safari Webpage Icon    by-BY -->
     <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/apple-touch-icon.png">
-
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -31,27 +35,25 @@
     <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
 
     <!-- Custom Fonts -->
+
+    <link rel="stylesheet" type="text/css" href="{{ "/css/iconfont/iconfont.css"| prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/css/fe.css"| prepend: site.baseurl }}">
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- jQuery -->
+    <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
 
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ "/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
 
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- ga & ba script hoook -->
-
-    
-    <script></script>
+    <!-- 搜索插件search start -->
+    {% if site.search %}
+        {% include plugins/search.html %}
+    {% endif %}
+    <!-- 搜索插件end -->
+    <script type="text/javascript" src="{{ "/js/toTop.js " | prepend: site.baseurl }}"></script>
 </head>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>{{page.title}}</title>
+<meta name="generator" content="Jekyll v3.7.3">
+<meta property="og:title" content="{{title}}">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://fedemo.top/">
+<meta property="og:url" content="https://fedemo.top/">
+<!-- Favicon -->
+<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+<meta property="og:site_name" content="fedemo.top">
+<script type="application/ld+json">
+{"name":"fedemo.top","@type":"WebSite","url":"https://fedemo.top/","headline":"{{title}}","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<style class="anchorjs"></style><link href="{{ site.baseurl }}/css/resume.css" rel="stylesheet">
+</head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body" style="position:relative">
+      {% if page.avatar %}
+      <div style="width:130px;height:130px;position:absolute;top:15px;right:0%;" >
+          <a href="{{ page.pdf }}">
+            <img src="{{page.avatar}}" style="width:100%;height:100%" title="pdf">
+          </a>
+      </div>
+      {% endif %}
+      {{ content }}
+    </div>
+    <script>
+      window.onload = function(){
+          //所有文章内a标签都为新建窗口打开
+          var aList = document.getElementsByTagName('a');//获取所有的标签a
+          for(var i=0;i<aList.length;i++){
+             aList[i].target='_blank';//定义成打开新窗口
+          }
+      }
+      {% if page.ba_track_id %}
+            // dynamic User by Hux
+            var _baId = '{{ site.ba_track_id }}';
+
+            // Originial
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?" + _baId;
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(hm, s);
+            })();
+      {% endif %}
+    </script>
+    <!-- Baidu Tongji -->
+
+  </body>
+</html>

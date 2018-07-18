@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+</style>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=wDYEcxgRRheZwyC9jpN1Tt7fzr2zjosZ"></script>
+<title>根据起终点经纬度驾车导航</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+  // 百度地图API功能
+  var map = new BMap.Map("allmap");
+  map.centerAndZoom(new BMap.Point(119.929576,28.4563),15);
+
+  var geolocation = new BMap.Geolocation();
+  geolocation.getCurrentPosition(function(r){
+    if(this.getStatus() == BMAP_STATUS_SUCCESS){
+      var p1 = new BMap.Point(r.point.lng,r.point.lat);
+      var p2 = new BMap.Point(GetQueryString("lng"),GetQueryString("lat"));
+      var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+      driving.search(p1, p2);
+      //map.addOverlay(mk);
+      // map.panTo(r.point);
+      //alert('您的位置：'+r.point.lng+','+r.point.lat);
+    }
+    else {
+      alert('failed'+this.getStatus());
+    }
+  },{enableHighAccuracy: true})
+  //var p1 = new BMap.Point(116.301934,39.977552);
+
+  /**
+   * 获得地址url参数
+   * url:		abc.html?id=123&url=http://www.maidq.com
+   * GetQueryString("id"):	123
+   * GetQueryString("url"):	http://www.maidq.com
+   */
+  function GetQueryString(name){
+       var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+       var r = window.location.search.substr(1).match(reg);
+       if(r!=null)return  unescape(r[2]); return null;
+  }
+</script>

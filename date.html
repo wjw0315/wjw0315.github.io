@@ -1,0 +1,67 @@
+---
+layout: page
+title: "Date"
+nav: true
+description: "Time flies like an arrow, fruit flies like a banana"
+header-img: "img/post-bg-coffee.jpeg"
+head_padding: "55px"
+---
+<!-- 按日期归档-->
+<ul id="myTab" class="nav nav-tabs">
+{% for post in site.posts %}
+
+	{% capture ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+	{% if yearmonth != ym %}
+		{% assign yearmonth = ym %}
+
+	    <li{% if forloop.first %} class="active"{% endif %}>
+		  <a href="/date/#aa{{ ym }}" data-toggle="tab">{{ post.date | date: "%Y年%m月" }}</a>
+    </li>
+
+	{% endif %}
+
+{% endfor %}
+</ul>
+<div id="myTabContent" class="tab-content">
+{% for post in site.posts %}
+	{% capture ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+	{% if yearmonth != ym %}
+		{% assign yearmonth = ym %}
+                {% if forloop.first %}{% else %}</div>{% endif %}
+                <div class="tab-pane fade{% if forloop.first %} in active{% endif %}" id="aa{{ ym }}">
+	{% endif %}
+		<p>
+			<div class="post-preview">
+		    <a href="{{ post.url }}" title="{{ post.title }}" >
+			     <time datetime="{{ post.date | date_to_string }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+		       &nbsp;&nbsp;{{ post.title }}
+		    </a>
+			</div>
+			<hr>
+			</p>
+{% endfor %}
+
+{% for post in site.posts %}
+	{% capture ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+	{% if yearmonth != ym %}
+		{% assign yearmonth = ym %}
+                {% if forloop.first %}</div>{% endif %}
+	{% endif %}
+{% endfor %}
+
+</div>
+<script>
+    $(function () {
+			   var _hash = insertStr(window.location.hash,1,"a");
+				 $('#myTab a[href="/date/'+ _hash+'"]').tab('show');
+    });
+		function insertStr(str1,n,str2){
+            if(str1.length<n){
+                return str1+str2;
+            }else{
+                s1 = str1.substring(0,n);
+                s2 = str1.substring(n,str1.length);
+                return s1+str2+s2;
+            }
+        }
+</script>
