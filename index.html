@@ -2,37 +2,11 @@
 layout: page
 description: "Surrender! Or more combat-worthy than enemy!"
 ---
-
-<div>
-	<a href="https://github.com/wjw0315/wjw0315.github.io/blob/master/_posts/2016/6/2016-6-6-menu.md">Ä¿ Â¼</a>
-</div>
 <!--ÖÃ¶¥ÎÄÕÂ-->
- {% if post.stickie == false %}
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
- {% endif %}
+
 <!--ÖÃ¶¥ÎÄÕÂend-->
 <!--ÆÕÍ¨ÎÄÕÂ-->
-   {% if post.stickie == true %}
+
 {% for post in paginator.posts %}
 
 <div class="post-preview">
@@ -56,7 +30,7 @@ description: "Surrender! Or more combat-worthy than enemy!"
 <hr>
 
 {% endfor %}
-  {% endif %}
+
 <!--ÆÕÍ¨ÎÄÕÂend-->
 
 <!-- Pager -->
