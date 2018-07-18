@@ -8,7 +8,7 @@ header-img: img/post-bg-rwd.jpg
 catalog: true
 stickie: true
 tags:
-    - java进阶
+    - Java进阶
 --- 
 
 **进程**：正在执行中的程序，其实是应用程序在内存中运行的那片空间。

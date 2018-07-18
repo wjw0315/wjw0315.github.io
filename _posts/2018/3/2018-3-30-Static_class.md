@@ -8,7 +8,7 @@ header-img: img/post-bg-rwd.jpg
 catalog: true
 stickie: true
 tags:
-    - java基础
+    - Java基础
 --- 
 
 java中的类可以是static吗？答案是可以。在java中我们可以有静态实例变量、静态方法、静态块。类也可以是静态的。

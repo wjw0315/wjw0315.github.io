@@ -8,7 +8,7 @@ header-img: img/post-bg-rwd.jpg
 catalog: true
 stickie: true
 tags:
-    - java基础
+    - Java基础
 --- 
 
 **先来一题看程序结果：**

@@ -8,7 +8,7 @@ header-img: img/post-bg-rwd.jpg
 catalog: true
 stickie: true
 tags:
-    - java面试基础
+    - Java面试基础
 --- 
 
 ## 1、jdk1.8中，下面有关java 抽象类和接口的区别，说法错误的是？

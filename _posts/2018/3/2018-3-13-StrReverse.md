@@ -8,7 +8,7 @@ header-img: img/post-bg-rwd.jpg
 catalog: true
 stickie: true
 tags:
-    - java基础
+    - Java基础
 --- 
 > 字符串的反转
 

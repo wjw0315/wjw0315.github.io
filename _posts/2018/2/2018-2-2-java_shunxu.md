@@ -8,7 +8,7 @@ header-img: img/post-bg-ios9-web.jpg
 catalog: true
 stickie: true
 tags:
-    - java基础
+    - Java基础
     - 面试集
 ---
 
