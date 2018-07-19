@@ -1,6 +1,6 @@
 ---
 layout:     post                  
-title:      Java基础      
+title:      Java基础 （未完待续☞）     
 subtitle:   Java_base         
 date:       2018-7-16             
 author:     wjw                   
