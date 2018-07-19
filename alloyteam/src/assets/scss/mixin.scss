@@ -1,0 +1,66 @@
+// size 375px size(width px)
+@function size($size) {
+  $width: 375;
+  $scale: 10;
+  @return ($size / $width * $scale) * 1rem;
+}
+$icon: #586069;
+$icon-on: #200c41;
+$top: #202b33;
+// $bgi: linear-gradient(90deg, #121c29 0%, #102848 100%);
+$bgi: #121c29;
+$bgc: #121c29;
+// $bg2: rgba(32, 43, 51, 0.4);
+// $bg3: #202b33;
+$bg2: #16222f;
+// $bg2: rgba(22, 34, 47, 0.5);
+$bg3: #1e2b3a;
+$bgt1: #1a293a;
+$nav: #252d47;
+$btn: #7e848b;
+$btna: #28e4d8;
+$font1: #d1d4d7;
+$font2: #a2a7ad;
+$shadow1: 0 26px 40px -24px rgba(0, 0, 0, 0.3);
+// $bg1: #f5f8fa;
+// $bg2: #e7ebed;
+// $bg3: #FFF;
+// $font1: #4d4d4d;
+// $font2: #a0a0a0;
+$font-c-3: #b2b2b2;
+$font-c-4: #33d0bf;
+$main-color: #91D4DA;
+$border-color: rgba(0,0,0,0.16);
+$border: size(2) solid $border-color;
+//宽高
+@mixin wh($width, $height){
+  width: $width;
+  height: $height;
+}
+// dpr自定义样式
+@mixin data-dpr($field, $val) {
+  #{$field}: $val;
+  [data-dpr="2"] & {
+      #{$field}: $val * 2;
+  }
+  [data-dpr="3"] & {
+      #{$field}: $val * 3;
+  }
+}
+
+// 字体大小
+@mixin font-size($size){
+  font-size: $size;
+  [data-dpr="2"] & {
+      font-size: $size * 2;
+  }
+  [data-dpr="3"] & {
+      font-size: $size * 3;
+  }
+}
+// 背景图片地址和大小
+@mixin BgUrl($url) { 
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

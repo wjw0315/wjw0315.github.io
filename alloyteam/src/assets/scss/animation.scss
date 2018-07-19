@@ -1,0 +1,1074 @@
+/* animation */
+.a-bounce, .a-flip, .a-flash, .a-shake, .a-swing, .a-wobble, .a-ring {
+    animation:1s ease;
+    animation:1s ease;
+    -ms-animation:1s ease;
+    animation:1s ease;
+}
+.a-fadein, .a-fadeinT, .a-fadeinR, .a-fadeinB, .a-fadeinL, .a-bouncein, .a-bounceinT, .a-bounceinR, .a-bounceinB, .a-bounceinL, .a-rotatein, .a-rotateinLT, .a-rotateinLB, .a-rotateinRT, .a-rotateinRB, .a-flipin, .a-flipinX, .a-flipinY {
+    animation:1s ease-out backwards;
+    animation:1s ease-out backwards;
+    -ms-animation:1s ease-out backwards;
+    animation:1s ease-out backwards;
+}
+.a-fadeout, .a-fadeoutT, .a-fadeoutR, .a-fadeoutB, .a-fadeoutL, .a-bounceout, .a-bounceoutT, .a-bounceoutR, .a-bounceoutB, .a-bounceoutL, .a-rotateout, .a-rotateoutLT, .a-rotateoutLB, .a-rotateoutRT, .a-rotateoutRB, .a-flipout, .a-flipoutX, .a-flipoutY {
+    animation:1s ease-in forwards;
+    animation:1s ease-in forwards;
+    -ms-animation:1s ease-in forwards;
+    animation:1s ease-in forwards;
+}
+/* 淡入 */
+.a-fadein {
+    animation-name:fadein;
+}
+/* 淡入-从上 */
+.a-fadeinT {
+    animation-name:fadeinT;
+}
+/* 淡入-从右 */
+.a-fadeinR {
+    animation-name:fadeinR;
+}
+/* 淡入-从下 */
+.a-fadeinB {
+    animation-name:fadeinB;
+}
+/* 淡入-从左 */
+.a-fadeinL {
+    animation-name:fadeinL;
+}
+/* 淡出 */
+.a-fadeout {
+    animation-name:fadeout;
+}
+/* 淡出-向上 */
+.a-fadeoutT {
+    animation-name:fadeoutT;
+}
+/* 淡出-向右 */
+.a-fadeoutR {
+    animation-name:fadeoutR;
+}
+/* 淡出-向下 */
+.a-fadeoutB {
+    animation-name:fadeoutB;
+}
+/* 淡出-向左 */
+.a-fadeoutL {
+    animation-name:fadeoutL;
+}
+/* 弹跳 */
+.a-bounce {
+    animation-name:bounce;
+}
+/* 弹入 */
+.a-bouncein {
+    animation-name:bouncein;
+}
+/* 弹入-从上 */
+.a-bounceinT {
+    animation-name:bounceinT;
+}
+/* 弹入-从右 */
+.a-bounceinR {
+    animation-name:bounceinR;
+}
+/* 弹入-从下 */
+.a-bounceinB {
+    animation-name:bounceinB;
+}
+/* 弹入-从左 */
+.a-bounceinL {
+    animation-name:bounceinL;
+}
+/* 弹出 */
+.a-bounceout {
+    animation-name:bounceout;
+}
+/* 弹出-向上 */
+.a-bounceoutT {
+    animation-name:bounceoutT;
+}
+/* 弹出-向右 */
+.a-bounceoutR {
+    animation-name:bounceoutR;
+}
+/* 弹出-向下 */
+.a-bounceoutB {
+    animation-name:bounceoutB;
+}
+/* 弹出-向左 */
+.a-bounceoutL {
+    animation-name:bounceoutL;
+}
+/* 转入 */
+.a-rotatein {
+    animation-name:rotatein;
+}
+/* 转入-从左上 */
+.a-rotateinLT {
+    animation-name:rotateinLT;
+}
+/* 转入-从左下 */
+.a-rotateinLB {
+    animation-name:rotateinLB;
+}
+/* 转入-从右上 */
+.a-rotateinRT {
+    animation-name:rotateinRT;
+}
+/* 转入-从右下*/
+.a-rotateinRB {
+    animation-name:rotateinRB;
+}
+/* 转出 */
+.a-rotateout {
+    animation-name:rotateout;
+}
+/* 转出-向左上 */
+.a-rotateoutLT {
+    animation-name:rotateoutLT;
+}
+/* 转出-向左下 */
+.a-rotateoutLB {
+    animation-name:rotateoutLB;
+}
+/* 转出-向右上 */
+.a-rotateoutRT {
+    animation-name:rotateoutRT;
+}
+/* 转出-向右下 */
+.a-rotateoutRB {
+    animation-name:rotateoutRB;
+}
+/* 翻转 */
+.a-flip {
+    animation-name:flip;
+}
+/* 翻入-X轴 */
+.a-flipinX {
+    animation-name:flipinX;
+}
+/* 翻入-Y轴 */
+.a-flipin, .a-flipinY {
+    animation-name:flipinY;
+}
+/* 翻出-X轴 */
+.a-flipoutX {
+    animation-name:flipoutX;
+}
+/* 翻出-Y轴 */
+.a-flipout, .a-flipoutY {
+    animation-name:flipoutY;
+}
+/* 闪烁 */
+.a-flash {
+    animation-name:flash;
+}
+/* 震颤 */
+.a-shake {
+    animation-name:shake;
+}
+/* 摇摆 */
+.a-swing {
+    animation-name:swing;
+}
+/* 摇晃 */
+.a-wobble {
+    animation-name:wobble;
+}
+/* 震铃 */
+.a-ring {
+    animation-name:ring;
+}
+/* define */
+/* 淡入 */
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* 淡入-从上 */
+@keyframes fadeinT {
+    0% {
+        opacity:0;
+        transform:translateY(-100px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* 淡入-从右 */
+@keyframes fadeinR {
+    0% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+/* 淡入-从下 */
+@keyframes fadeinB {
+    0% {
+        opacity:0;
+        transform:translateY(100px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* 淡入-从左 */
+@keyframes fadeinL {
+    0% {
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+/* 淡出 */
+@keyframes fadeout {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+/* 淡出-向上 */
+@keyframes fadeoutT {
+    0% {
+        opacity:1;
+        transform:translateY(0);
+    }
+    100% {
+        opacity:0;
+        transform:translateY(-100px);
+    }
+}
+/* 淡出-向右 */
+@keyframes fadeoutR {
+    0% {
+        opacity:1;
+        transform:translateX(0);
+    }
+    100% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+}
+/* 淡出-向下 */
+@keyframes fadeoutB {
+    0% {
+        opacity:1;
+        transform:translateY(0);
+    }
+    100% {
+        opacity:0;
+        transform:translateY(100px);
+    }
+}
+/* 淡出-向左 */
+@keyframes fadeoutL {
+    0% {
+        opacity:1;
+        transform:translateX(0);
+    }
+    100% {
+        opacity:0;
+        transform:translateX(-100px);
+    }
+}
+/* 弹跳 */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform:translateY(0);
+    }
+    40% {
+        transform:translateY(-30px);
+    }
+    60% {
+        transform:translateY(-15px);
+    }
+}
+/* 弹入 */
+@keyframes bouncein {
+    0% {
+        opacity:0;
+        transform:scale(0.3);
+    }
+    50% {
+        opacity:1;
+        transform:scale(1.05);
+    }
+    70% {
+        transform:scale(0.9);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+/* 弹入-从上 */
+@keyframes bounceinT {
+    0% {
+        opacity:0;
+        transform:translateY(-100px);
+    }
+    60% {
+        opacity:1;
+        transform:translateY(30px);
+    }
+    80% {
+        transform:translateY(-10px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+/* 弹入-从右 */
+@keyframes bounceinR {
+    0% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+    60% {
+        opacity:1;
+        transform:translateX(-30px);
+    }
+    80% {
+        transform:translateX(10px);
+    }
+    100% {
+        transform:translateX(0);
+    }
+}
+/* 弹入-从下 */
+@keyframes bounceinB {
+    0% {
+        opacity:0;
+        transform:translateY(100px);
+    }
+    60% {
+        opacity:1;
+        transform:translateY(-30px);
+    }
+    80% {
+        transform:translateY(10px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+/* 弹入-从左 */
+@keyframes bounceinL {
+    0% {
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    60% {
+        opacity:1;
+        transform:translateX(30px);
+    }
+    80% {
+        transform:translateX(-10px);
+    }
+    100% {
+        transform:translateX(0);
+    }
+}
+/* 弹出 */
+@keyframes bounceout {
+    0% {
+        transform:scale(1);
+    }
+    25% {
+        transform:scale(0.95);
+    }
+    50% {
+        opacity:1;
+        transform:scale(1.1);
+    }
+    100% {
+        opacity:0;
+        transform:scale(0.3);
+    }
+}
+/* 弹出-向上*/
+@keyframes bounceoutT {
+    0% {
+        transform:translateY(0);
+    }
+    20% {
+        opacity:1;
+        transform:translateY(20px);
+    }
+    100% {
+        opacity:0;
+        transform:translateY(-100px);
+    }
+}
+/* 弹出-向右*/
+@keyframes bounceoutR {
+    0% {
+        transform:translateX(0);
+    }
+    20% {
+        opacity:1;
+        transform:translateX(-20px);
+    }
+    100% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+}
+/* 弹出-向下 */
+@keyframes bounceoutB {
+    0% {
+        transform:translateY(0);
+    }
+    20% {
+        opacity:1;
+        transform:translateY(-20px);
+    }
+    100% {
+        opacity:0;
+        transform:translateY(100px);
+    }
+}
+/* 弹出-向左 */
+@keyframes bounceoutL {
+    0% {
+        transform:translateX(0);
+    }
+    20% {
+        opacity:1;
+        transform:translateX(20px);
+    }
+    100% {
+        opacity:0;
+        transform:translateX(-200px);
+    }
+}
+/* 转入 */
+@keyframes rotatein {
+    0% {
+        opacity:0;
+        transform:rotate(-200deg);
+    }
+    100% {
+        opacity:1;
+        transform:rotate(0);
+    }
+}
+/* 转入-从左上 */
+@keyframes rotateinLT {
+    0% {
+        transform-origin:left bottom;
+        transform:rotate(-90deg);
+        opacity:0;
+    }
+    100% {
+        transform-origin:left bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+}
+/* 转入-从左下 */
+@keyframes rotateineftB {
+    0% {
+        transform-origin:left bottom;
+        transform:rotate(90deg);
+        opacity:0;
+    }
+    100% {
+        transform-origin:left bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+}
+/* 转入-从右上 */
+@keyframes rotateinRT {
+    0% {
+        transform-origin:right bottom;
+        transform:rotate(90deg);
+        opacity:0;
+    }
+    100% {
+        transform-origin:right bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+}
+/* 转入-从右下*/
+@keyframes rotateinRB {
+    0% {
+        transform-origin:right bottom;
+        transform:rotate(-90deg);
+        opacity:0;
+    }
+    100% {
+        transform-origin:right bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+}
+/* 转出 */
+@keyframes rotateout {
+    0% {
+        transform-origin:center center;
+        transform:rotate(0);
+        opacity:1;
+    }
+    100% {
+        transform-origin:center center;
+        transform:rotate(200deg);
+        opacity:0;
+    }
+}
+/* 转出-向左上 */
+@keyframes rotateoutLT {
+    0% {
+        transform-origin:left bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+    100% {
+        transform-origin:left bottom;
+        transform:rotate(-90deg);
+        opacity:0;
+    }
+}
+/* 转出-向左下 */
+@keyframes rotateoutLB {
+    0% {
+        transform-origin:left bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+    100% {
+        transform-origin:left bottom;
+        transform:rotate(90deg);
+        opacity:0;
+    }
+}
+/* 转出-向右上 */
+@keyframes rotateoutRT {
+    0% {
+        transform-origin:right bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+    100% {
+        transform-origin:right bottom;
+        transform:rotate(90deg);
+        opacity:0;
+    }
+}
+/* 转出-向右下 */
+@keyframes rotateoutBR {
+    0% {
+        transform-origin:right bottom;
+        transform:rotate(0);
+        opacity:1;
+    }
+    100% {
+        transform-origin:right bottom;
+        transform:rotate(-90deg);
+        opacity:0;
+    }
+}
+/* 翻转 */
+@keyframes flip {
+    0% {
+        transform:perspective(400px) rotateY(0);
+        animation-timing-function:ease-out;
+    }
+    40% {
+        transform:perspective(400px) translateZ(150px) rotateY(170deg);
+        animation-timing-function:ease-out;
+    }
+    50% {
+        transform:perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+        animation-timing-function:ease-in;
+    }
+    80% {
+        transform:perspective(400px) rotateY(360deg) scale(0.95);
+        animation-timing-function:ease-in;
+    }
+    100% {
+        transform:perspective(400px) scale(1);
+        animation-timing-function:ease-in;
+    }
+}
+/* 翻入-X轴 */
+@keyframes flipinX {
+    0% {
+        transform:perspective(400px) rotateX(90deg);
+        opacity:0;
+    }
+    40% {
+        transform:perspective(400px) rotateX(-10deg);
+    }
+    70% {
+        transform:perspective(400px) rotateX(10deg);
+    }
+    100% {
+        transform:perspective(400px) rotateX(0);
+        opacity:1;
+    }
+}
+/* 翻入-Y轴 */
+@keyframes flipinY {
+    0% {
+        transform:perspective(400px) rotateY(90deg);
+        opacity:0;
+    }
+    40% {
+        transform:perspective(400px) rotateY(-10deg);
+    }
+    70% {
+        transform:perspective(400px) rotateY(10deg);
+    }
+    100% {
+        transform:perspective(400px) rotateY(0);
+        opacity:1;
+    }
+}
+/* 翻出-X轴 */
+@keyframes flipoutX {
+    0% {
+        transform:perspective(400px) rotateX(0);
+        opacity:1;
+    }
+    100% {
+        transform:perspective(400px) rotateX(90deg);
+        opacity:0;
+    }
+}
+/* 翻出-Y轴 */
+@keyframes flipoutY {
+    0% {
+        transform:perspective(400px) rotateY(0);
+        opacity:1;
+    }
+    100% {
+        transform:perspective(400px) rotateY(90deg);
+        opacity:0;
+    }
+}
+/* 闪烁 */
+@keyframes flash {
+    0%, 50%, 100% {
+        opacity:1;
+    }
+    25%, 75% {
+        opacity:0;
+    }
+}
+/* 震颤 */
+@keyframes shake {
+    0%, 100% {
+        transform:translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform:translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform:translateX(10px);
+    }
+}
+/* 摇摆 */
+@keyframes swing {
+    20% {
+        transform:rotate(15deg);
+    }
+    40% {
+        transform:rotate(-10deg);
+    }
+    60% {
+        transform:rotate(5deg);
+    }
+    80% {
+        transform:rotate(-5deg);
+    }
+    100% {
+        transform:rotate(0);
+    }
+}
+/* 摇晃 */
+@keyframes wobble {
+    0% {
+        transform:translateX(0);
+    }
+    15% {
+        transform:translateX(-100px) rotate(-5deg);
+    }
+    30% {
+        transform:translateX(80px) rotate(3deg);
+    }
+    45% {
+        transform:translateX(-65px) rotate(-3deg);
+    }
+    60% {
+        transform:translateX(40px) rotate(2deg);
+    }
+    75% {
+        transform:translateX(-20px) rotate(-1deg);
+    }
+    100% {
+        transform:translateX(0);
+    }
+}
+/* 震铃 */
+@keyframes ring{
+    0%{
+        transform:scale(1);
+    }
+    10%,20%{
+        transform:scale(0.9) rotate(-3deg);
+    }
+    30%,50%,70%,90%{
+        transform:scale(1.1) rotate(3deg);
+    }
+    40%,60%,80%{
+        transform:scale(1.1) rotate(-3deg);
+    }
+    100%{
+        transform:scale(1) rotate(0);
+    }
+}
+/*从右变形淡入效果*/
+@keyframes speedR {
+    0% {
+        transform:translate3d(100%, 0, 0) skewX(-30deg);
+        transform:translate3d(100%, 0, 0) skewX(-30deg);
+        opacity:0
+    }
+    60% {
+        transform:skewX(20deg);
+        transform:skewX(20deg);
+        opacity:1
+    }
+    80% {
+        transform:skewX(-5deg);
+        transform:skewX(-5deg);
+        opacity:1
+    }
+    100% {
+        transform:none;
+        transform:none;
+        opacity:1
+    }
+}
+/*水滴抖动*/
+@keyframes waterDrops {
+    0% {
+        -webkit-transform: scale(1.2, 0.8);
+        transform: scale(1.2, 0.8);
+        -ms-transform: scale(1.2, 0.8);
+        transform: scale(1.2, 0.8);
+    }
+    1% {
+        -webkit-transform: scale(1.18, 0.82);
+        transform: scale(1.18, 0.82);
+        -ms-transform: scale(1.18, 0.82);
+        transform: scale(1.18, 0.82);
+    }
+    2% {
+        -webkit-transform: scale(1.16, 0.84);
+        transform: scale(1.16, 0.84);
+        -ms-transform: scale(1.16, 0.84);
+        transform: scale(1.16, 0.84);
+    }
+    3% {
+        -webkit-transform: scale(1.13, 0.87);
+        transform: scale(1.13, 0.87);
+        -ms-transform: scale(1.13, 0.87);
+        transform: scale(1.13, 0.87);
+    }
+    4% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+        -ms-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+    5% {
+        -webkit-transform: scale(1.07, 0.93);
+        transform: scale(1.07, 0.93);
+        -ms-transform: scale(1.07, 0.93);
+        transform: scale(1.07, 0.93);
+    }
+    6% {
+        -webkit-transform: scale(1.04, 0.96);
+        transform: scale(1.04, 0.96);
+        -ms-transform: scale(1.04, 0.96);
+        transform: scale(1.04, 0.96);
+    }
+    7% {
+        -webkit-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+        -ms-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+    }
+    8% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    9% {
+        -webkit-transform: scale(0.97, 1.03);
+        transform: scale(0.97, 1.03);
+        -ms-transform: scale(0.97, 1.03);
+        transform: scale(0.97, 1.03);
+    }
+    10% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+        -ms-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+    11% {
+        -webkit-transform: scale(0.94, 1.06);
+        transform: scale(0.94, 1.06);
+        -ms-transform: scale(0.94, 1.06);
+        transform: scale(0.94, 1.06);
+    }
+    12% {
+        -webkit-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+        -ms-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+    }
+    13% {
+        -webkit-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+        -ms-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+    }
+    14% {
+        -webkit-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+        -ms-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+    }
+    15% {
+        -webkit-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+        -ms-transform: scale(0.93, 1.07);
+        transform: scale(0.93, 1.07);
+    }
+    16% {
+        -webkit-transform: scale(0.94, 1.06);
+        transform: scale(0.94, 1.06);
+        -ms-transform: scale(0.94, 1.06);
+        transform: scale(0.94, 1.06);
+    }
+    17% {
+        -webkit-transform: scale(0.94, 1.06);
+        transform: scale(0.94, 1.06);
+        -ms-transform: scale(0.94, 1.06);
+        transform: scale(0.94, 1.06);
+    }
+    18% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+        -ms-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+    19% {
+        -webkit-transform: scale(0.96, 1.04);
+        transform: scale(0.96, 1.04);
+        -ms-transform: scale(0.96, 1.04);
+        transform: scale(0.96, 1.04);
+    }
+    20% {
+        -webkit-transform: scale(0.98, 1.02);
+        transform: scale(0.98, 1.02);
+        -ms-transform: scale(0.98, 1.02);
+        transform: scale(0.98, 1.02);
+    }
+    21% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    22% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    23% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    24% {
+        -webkit-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+        -ms-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+    }
+    25% {
+        -webkit-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+        -ms-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+    }
+    26% {
+        -webkit-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+        -ms-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+    }
+    27% {
+        -webkit-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+        -ms-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+    }
+    28% {
+        -webkit-transform: scale(1.03, 0.97);
+        transform: scale(1.03, 0.97);
+        -ms-transform: scale(1.03, 0.97);
+        transform: scale(1.03, 0.97);
+    }
+    29% {
+        -webkit-transform: scale(1.03, 0.97);
+        transform: scale(1.03, 0.97);
+        -ms-transform: scale(1.03, 0.97);
+        transform: scale(1.03, 0.97);
+    }
+    30% {
+        -webkit-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+        -ms-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+    }
+    31% {
+        -webkit-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+        -ms-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+    }
+    32% {
+        -webkit-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+        -ms-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+    }
+    33% {
+        -webkit-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+        -ms-transform: scale(1.02, 0.98);
+        transform: scale(1.02, 0.98);
+    }
+    34% {
+        -webkit-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+        -ms-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+    }
+    35% {
+        -webkit-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+        -ms-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+    }
+    36% {
+        -webkit-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+        -ms-transform: scale(1.01, 0.99);
+        transform: scale(1.01, 0.99);
+    }
+    37% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    38% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    39% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    40% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    41% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    42% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    43% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    44% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    45% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    46% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    47% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    48% {
+        -webkit-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+        -ms-transform: scale(0.99, 1.01);
+        transform: scale(0.99, 1.01);
+    }
+    49% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}

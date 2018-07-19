@@ -1,0 +1,33 @@
+.vue-fade-enter-active,.vue-fade-leave-active {
+  opacity: 1;
+  transition: opacity linear 0.2s
+}
+.vue-fade-enter, .vue-fade-leave-to {
+  opacity: 0;
+}
+
+.vue-dialog-enter-active,.vue-dialog-leave-active {
+  opacity: 1;
+  transition-duration: 400ms;
+  transform: translate(-50%, -50%) scale(1)!important;
+  transition-property: transform, opacity!important;
+}
+.vue-dialog-enter, .vue-dialog-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.185)!important;
+}
+
+.vue-mask-enter, .vue-mask-leave-active {
+  opacity: 0;
+}
+.vue-mask-leave-active, .vue-mask-enter-active {
+  transition: opacity 300ms;
+}
+
+.router-slid-enter-active, .router-slid-leave-active {
+  transition: all .4s;
+}
+.router-slid-enter, .router-slid-leave-active {
+  transform: translate3d(2rem, 0, 0);
+  opacity: 0;
+}

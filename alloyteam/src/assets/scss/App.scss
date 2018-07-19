@@ -1,0 +1,28 @@
+@charset"utf-8";
+@import "public/MobileReset.scss";
+@import "public/FlexibleSassMethod.scss";
+@import "public/MobileSrollbar.scss";
+@import "public/Fonts.scss";
+// @import "public/MobileWap.scss";
+
+// size 375px size(width px)
+@function size($size) {
+  $width: 375;
+  $scale: 10;
+  @return ($size / $width * $scale) * 1rem;
+}
+$bg-c-1: #FFF;
+$bg-c-2: #200c41;
+$bg-c-3: #cc9729;
+$bg-c-4: #8dd9db;
+$bg-c-5: #33d0bf;
+$font-c-1: #494949;
+$font-c-2: #a0a0a0;
+$font-c-3: #b2b2b2;
+$font-c-4: #33d0bf;
+$main-color: #91D4DA;
+$border-color: rgba(0,0,0,0.16);
+$border: size(2) solid $border-color;
+html{width: 100%;height: 100%;}
+
+

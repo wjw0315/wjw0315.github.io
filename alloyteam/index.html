@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Vue</title>
+    <meta charset="utf-8">
+    <!-- 介绍 -->
+    <meta name="Keywords" content="" />
+    <meta name="description" content=""/>
+    <meta name="author" content="luuman">
+    <!-- 清除cache -->
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <!-- icon -->
+    <link rel="icon" href="/favicon.ico">
+    <!-- 移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="">
+    <style>
+        body{
+            padding: 0;background: #042d48;
+        }
+        #loading{position: fixed;height: 100%;width: 100%;display: inline-block;top: 0;left: 0;z-index: 999;overflow: hidden;}
+        #loading .center{width: 5rem;overflow: hidden;position: absolute;top: 50%;left: 50%;margin: -4rem -2.5rem;}
+        .bg{display:inline-block;width:5rem;height:5rem;border-radius:50%;overflow:hidden;background: linear-gradient(116deg, rgba(47, 54, 61, 0.17),rgba(72, 72, 72, 0.7));}
+        .boat{width: 50%;height: 50%;margin:1.25rem 0 0 1.25rem;-webkit-animation:boatswell 4s linear infinite;animation:boatswell 4s linear infinite}
+        .boat svg{width: 100%;height: 100%;}
+        .waves{position:relative;display:block;width:200rem;height:2.5rem;margin:-2rem 0 0 0;z-index:100;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjE1NSIgaGVpZ2h0PSI4NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDwhLS0gQ3JlYXRlZCB3aXRoIE1ldGhvZCBEcmF3IC0gaHR0cDovL2dpdGh1Yi5jb20vZHVvcGl4ZWwvTWV0aG9kLURyYXcvIC0tPgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5vbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI4NyIgd2lkdGg9IjE1NyIgeT0iLTEiIHg9Ii0xIi8+CiAgPGcgZGlzcGxheT0ibm9uZSIgb3ZlcmZsb3c9InZpc2libGUiIHk9IjAiIHg9IjAiIGhlaWdodD0iMTAwJSIgd2lkdGg9IjEwMCUiIGlkPSJjYW52YXNHcmlkIj4KICAgPHJlY3QgZmlsbD0idXJsKCNncmlkcGF0dGVybikiIHN0cm9rZS13aWR0aD0iMCIgeT0iMCIgeD0iMCIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSIvPgogIDwvZz4KIDwvZz4KIDxnPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8ZyBpZD0ic3ZnXzkiPgogICA8ZWxsaXBzZSByeT0iMjYiIHJ4PSIyNiIgaWQ9InN2Z18xIiBjeT0iMzMuNSIgY3g9IjM0LjUiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSIjZmZmIi8+CiAgIDxlbGxpcHNlIHJ5PSIyNiIgcng9IjI2IiBpZD0ic3ZnXzMiIGN5PSIzMy41IiBjeD0iNjMuODY4NDkzIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0iI2ZmZiIvPgogICA8ZWxsaXBzZSByeT0iMjYiIHJ4PSIyNiIgaWQ9InN2Z182IiBjeT0iMzMuNSIgY3g9IjkxLjcxODg4IiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0iI2ZmZiIvPgogICA8ZWxsaXBzZSByeT0iMjYiIHJ4PSIyNiIgaWQ9InN2Z183IiBjeT0iMzMuNSIgY3g9IjEyMS4wODczNzMiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSIjZmZmIi8+CiAgIDxyZWN0IGlkPSJzdmdfOCIgaGVpZ2h0PSI0NiIgd2lkdGg9IjE0MC4wMDAwMDYiIHk9IjMyLjUiIHg9IjcuNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9IiNmZmYiLz4KICA8L2c+CiA8L2c+Cjwvc3ZnPg==);
+            background-repeat:repeat-x;
+            background-size: 7.5rem;
+            -webkit-animation:sail 4s linear infinite;
+            animation:sail 4s linear infinite
+        }
+        #loading p{text-align: center;padding:10px 0 0 0;font-size:20px;color:#999;letter-spacing:1px}
+        [data-dpr="3"] #loading p{
+            font-size: 54px;
+        }
+        @-webkit-keyframes boatswell{0%{transform:translate3d(0,10%,0)}50%{transform:translate3d(0,-10%,0)}100%{transform:translate3d(0,10%,0)}}
+        @keyframes boatswell{0%{transform:translate3d(0,10%,0)}50%{transform:translate3d(0,-10%,0)}100%{transform:translate3d(0,10%,0)}}
+        @-webkit-keyframes sail{from{transform:translate3d(-25rem,0,0)}to{transform:translate3d(0,0,0)}}@keyframes sail{from{transform:translate3d(-25rem,0,0)}to{transform:translate3d(0,0,0)}}
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="center">
+            <div class="bg">
+                <div class="boat">
+                    <svg t="1494487039289" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="27360" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css"></style></defs><path d="M793.23136 72.566784c-39.512064 0-75.451392 15.268864-102.255616 40.218624-55.638016-25.808896-117.640192-40.218624-183.008256-40.218624s-127.37024 14.409728-183.008256 40.218624c-26.809344-24.94976-62.743552-40.218624-102.253568-40.218624-82.920448 0-150.137856 67.219456-150.137856 150.13888 0 39.51104 0 219.895808 0 285.264896 0 240.463872 194.93376 435.39968 435.39968 435.39968 240.466944 0 435.402752-194.935808 435.402752-435.39968 0-65.369088 0-245.753856 0-285.264896C943.369216 139.78624 876.14976 72.566784 793.23136 72.566784zM507.966464 853.987328c-144.277504 0-261.23776-115.51232-261.23776-258.00192 0-10.928128 0.695296-21.696512 2.02752-32.26624 69.080064 60.22144 159.8208 96.765952 259.21024 96.765952 99.390464 0 190.130176-36.544512 259.212288-96.765952 1.33632 10.569728 2.029568 21.338112 2.029568 32.26624C769.209344 738.476032 652.246016 853.987328 507.966464 853.987328zM859.969536 439.414784c-63.070208 40.05888-206.145536-89.649152-351.593472-89.649152S217.445376 478.418944 154.37824 438.361088c-27.35616-17.376256-23.581696-101.374976-23.581696-122.345472 0-20.955136 7.865344-44.862464 35.182592-62.227456 63.048704-40.07936 197.958656 43.242496 343.450624 43.242496 145.482752 0 281.156608-81.20832 344.211456-41.13408 27.326464 17.369088 31.638528 46.542848 31.638528 67.501056C885.280768 344.369152 887.323648 422.039552 859.969536 439.414784z" p-id="27361" fill="#ffffff"></path><path d="M226.720768 273.691648c-33.59232 0-60.821504 27.230208-60.821504 60.821504 0 33.591296 27.230208 60.821504 60.821504 60.821504 33.59232 0 60.821504-27.230208 60.821504-60.821504C287.543296 300.921856 260.314112 273.691648 226.720768 273.691648zM248.224768 323.428352c-8.015872 0-14.513152-6.498304-14.513152-14.514176s6.49728-14.514176 14.513152-14.514176 14.514176 6.498304 14.514176 14.514176S256.241664 323.428352 248.224768 323.428352z" p-id="27362" fill="#ffffff"></path><path d="M789.213184 273.691648c-33.593344 0-60.821504 27.230208-60.821504 60.821504 0 33.591296 27.230208 60.821504 60.821504 60.821504 33.591296 0 60.821504-27.230208 60.821504-60.821504C850.034688 300.921856 822.805504 273.691648 789.213184 273.691648zM810.717184 323.428352c-8.015872 0-14.514176-6.498304-14.514176-14.514176s6.498304-14.514176 14.514176-14.514176c8.014848 0 14.513152 6.498304 14.513152 14.514176S818.732032 323.428352 810.717184 323.428352z" p-id="27363" fill="#ffffff"></path></svg>
+                </div>
+            </div>
+            <div class="waves"></div>
+            <p>极速加载中...</p>
+        </div>
+    </div>
+    <div id="app"></div>
+<!--     <script src="https://qubyte.github.io/navbar/javascripts/navbar.js"></script>
+ --><!--     <script src="http://cdn.jsdelivr.net/eruda/1.2.2/eruda.min.js"></script>
+    <script>eruda.init();</script> -->
+</body>
+</html>
