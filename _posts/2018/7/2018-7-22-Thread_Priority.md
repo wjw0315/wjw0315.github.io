@@ -1,51 +1,51 @@
 ---
 layout:     post                  
-title:      Ïß³ÌÓÅÏÈ¼¶      
-subtitle:   Ïß³ÌÓÅÏÈ¼¶ÎÊÌâ          
+title:      çº¿ç¨‹ä¼˜å…ˆçº§      
+subtitle:   Thread_Priority          
 date:       2018-7-22             
 author:     Mr.W                   
 header-img: img/post-bg-rwd.jpg  
-keywords_post:  "²¢·¢ ¶àÏß³Ì"
+keywords_post:  "å¹¶å‘ å¤šçº¿ç¨‹"
 catalog: true                          
 tags:                             
-- Java²¢·¢
-- ¶àÏß³Ì
+- Javaå¹¶å‘
+- å¤šçº¿ç¨‹
 ---
   
->Ã¿¸öÏß³Ì¶¼ÓĞÒ»¸ö"ÓÅÏÈ¼¶"£¬ÓÅÏÈ¼¶¿ÉÒÔÓÃÕûÊı±íÊ¾£¬È¡Öµ·¶Î§Îª0~10£¬0Îª×îµÍÓÅÏÈ¼¶£¬10Î»×î¸ßÓÅÏÈ¼¶£¬µ±¾ö¶¨ÄÄ¸öÏß³ÌĞèÒªµ÷¶ÈÊ±£¬Ê×ÏÈ²é¿´ÊÇ·ñ´æÔÚÓÅÏÈ¼¶¸ßµÄ¿Éµ÷¶ÈÏß³Ì£¬Èç¹û´æÔÚ£¬¾Í´ÓÖĞÑ¡Ôñ½øĞĞµ÷¶È¡£µ±¾ö¶¨ÄÄ¸öÏß³ÌĞèÒªµ÷¶ÈÊ±£¬Ê×ÏÈ²é¿´ÊÇ·ñ´æÔÚÓÅÏÈ¼¶¸ßµÄ¿Éµ÷¶ÈÏß³Ì£¬Èç¹û´æÔÚ£¬¾Í´ÓÖĞÑ¡Ôñ½øĞĞµ÷¶È¡£µ±¸ÃÏß³ÌµÄÊ±¼äÆ¬µ½´ïÖ®ºó£¬ÏµÍ³²é¿´ÊÇ·ñ´æÔÚÁíÒ»¸öÓÅÏÈ¼¶±È½Ï¸ßµÄ¿Éµ÷¶ÈÏß³Ì£¬Èç¹û´æÔÚ¾Íµ÷¶È¡£ÕâÑùÒÀ´Î½øĞĞÅĞ¶Ïµ÷¶ÈÏß³Ì¡£
+>æ¯ä¸ªçº¿ç¨‹éƒ½æœ‰ä¸€ä¸ª"ä¼˜å…ˆçº§"ï¼Œä¼˜å…ˆçº§å¯ä»¥ç”¨æ•´æ•°è¡¨ç¤ºï¼Œå–å€¼èŒƒå›´ä¸º0~10ï¼Œ0ä¸ºæœ€ä½ä¼˜å…ˆçº§ï¼Œ10ä½æœ€é«˜ä¼˜å…ˆçº§ï¼Œå½“å†³å®šå“ªä¸ªçº¿ç¨‹éœ€è¦è°ƒåº¦æ—¶ï¼Œé¦–å…ˆæŸ¥çœ‹æ˜¯å¦å­˜åœ¨ä¼˜å…ˆçº§é«˜çš„å¯è°ƒåº¦çº¿ç¨‹ï¼Œå¦‚æœå­˜åœ¨ï¼Œå°±ä»ä¸­é€‰æ‹©è¿›è¡Œè°ƒåº¦ã€‚å½“å†³å®šå“ªä¸ªçº¿ç¨‹éœ€è¦è°ƒåº¦æ—¶ï¼Œé¦–å…ˆæŸ¥çœ‹æ˜¯å¦å­˜åœ¨ä¼˜å…ˆçº§é«˜çš„å¯è°ƒåº¦çº¿ç¨‹ï¼Œå¦‚æœå­˜åœ¨ï¼Œå°±ä»ä¸­é€‰æ‹©è¿›è¡Œè°ƒåº¦ã€‚å½“è¯¥çº¿ç¨‹çš„æ—¶é—´ç‰‡åˆ°è¾¾ä¹‹åï¼Œç³»ç»ŸæŸ¥çœ‹æ˜¯å¦å­˜åœ¨å¦ä¸€ä¸ªä¼˜å…ˆçº§æ¯”è¾ƒé«˜çš„å¯è°ƒåº¦çº¿ç¨‹ï¼Œå¦‚æœå­˜åœ¨å°±è°ƒåº¦ã€‚è¿™æ ·ä¾æ¬¡è¿›è¡Œåˆ¤æ–­è°ƒåº¦çº¿ç¨‹ã€‚
 
->ÏÂÃæÁ½ÖĞ·½Ê½ÊµÏÖÏß³ÌÓÅÏÈ¼¶ÅÅÁĞ--1¡¢¾²Ì¬³£Á¿±íÊ¾£»2¡¢ÓÃÊı×Ö±íÊ¾
+>ä¸‹é¢ä¸¤ä¸­æ–¹å¼å®ç°çº¿ç¨‹ä¼˜å…ˆçº§æ’åˆ—--1ã€é™æ€å¸¸é‡è¡¨ç¤ºï¼›2ã€ç”¨æ•°å­—è¡¨ç¤º
 
-# Ïß³ÌÓÅÏÈ¼¶ÊµÏÖ£º
+# çº¿ç¨‹ä¼˜å…ˆçº§å®ç°ï¼š
 
-(1)ThreadÀàÓĞÈı¸öÓÅÏÈ¼¶¾²Ì¬³£Á¿£ºMAX_PRIORITYÎª10£¬ÎªÏß³Ì×î¸ßÓÅÏÈ¼¶£»MIN_PRIORITYÈ¡ÖµÎª1£¬ÎªÏß³Ì×îµÍÓÅÏÈ¼¶£»NORM_PRIORITYÈ¡ÖµÎª5£¬ÎªÏß³ÌÖĞ¼äÎ»ÖÃµÄÓÅÏÈ¼¶¡£Ä¬ÈÏÇé¿öÏÂ£¬Ïß³ÌµÄÓÅÏÈ¼¶ÎªNORM_PRIORITY¡£
+(1)Threadç±»æœ‰ä¸‰ä¸ªä¼˜å…ˆçº§é™æ€å¸¸é‡ï¼šMAX_PRIORITYä¸º10ï¼Œä¸ºçº¿ç¨‹æœ€é«˜ä¼˜å…ˆçº§ï¼›MIN_PRIORITYå–å€¼ä¸º1ï¼Œä¸ºçº¿ç¨‹æœ€ä½ä¼˜å…ˆçº§ï¼›NORM_PRIORITYå–å€¼ä¸º5ï¼Œä¸ºçº¿ç¨‹ä¸­é—´ä½ç½®çš„ä¼˜å…ˆçº§ã€‚é»˜è®¤æƒ…å†µä¸‹ï¼Œçº¿ç¨‹çš„ä¼˜å…ˆçº§ä¸ºNORM_PRIORITYã€‚
 
-(2)JavaÖĞµÄÏß³ÌÔÚÍ¬µÈÇé¿öÏÂ£¬¶ÔÓÚÁ½¸öÍ¬Ê±Æô¶¯µÄÏß³Ì£¬ÓÅÏÈ¼¶¸ßµÄÏß³ÌÏÈ»ñÈ¡CPU×ÊÔ´£¬ÏÈ±»ÕæÕıÔËĞĞ£¬ÓÅÏÈ¼¶µÍµÄÏß³Ìºó»ñÈ¡CPU×ÊÔ´£¬ºó±»Ö´ĞĞ¡£ÌØÊâÇé¿öÔÚÓÚÏÖÔÚ¼ÆËã»ú¶¼ÊÇ¶àºË¶àÏß³ÌµÄÅäÖÃ£¬ÓĞ¿ÉÄÜÓÅÏÈ¼¶µÍµÄÏß³Ì±ÈÓÅÏÈ¼¶¸ßµÄÏß³ÌÏÈÔËĞĞ£¬ÓÅÏÈ¼¶¸ßµÄÏß³Ì¿ÉÄÜ±ÈÓÅÏÈ¼¶µÍµÄÏß³ÌºóÔËĞĞ£¬Ïß³ÌµÄÖ´ĞĞÏÈºó»¹ÊÇÓÉJavaĞéÄâ»úµ÷¶È¾ö¶¨µÄ¡£
+(2)Javaä¸­çš„çº¿ç¨‹åœ¨åŒç­‰æƒ…å†µä¸‹ï¼Œå¯¹äºä¸¤ä¸ªåŒæ—¶å¯åŠ¨çš„çº¿ç¨‹ï¼Œä¼˜å…ˆçº§é«˜çš„çº¿ç¨‹å…ˆè·å–CPUèµ„æºï¼Œå…ˆè¢«çœŸæ­£è¿è¡Œï¼Œä¼˜å…ˆçº§ä½çš„çº¿ç¨‹åè·å–CPUèµ„æºï¼Œåè¢«æ‰§è¡Œã€‚ç‰¹æ®Šæƒ…å†µåœ¨äºç°åœ¨è®¡ç®—æœºéƒ½æ˜¯å¤šæ ¸å¤šçº¿ç¨‹çš„é…ç½®ï¼Œæœ‰å¯èƒ½ä¼˜å…ˆçº§ä½çš„çº¿ç¨‹æ¯”ä¼˜å…ˆçº§é«˜çš„çº¿ç¨‹å…ˆè¿è¡Œï¼Œä¼˜å…ˆçº§é«˜çš„çº¿ç¨‹å¯èƒ½æ¯”ä¼˜å…ˆçº§ä½çš„çº¿ç¨‹åè¿è¡Œï¼Œçº¿ç¨‹çš„æ‰§è¡Œå…ˆåè¿˜æ˜¯ç”±Javaè™šæ‹Ÿæœºè°ƒåº¦å†³å®šçš„ã€‚
 
 ```
 class firstFamilyThread implements Runnable {
-	Thread thread;// ÉùÃ÷Ò»¸öÏß³Ì
+	Thread thread;// å£°æ˜ä¸€ä¸ªçº¿ç¨‹
 	public firstFamilyThread() {
 	}
  
-	public firstFamilyThread(String name) {// ¹¹Ôì·½·¨³õÊ¼»¯Ò»¸öÏß³Ì
-		thread = new Thread(this, name); // ²ÎÊı1 ÊÇÒªµ÷ÓÃµÄÏß³Ìthread£¬ ²ÎÊı2
-											// ÊÇÒªµ÷ÓÃµÄÏß³ÌthreadµÄÃû×Ö
+	public firstFamilyThread(String name) {// æ„é€ æ–¹æ³•åˆå§‹åŒ–ä¸€ä¸ªçº¿ç¨‹
+		thread = new Thread(this, name); // å‚æ•°1 æ˜¯è¦è°ƒç”¨çš„çº¿ç¨‹threadï¼Œ å‚æ•°2
+											// æ˜¯è¦è°ƒç”¨çš„çº¿ç¨‹threadçš„åå­—
 	}
  
 	@Override
 	public void run() {
-		System.out.println("µÚÒ»×é£º" + thread.getName());// »ñµÃÏß³ÌµÄÃû³Æ
+		System.out.println("ç¬¬ä¸€ç»„ï¼š" + thread.getName());// è·å¾—çº¿ç¨‹çš„åç§°
 	}
  
-	public void startThreadByLevel() {// ¸Ã·½·¨´´½¨5¸öÏß³Ì£¬²¢¸÷¸³Óè²»Í¬µÄÓÅÏÈ¼¶
-		// ÊµÀı»¯5¸öÀà¶ÔÏó£¬ÔÚµ÷ÓÃµÄÒ»²Î¹¹ÔìÆ÷ÖĞ´´½¨Ïß³Ì
+	public void startThreadByLevel() {// è¯¥æ–¹æ³•åˆ›å»º5ä¸ªçº¿ç¨‹ï¼Œå¹¶å„èµ‹äºˆä¸åŒçš„ä¼˜å…ˆçº§
+		// å®ä¾‹åŒ–5ä¸ªç±»å¯¹è±¡ï¼Œåœ¨è°ƒç”¨çš„ä¸€å‚æ„é€ å™¨ä¸­åˆ›å»ºçº¿ç¨‹
 		firstFamilyThread f1 = new firstFamilyThread("5");
 		firstFamilyThread f2 = new firstFamilyThread("4");
 		firstFamilyThread f3 = new firstFamilyThread("3");
 		firstFamilyThread f4 = new firstFamilyThread("2");
 		firstFamilyThread f5 = new firstFamilyThread("1");
-		// ÉèÖÃÏß³ÌÓÅÏÈ¼¶-µ÷ÓÃÈ«¾Ö±äÁ¿thread£¬È»ºóÉèÖÃÓÅÏÈ¼¶
+		// è®¾ç½®çº¿ç¨‹ä¼˜å…ˆçº§-è°ƒç”¨å…¨å±€å˜é‡threadï¼Œç„¶åè®¾ç½®ä¼˜å…ˆçº§
 		f1.thread.setPriority(Thread.MAX_PRIORITY);//MAX_PRIORITY 10
 		f2.thread.setPriority(Thread.MAX_PRIORITY-1);//9
 		f3.thread.setPriority(Thread.NORM_PRIORITY);//NORM_PRIORITY 5
@@ -59,34 +59,34 @@ class firstFamilyThread implements Runnable {
 		try {
 			f5.thread.join();
 		} catch (InterruptedException e) {
-			System.out.println("µÈ´ıÏß³Ì½áÊø³ö´í£º "+e.getMessage());
+			System.out.println("ç­‰å¾…çº¿ç¨‹ç»“æŸå‡ºé”™ï¼š "+e.getMessage());
 		}
 	}
  
 }
 class secondFamilyThread implements Runnable {
-	Thread thread;// ÉùÃ÷Ò»¸öÏß³Ì
+	Thread thread;// å£°æ˜ä¸€ä¸ªçº¿ç¨‹
 	public secondFamilyThread() {
 	}
  
-	public secondFamilyThread(String name) {// ¹¹Ôì·½·¨³õÊ¼»¯Ò»¸öÏß³Ì
-		thread = new Thread(this, name); // ²ÎÊı1 ÊÇÒªµ÷ÓÃµÄÏß³Ìthread£¬ ²ÎÊı2
-											// ÊÇÒªµ÷ÓÃµÄÏß³ÌthreadµÄÃû×Ö
+	public secondFamilyThread(String name) {// æ„é€ æ–¹æ³•åˆå§‹åŒ–ä¸€ä¸ªçº¿ç¨‹
+		thread = new Thread(this, name); // å‚æ•°1 æ˜¯è¦è°ƒç”¨çš„çº¿ç¨‹threadï¼Œ å‚æ•°2
+											// æ˜¯è¦è°ƒç”¨çš„çº¿ç¨‹threadçš„åå­—
 	}
  
 	@Override
 	public void run() {
-		System.out.println("µÚ¶ş×éÔ±£º" + thread.getName());// »ñµÃÏß³ÌµÄÃû³Æ
+		System.out.println("ç¬¬äºŒç»„å‘˜ï¼š" + thread.getName());// è·å¾—çº¿ç¨‹çš„åç§°
 	}
  
-	public void startThreadByLevel() {// ¸Ã·½·¨´´½¨5¸öÏß³Ì£¬²¢¸÷¸³Óè²»Í¬µÄÓÅÏÈ¼¶
-		// ÊµÀı»¯5¸öÀà¶ÔÏó£¬ÔÚµ÷ÓÃµÄÒ»²Î¹¹ÔìÆ÷ÖĞ´´½¨Ïß³Ì
+	public void startThreadByLevel() {// è¯¥æ–¹æ³•åˆ›å»º5ä¸ªçº¿ç¨‹ï¼Œå¹¶å„èµ‹äºˆä¸åŒçš„ä¼˜å…ˆçº§
+		// å®ä¾‹åŒ–5ä¸ªç±»å¯¹è±¡ï¼Œåœ¨è°ƒç”¨çš„ä¸€å‚æ„é€ å™¨ä¸­åˆ›å»ºçº¿ç¨‹
 		secondFamilyThread s1 = new secondFamilyThread("5");
 		secondFamilyThread s2 = new secondFamilyThread("4");
 		secondFamilyThread s3 = new secondFamilyThread("3");
 		secondFamilyThread s4 = new secondFamilyThread("2");
 		secondFamilyThread s5 = new secondFamilyThread("1");
-		// ÉèÖÃÏß³ÌÓÅÏÈ¼¶-µ÷ÓÃÈ«¾Ö±äÁ¿thread£¬È»ºóÉèÖÃÓÅÏÈ¼¶
+		// è®¾ç½®çº¿ç¨‹ä¼˜å…ˆçº§-è°ƒç”¨å…¨å±€å˜é‡threadï¼Œç„¶åè®¾ç½®ä¼˜å…ˆçº§
 		s1.thread.setPriority(10);//MAX_PRIORITY 10
 		s2.thread.setPriority(9);//9
 		s3.thread.setPriority(5);//NORM_PRIORITY 5
@@ -100,19 +100,19 @@ class secondFamilyThread implements Runnable {
 		try {
 			s5.thread.join();
 		} catch (InterruptedException e) {
-			System.out.println("µÈ´ıÏß³Ì½áÊø³ö´í£º "+e.getMessage());
+			System.out.println("ç­‰å¾…çº¿ç¨‹ç»“æŸå‡ºé”™ï¼š "+e.getMessage());
 		}
 	}
  
 }
-public class TextPriorityLevel extends Thread {// ²Ù×÷ÔËÓÃÓÅÏÈ¼¶ÊµÏÖ
+public class TextPriorityLevel extends Thread {// æ“ä½œè¿ç”¨ä¼˜å…ˆçº§å®ç°
 	public static void main(String[] args) {
-		System.out.println("ÊµÏÖRunnable½Ó¿Ú£¬¸ù¾İ¾²Ì¬µÈ¼¶³£Á¿ÊµÏÖÏß³ÌÓÅÏÈ¼¶");
+		System.out.println("å®ç°Runnableæ¥å£ï¼Œæ ¹æ®é™æ€ç­‰çº§å¸¸é‡å®ç°çº¿ç¨‹ä¼˜å…ˆçº§");
 		new firstFamilyThread().startThreadByLevel();
-		System.out.println("ÊµÏÖRunnable½Ó¿Ú£¬¸ù¾İÊı×Ö´Ó¸ßµ½µÍÊµÏÖÏß³ÌÓÅÏÈ¼¶");
+		System.out.println("å®ç°Runnableæ¥å£ï¼Œæ ¹æ®æ•°å­—ä»é«˜åˆ°ä½å®ç°çº¿ç¨‹ä¼˜å…ˆçº§");
 		new secondFamilyThread().startThreadByLevel();
 	}
 }
 ```
 
-½á¹û¿ÉÄÜ»á³öÏÖÒ»Ğ©Æ«²î£¬µ«ÊÇ´óÖÂ¶¼ÊÇ×ñÑ­ÁËÏß³ÌµÄÓÅÏÈ¼¶
+ç»“æœå¯èƒ½ä¼šå‡ºç°ä¸€äº›åå·®ï¼Œä½†æ˜¯å¤§è‡´éƒ½æ˜¯éµå¾ªäº†çº¿ç¨‹çš„ä¼˜å…ˆçº§
