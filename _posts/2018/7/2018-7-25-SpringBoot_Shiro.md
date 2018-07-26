@@ -1,90 +1,88 @@
 ---
 layout:     post                  
-title:      springbootÕûºÏshiro-µÇÂ¼ÈÏÖ¤ºÍÈ¨ÏŞ¹ÜÀí(1)
-subtitle:   SpringBoot_shiro         
+title:      springbootæ•´åˆshiro-ç™»å½•è®¤è¯å’Œæƒé™ç®¡ç†(1)        
 date:       2018-7-25             
 author:     Mr.W                   
 header-img: img/post-bg-rwd.jpg  
-keywords_post:  "Shiro"
-catalog: true                          
+category: springboot                     
 tags:                             
 - SpringBoot 
 - Shiro
 ---
   
-ÕâÆªÎÄÕÂÎÒÃÇÀ´Ñ§Ï°ÈçºÎÊ¹ÓÃSpring Boot¼¯³ÉApache Shiro¡£»¥ÁªÍøµÄ°²È«ĞÔÓÈÎªÖØÒª¡£ÔÚJavaÁìÓòÒ»°ãÓĞSpring Security¡¢Apache ShiroµÈ°²È«¿ò¼Ü£¬µ«ÊÇÓÉÓÚSpring Security¹ıÓÚÅÓ´óºÍ¸´ÔÓ£¬´ó¶àÊı¹«Ë¾»áÑ¡ÔñApache ShiroÀ´Ê¹ÓÃ£¬ÕâÆªÎÄÕÂ»áÏÈ½éÉÜÒ»ÏÂApache Shiro£¬ÔÚ½áºÏSpring Boot¸ø³öÊ¹ÓÃ°¸Àı¡£
+è¿™ç¯‡æ–‡ç« æˆ‘ä»¬æ¥å­¦ä¹ å¦‚ä½•ä½¿ç”¨Spring Booté›†æˆApache Shiroã€‚äº’è”ç½‘çš„å®‰å…¨æ€§å°¤ä¸ºé‡è¦ã€‚åœ¨Javaé¢†åŸŸä¸€èˆ¬æœ‰Spring Securityã€Apache Shiroç­‰å®‰å…¨æ¡†æ¶ï¼Œä½†æ˜¯ç”±äºSpring Securityè¿‡äºåºå¤§å’Œå¤æ‚ï¼Œå¤§å¤šæ•°å…¬å¸ä¼šé€‰æ‹©Apache Shiroæ¥ä½¿ç”¨ï¼Œè¿™ç¯‡æ–‡ç« ä¼šå…ˆä»‹ç»ä¸€ä¸‹Apache Shiroï¼Œåœ¨ç»“åˆSpring Bootç»™å‡ºä½¿ç”¨æ¡ˆä¾‹ã€‚
 
 
 ## Apache Shiro
 
-### Ê²Ã´ÊÇ Apache Shiro? 
+### ä»€ä¹ˆæ˜¯ Apache Shiro? 
 
-Apache ShiroÊÇÒ»¸ö¹¦ÄÜÇ¿´ó¡¢Áé»îµÄ£¬¿ªÔ´µÄ°²È«¿ò¼Ü¡£Ëü¿ÉÒÔ¸É¾»ÀûÂäµØ´¦ÀíÉí·İÑéÖ¤¡¢ÊÚÈ¨¡¢ÆóÒµ»á»°¹ÜÀíºÍ¼ÓÃÜ¡£
+Apache Shiroæ˜¯ä¸€ä¸ªåŠŸèƒ½å¼ºå¤§ã€çµæ´»çš„ï¼Œå¼€æºçš„å®‰å…¨æ¡†æ¶ã€‚å®ƒå¯ä»¥å¹²å‡€åˆ©è½åœ°å¤„ç†èº«ä»½éªŒè¯ã€æˆæƒã€ä¼ä¸šä¼šè¯ç®¡ç†å’ŒåŠ å¯†ã€‚
 
-Apache ShiroµÄÊ×ÒªÄ¿±êÊÇÒ×ÓÚÊ¹ÓÃºÍÀí½â¡£°²È«Í¨³£ºÜ¸´ÔÓ£¬ÉõÖÁÈÃÈË¸Ğµ½ºÜÍ´¿à£¬µ«ÊÇShiroÈ´²»ÊÇÕâÑù×ÓµÄ¡£Ò»¸öºÃµÄ°²È«¿ò¼ÜÓ¦¸ÃÆÁ±Î¸´ÔÓĞÔ£¬ÏòÍâ±©Â¶¼òµ¥¡¢Ö±¹ÛµÄAPI£¬À´¼ò»¯¿ª·¢ÈËÔ±ÊµÏÖÓ¦ÓÃ³ÌĞò°²È«Ëù»¨·ÑµÄÊ±¼äºÍ¾«Á¦¡£
+Apache Shiroçš„é¦–è¦ç›®æ ‡æ˜¯æ˜“äºä½¿ç”¨å’Œç†è§£ã€‚å®‰å…¨é€šå¸¸å¾ˆå¤æ‚ï¼Œç”šè‡³è®©äººæ„Ÿåˆ°å¾ˆç—›è‹¦ï¼Œä½†æ˜¯Shiroå´ä¸æ˜¯è¿™æ ·å­çš„ã€‚ä¸€ä¸ªå¥½çš„å®‰å…¨æ¡†æ¶åº”è¯¥å±è”½å¤æ‚æ€§ï¼Œå‘å¤–æš´éœ²ç®€å•ã€ç›´è§‚çš„APIï¼Œæ¥ç®€åŒ–å¼€å‘äººå‘˜å®ç°åº”ç”¨ç¨‹åºå®‰å…¨æ‰€èŠ±è´¹çš„æ—¶é—´å’Œç²¾åŠ›ã€‚
 
-ShiroÄÜ×öÊ²Ã´ÄØ£¿
+Shiroèƒ½åšä»€ä¹ˆå‘¢ï¼Ÿ
 
-* ÑéÖ¤ÓÃ»§Éí·İ
-* ÓÃ»§·ÃÎÊÈ¨ÏŞ¿ØÖÆ£¬±ÈÈç£º1¡¢ÅĞ¶ÏÓÃ»§ÊÇ·ñ·ÖÅäÁËÒ»¶¨µÄ°²È«½ÇÉ«¡£2¡¢ÅĞ¶ÏÓÃ»§ÊÇ·ñ±»ÊÚÓèÍê³ÉÄ³¸ö²Ù×÷µÄÈ¨ÏŞ
-* ÔÚ·Ç web »ò EJB ÈİÆ÷µÄ»·¾³ÏÂ¿ÉÒÔÈÎÒâÊ¹ÓÃSession API
-* ¿ÉÒÔÏìÓ¦ÈÏÖ¤¡¢·ÃÎÊ¿ØÖÆ£¬»òÕß Session ÉúÃüÖÜÆÚÖĞ·¢ÉúµÄÊÂ¼ş
-* ¿É½«Ò»¸ö»òÒÔÉÏÓÃ»§°²È«Êı¾İÔ´Êı¾İ×éºÏ³ÉÒ»¸ö¸´ºÏµÄÓÃ»§ "view"(ÊÓÍ¼)
-* Ö§³Öµ¥µãµÇÂ¼(SSO)¹¦ÄÜ
-* Ö§³ÖÌá¹©¡°Remember Me¡±·şÎñ£¬»ñÈ¡ÓÃ»§¹ØÁªĞÅÏ¢¶øÎŞĞèµÇÂ¼  
-¡­ 
+* éªŒè¯ç”¨æˆ·èº«ä»½
+* ç”¨æˆ·è®¿é—®æƒé™æ§åˆ¶ï¼Œæ¯”å¦‚ï¼š1ã€åˆ¤æ–­ç”¨æˆ·æ˜¯å¦åˆ†é…äº†ä¸€å®šçš„å®‰å…¨è§’è‰²ã€‚2ã€åˆ¤æ–­ç”¨æˆ·æ˜¯å¦è¢«æˆäºˆå®ŒæˆæŸä¸ªæ“ä½œçš„æƒé™
+* åœ¨é web æˆ– EJB å®¹å™¨çš„ç¯å¢ƒä¸‹å¯ä»¥ä»»æ„ä½¿ç”¨Session API
+* å¯ä»¥å“åº”è®¤è¯ã€è®¿é—®æ§åˆ¶ï¼Œæˆ–è€… Session ç”Ÿå‘½å‘¨æœŸä¸­å‘ç”Ÿçš„äº‹ä»¶
+* å¯å°†ä¸€ä¸ªæˆ–ä»¥ä¸Šç”¨æˆ·å®‰å…¨æ•°æ®æºæ•°æ®ç»„åˆæˆä¸€ä¸ªå¤åˆçš„ç”¨æˆ· "view"(è§†å›¾)
+* æ”¯æŒå•ç‚¹ç™»å½•(SSO)åŠŸèƒ½
+* æ”¯æŒæä¾›â€œRemember Meâ€æœåŠ¡ï¼Œè·å–ç”¨æˆ·å…³è”ä¿¡æ¯è€Œæ— éœ€ç™»å½•  
+â€¦ 
 
-µÈµÈ¡ª¡ª¶¼¼¯³Éµ½Ò»¸öÓĞÄı¾ÛÁ¦µÄÒ×ÓÚÊ¹ÓÃµÄAPI¡£
+ç­‰ç­‰â€”â€”éƒ½é›†æˆåˆ°ä¸€ä¸ªæœ‰å‡èšåŠ›çš„æ˜“äºä½¿ç”¨çš„APIã€‚
 
-Shiro ÖÂÁ¦ÔÚËùÓĞÓ¦ÓÃ»·¾³ÏÂÊµÏÖÉÏÊö¹¦ÄÜ£¬Ğ¡µ½ÃüÁîĞĞÓ¦ÓÃ³ÌĞò£¬´óµ½ÆóÒµÓ¦ÓÃÖĞ£¬¶øÇÒ²»ĞèÒª½èÖúµÚÈı·½¿ò¼Ü¡¢ÈİÆ÷¡¢Ó¦ÓÃ·şÎñÆ÷µÈ¡£µ±È» Shiro µÄÄ¿µÄÊÇ¾¡Á¿µÄÈÚÈëµ½ÕâÑùµÄÓ¦ÓÃ»·¾³ÖĞÈ¥£¬µ«Ò²¿ÉÒÔÔÚËüÃÇÖ®ÍâµÄÈÎºÎ»·¾³ÏÂ¿ªÏä¼´ÓÃ¡£
+Shiro è‡´åŠ›åœ¨æ‰€æœ‰åº”ç”¨ç¯å¢ƒä¸‹å®ç°ä¸Šè¿°åŠŸèƒ½ï¼Œå°åˆ°å‘½ä»¤è¡Œåº”ç”¨ç¨‹åºï¼Œå¤§åˆ°ä¼ä¸šåº”ç”¨ä¸­ï¼Œè€Œä¸”ä¸éœ€è¦å€ŸåŠ©ç¬¬ä¸‰æ–¹æ¡†æ¶ã€å®¹å™¨ã€åº”ç”¨æœåŠ¡å™¨ç­‰ã€‚å½“ç„¶ Shiro çš„ç›®çš„æ˜¯å°½é‡çš„èå…¥åˆ°è¿™æ ·çš„åº”ç”¨ç¯å¢ƒä¸­å»ï¼Œä½†ä¹Ÿå¯ä»¥åœ¨å®ƒä»¬ä¹‹å¤–çš„ä»»ä½•ç¯å¢ƒä¸‹å¼€ç®±å³ç”¨ã€‚
 
-### Apache Shiro Features ÌØĞÔ
+### Apache Shiro Features ç‰¹æ€§
 
-Apache ShiroÊÇÒ»¸öÈ«ÃæµÄ¡¢ÔÌº¬·á¸»¹¦ÄÜµÄ°²È«¿ò¼Ü¡£ÏÂÍ¼ÎªÃèÊöShiro¹¦ÄÜµÄ¿ò¼ÜÍ¼£º
+Apache Shiroæ˜¯ä¸€ä¸ªå…¨é¢çš„ã€è•´å«ä¸°å¯ŒåŠŸèƒ½çš„å®‰å…¨æ¡†æ¶ã€‚ä¸‹å›¾ä¸ºæè¿°ShiroåŠŸèƒ½çš„æ¡†æ¶å›¾ï¼š
 
  
 ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-25/1.png)
 
-Authentication£¨ÈÏÖ¤£©, Authorization£¨ÊÚÈ¨£©, Session Management£¨»á»°¹ÜÀí£©, Cryptography£¨¼ÓÃÜ£©±» Shiro ¿ò¼ÜµÄ¿ª·¢ÍÅ¶Ó³ÆÖ®ÎªÓ¦ÓÃ°²È«µÄËÄ´ó»ùÊ¯¡£ÄÇÃ´¾ÍÈÃÎÒÃÇÀ´¿´¿´ËüÃÇ°É£º
+Authenticationï¼ˆè®¤è¯ï¼‰, Authorizationï¼ˆæˆæƒï¼‰, Session Managementï¼ˆä¼šè¯ç®¡ç†ï¼‰, Cryptographyï¼ˆåŠ å¯†ï¼‰è¢« Shiro æ¡†æ¶çš„å¼€å‘å›¢é˜Ÿç§°ä¹‹ä¸ºåº”ç”¨å®‰å…¨çš„å››å¤§åŸºçŸ³ã€‚é‚£ä¹ˆå°±è®©æˆ‘ä»¬æ¥çœ‹çœ‹å®ƒä»¬å§ï¼š
 
-* **Authentication£¨ÈÏÖ¤£©£º**ÓÃ»§Éí·İÊ¶±ğ£¬Í¨³£±»³ÆÎªÓÃ»§¡°µÇÂ¼¡±
-* **Authorization£¨ÊÚÈ¨£©£º**·ÃÎÊ¿ØÖÆ¡£±ÈÈçÄ³¸öÓÃ»§ÊÇ·ñ¾ßÓĞÄ³¸ö²Ù×÷µÄÊ¹ÓÃÈ¨ÏŞ¡£
-* **Session Management£¨»á»°¹ÜÀí£©£º**ÌØ¶¨ÓÚÓÃ»§µÄ»á»°¹ÜÀí,ÉõÖÁÔÚ·Çweb »ò EJB Ó¦ÓÃ³ÌĞò¡£
-* **Cryptography£¨¼ÓÃÜ£©£º**ÔÚ¶ÔÊı¾İÔ´Ê¹ÓÃ¼ÓÃÜËã·¨¼ÓÃÜµÄÍ¬Ê±£¬±£Ö¤Ò×ÓÚÊ¹ÓÃ¡£
+* **Authenticationï¼ˆè®¤è¯ï¼‰ï¼š**ç”¨æˆ·èº«ä»½è¯†åˆ«ï¼Œé€šå¸¸è¢«ç§°ä¸ºç”¨æˆ·â€œç™»å½•â€
+* **Authorizationï¼ˆæˆæƒï¼‰ï¼š**è®¿é—®æ§åˆ¶ã€‚æ¯”å¦‚æŸä¸ªç”¨æˆ·æ˜¯å¦å…·æœ‰æŸä¸ªæ“ä½œçš„ä½¿ç”¨æƒé™ã€‚
+* **Session Managementï¼ˆä¼šè¯ç®¡ç†ï¼‰ï¼š**ç‰¹å®šäºç”¨æˆ·çš„ä¼šè¯ç®¡ç†,ç”šè‡³åœ¨éweb æˆ– EJB åº”ç”¨ç¨‹åºã€‚
+* **Cryptographyï¼ˆåŠ å¯†ï¼‰ï¼š**åœ¨å¯¹æ•°æ®æºä½¿ç”¨åŠ å¯†ç®—æ³•åŠ å¯†çš„åŒæ—¶ï¼Œä¿è¯æ˜“äºä½¿ç”¨ã€‚
 
-»¹ÓĞÆäËûµÄ¹¦ÄÜÀ´Ö§³ÖºÍ¼ÓÇ¿ÕâĞ©²»Í¬Ó¦ÓÃ»·¾³ÏÂ°²È«ÁìÓòµÄ¹Ø×¢µã¡£ÌØ±ğÊÇ¶ÔÒÔÏÂµÄ¹¦ÄÜÖ§³Ö£º
+è¿˜æœ‰å…¶ä»–çš„åŠŸèƒ½æ¥æ”¯æŒå’ŒåŠ å¼ºè¿™äº›ä¸åŒåº”ç”¨ç¯å¢ƒä¸‹å®‰å…¨é¢†åŸŸçš„å…³æ³¨ç‚¹ã€‚ç‰¹åˆ«æ˜¯å¯¹ä»¥ä¸‹çš„åŠŸèƒ½æ”¯æŒï¼š
 
-* WebÖ§³Ö£ºShiro Ìá¹©µÄ web Ö§³Ö api £¬¿ÉÒÔºÜÇáËÉµÄ±£»¤ web Ó¦ÓÃ³ÌĞòµÄ°²È«¡£
-* »º´æ£º»º´æÊÇ Apache Shiro ±£Ö¤°²È«²Ù×÷¿ìËÙ¡¢¸ßĞ§µÄÖØÒªÊÖ¶Î¡£
-* ²¢·¢£ºApache Shiro Ö§³Ö¶àÏß³ÌÓ¦ÓÃ³ÌĞòµÄ²¢·¢ÌØĞÔ¡£
-* ²âÊÔ£ºÖ§³Öµ¥Ôª²âÊÔºÍ¼¯³É²âÊÔ£¬È·±£´úÂëºÍÔ¤ÏëµÄÒ»Ñù°²È«¡£
-* "Run As"£ºÕâ¸ö¹¦ÄÜÔÊĞíÓÃ»§¼ÙÉèÁíÒ»¸öÓÃ»§µÄÉí·İ(ÔÚĞí¿ÉµÄÇ°ÌáÏÂ)¡£
-* "Remember Me"£º¿ç session ¼ÇÂ¼ÓÃ»§µÄÉí·İ£¬Ö»ÓĞÔÚÇ¿ÖÆĞèÒªÊ±²ÅĞèÒªµÇÂ¼¡£
+* Webæ”¯æŒï¼šShiro æä¾›çš„ web æ”¯æŒ api ï¼Œå¯ä»¥å¾ˆè½»æ¾çš„ä¿æŠ¤ web åº”ç”¨ç¨‹åºçš„å®‰å…¨ã€‚
+* ç¼“å­˜ï¼šç¼“å­˜æ˜¯ Apache Shiro ä¿è¯å®‰å…¨æ“ä½œå¿«é€Ÿã€é«˜æ•ˆçš„é‡è¦æ‰‹æ®µã€‚
+* å¹¶å‘ï¼šApache Shiro æ”¯æŒå¤šçº¿ç¨‹åº”ç”¨ç¨‹åºçš„å¹¶å‘ç‰¹æ€§ã€‚
+* æµ‹è¯•ï¼šæ”¯æŒå•å…ƒæµ‹è¯•å’Œé›†æˆæµ‹è¯•ï¼Œç¡®ä¿ä»£ç å’Œé¢„æƒ³çš„ä¸€æ ·å®‰å…¨ã€‚
+* "Run As"ï¼šè¿™ä¸ªåŠŸèƒ½å…è®¸ç”¨æˆ·å‡è®¾å¦ä¸€ä¸ªç”¨æˆ·çš„èº«ä»½(åœ¨è®¸å¯çš„å‰æä¸‹)ã€‚
+* "Remember Me"ï¼šè·¨ session è®°å½•ç”¨æˆ·çš„èº«ä»½ï¼Œåªæœ‰åœ¨å¼ºåˆ¶éœ€è¦æ—¶æ‰éœ€è¦ç™»å½•ã€‚
 
 
-> ×¢Òâ£º Shiro²»»áÈ¥Î¬»¤ÓÃ»§¡¢Î¬»¤È¨ÏŞ£¬ÕâĞ©ĞèÒªÎÒÃÇ×Ô¼ºÈ¥Éè¼Æ/Ìá¹©£¬È»ºóÍ¨¹ıÏàÓ¦µÄ½Ó¿Ú×¢Èë¸øShiro
+> æ³¨æ„ï¼š Shiroä¸ä¼šå»ç»´æŠ¤ç”¨æˆ·ã€ç»´æŠ¤æƒé™ï¼Œè¿™äº›éœ€è¦æˆ‘ä»¬è‡ªå·±å»è®¾è®¡/æä¾›ï¼Œç„¶åé€šè¿‡ç›¸åº”çš„æ¥å£æ³¨å…¥ç»™Shiro
 
-### High-Level Overview ¸ß¼¶¸ÅÊö
+### High-Level Overview é«˜çº§æ¦‚è¿°
 
-ÔÚ¸ÅÄî²ã£¬Shiro ¼Ü¹¹°üº¬Èı¸öÖ÷ÒªµÄÀíÄî£ºSubject,SecurityManagerºÍ Realm¡£ÏÂÃæµÄÍ¼Õ¹Ê¾ÁËÕâĞ©×é¼şÈçºÎÏà»¥×÷ÓÃ£¬ÎÒÃÇ½«ÔÚÏÂÃæÒÀ´Î¶ÔÆä½øĞĞÃèÊö¡£
+åœ¨æ¦‚å¿µå±‚ï¼ŒShiro æ¶æ„åŒ…å«ä¸‰ä¸ªä¸»è¦çš„ç†å¿µï¼šSubject,SecurityManagerå’Œ Realmã€‚ä¸‹é¢çš„å›¾å±•ç¤ºäº†è¿™äº›ç»„ä»¶å¦‚ä½•ç›¸äº’ä½œç”¨ï¼Œæˆ‘ä»¬å°†åœ¨ä¸‹é¢ä¾æ¬¡å¯¹å…¶è¿›è¡Œæè¿°ã€‚
 
  
 ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-25/2.png)
 
 
-- Subject£ºµ±Ç°ÓÃ»§£¬Subject ¿ÉÒÔÊÇÒ»¸öÈË£¬µ«Ò²¿ÉÒÔÊÇµÚÈı·½·şÎñ¡¢ÊØ»¤½ø³ÌÕÊ»§¡¢Ê±ÖÓÊØ»¤ÈÎÎñ»òÕßÆäËü--µ±Ç°ºÍÈí¼ş½»»¥µÄÈÎºÎÊÂ¼ş¡£
-- SecurityManager£º¹ÜÀíËùÓĞSubject£¬SecurityManager ÊÇ Shiro ¼Ü¹¹µÄºËĞÄ£¬ÅäºÏÄÚ²¿°²È«×é¼ş¹²Í¬×é³É°²È«É¡¡£
-- Realms£ºÓÃÓÚ½øĞĞÈ¨ÏŞĞÅÏ¢µÄÑéÖ¤£¬ÎÒÃÇ×Ô¼ºÊµÏÖ¡£Realm ±¾ÖÊÉÏÊÇÒ»¸öÌØ¶¨µÄ°²È« DAO£ºËü·â×°ÓëÊı¾İÔ´Á¬½ÓµÄÏ¸½Ú£¬µÃµ½Shiro ËùĞèµÄÏà¹ØµÄÊı¾İ¡£ÔÚÅäÖÃ Shiro µÄÊ±ºò£¬Äã±ØĞëÖ¸¶¨ÖÁÉÙÒ»¸öRealm À´ÊµÏÖÈÏÖ¤£¨authentication£©ºÍ/»òÊÚÈ¨£¨authorization£©¡£
+- Subjectï¼šå½“å‰ç”¨æˆ·ï¼ŒSubject å¯ä»¥æ˜¯ä¸€ä¸ªäººï¼Œä½†ä¹Ÿå¯ä»¥æ˜¯ç¬¬ä¸‰æ–¹æœåŠ¡ã€å®ˆæŠ¤è¿›ç¨‹å¸æˆ·ã€æ—¶é’Ÿå®ˆæŠ¤ä»»åŠ¡æˆ–è€…å…¶å®ƒ--å½“å‰å’Œè½¯ä»¶äº¤äº’çš„ä»»ä½•äº‹ä»¶ã€‚
+- SecurityManagerï¼šç®¡ç†æ‰€æœ‰Subjectï¼ŒSecurityManager æ˜¯ Shiro æ¶æ„çš„æ ¸å¿ƒï¼Œé…åˆå†…éƒ¨å®‰å…¨ç»„ä»¶å…±åŒç»„æˆå®‰å…¨ä¼ã€‚
+- Realmsï¼šç”¨äºè¿›è¡Œæƒé™ä¿¡æ¯çš„éªŒè¯ï¼Œæˆ‘ä»¬è‡ªå·±å®ç°ã€‚Realm æœ¬è´¨ä¸Šæ˜¯ä¸€ä¸ªç‰¹å®šçš„å®‰å…¨ DAOï¼šå®ƒå°è£…ä¸æ•°æ®æºè¿æ¥çš„ç»†èŠ‚ï¼Œå¾—åˆ°Shiro æ‰€éœ€çš„ç›¸å…³çš„æ•°æ®ã€‚åœ¨é…ç½® Shiro çš„æ—¶å€™ï¼Œä½ å¿…é¡»æŒ‡å®šè‡³å°‘ä¸€ä¸ªRealm æ¥å®ç°è®¤è¯ï¼ˆauthenticationï¼‰å’Œ/æˆ–æˆæƒï¼ˆauthorizationï¼‰ã€‚
 
-ÎÒÃÇĞèÒªÊµÏÖRealmsµÄAuthentication ºÍ Authorization¡£ÆäÖĞ Authentication ÊÇÓÃÀ´ÑéÖ¤ÓÃ»§Éí·İ£¬Authorization ÊÇÊÚÈ¨·ÃÎÊ¿ØÖÆ£¬ÓÃÓÚ¶ÔÓÃ»§½øĞĞµÄ²Ù×÷ÊÚÈ¨£¬Ö¤Ã÷¸ÃÓÃ»§ÊÇ·ñÔÊĞí½øĞĞµ±Ç°²Ù×÷£¬Èç·ÃÎÊÄ³¸öÁ´½Ó£¬Ä³¸ö×ÊÔ´ÎÄ¼şµÈ¡£
+æˆ‘ä»¬éœ€è¦å®ç°Realmsçš„Authentication å’Œ Authorizationã€‚å…¶ä¸­ Authentication æ˜¯ç”¨æ¥éªŒè¯ç”¨æˆ·èº«ä»½ï¼ŒAuthorization æ˜¯æˆæƒè®¿é—®æ§åˆ¶ï¼Œç”¨äºå¯¹ç”¨æˆ·è¿›è¡Œçš„æ“ä½œæˆæƒï¼Œè¯æ˜è¯¥ç”¨æˆ·æ˜¯å¦å…è®¸è¿›è¡Œå½“å‰æ“ä½œï¼Œå¦‚è®¿é—®æŸä¸ªé“¾æ¥ï¼ŒæŸä¸ªèµ„æºæ–‡ä»¶ç­‰ã€‚
 
 
 ## Demo
 
 
-### »ù´¡ĞÅÏ¢
+### åŸºç¡€ä¿¡æ¯
 
-**pom°üÒÀÀµ**
+**pomåŒ…ä¾èµ–**
 
 ``` xml
 <dependencies>
@@ -118,9 +116,9 @@ Authentication£¨ÈÏÖ¤£©, Authorization£¨ÊÚÈ¨£©, Session Management£¨»á»°¹ÜÀí£©, C
 	</dependencies>
 ```
 
-ÖØµãÊÇ shiro-spring°ü
+é‡ç‚¹æ˜¯ shiro-springåŒ…
 
-**ÅäÖÃÎÄ¼ş**
+**é…ç½®æ–‡ä»¶**
 
 ``` xml
 spring:
@@ -146,21 +144,21 @@ spring:
        mode: LEGACYHTML5
 ```
 
-thymeleafµÄÅäÖÃÊÇÎªÁËÈ¥µôhtmlµÄĞ£Ñé
+thymeleafçš„é…ç½®æ˜¯ä¸ºäº†å»æ‰htmlçš„æ ¡éªŒ
 
 
-**Ò³Ãæ**
+**é¡µé¢**
 
-ĞÂ½¨ÁËÁù¸öÒ³ÃæÓÃÀ´²âÊÔ£º
+æ–°å»ºäº†å…­ä¸ªé¡µé¢ç”¨æ¥æµ‹è¯•ï¼š
 
-- index.html £ºÊ×Ò³
-- login.html  £ºµÇÂ¼Ò³
-- userInfo.html £º ÓÃ»§ĞÅÏ¢Ò³Ãæ
-- userInfoAdd.html £ºÌí¼ÓÓÃ»§Ò³Ãæ
-- userInfoDel.html £ºÉ¾³ıÓÃ»§Ò³Ãæ
-- 403.html £º Ã»ÓĞÈ¨ÏŞµÄÒ³Ãæ
+- index.html ï¼šé¦–é¡µ
+- login.html  ï¼šç™»å½•é¡µ
+- userInfo.html ï¼š ç”¨æˆ·ä¿¡æ¯é¡µé¢
+- userInfoAdd.html ï¼šæ·»åŠ ç”¨æˆ·é¡µé¢
+- userInfoDel.html ï¼šåˆ é™¤ç”¨æˆ·é¡µé¢
+- 403.html ï¼š æ²¡æœ‰æƒé™çš„é¡µé¢
 
-³ı¹ıµÇÂ¼Ò³ÃæÆäËü¶¼ºÜ¼òµ¥£¬´ó¸ÅÈçÏÂ£º
+é™¤è¿‡ç™»å½•é¡µé¢å…¶å®ƒéƒ½å¾ˆç®€å•ï¼Œå¤§æ¦‚å¦‚ä¸‹ï¼š
 
 ``` html
 <!DOCTYPE html>
@@ -177,11 +175,11 @@ thymeleafµÄÅäÖÃÊÇÎªÁËÈ¥µôhtmlµÄĞ£Ñé
 
 ### RBAC
 
-RBAC ÊÇ»ùÓÚ½ÇÉ«µÄ·ÃÎÊ¿ØÖÆ£¨Role-Based Access Control £©ÔÚ RBAC ÖĞ£¬È¨ÏŞÓë½ÇÉ«Ïà¹ØÁª£¬ÓÃ»§Í¨¹ı³ÉÎªÊÊµ±½ÇÉ«µÄ³ÉÔ±¶øµÃµ½ÕâĞ©½ÇÉ«µÄÈ¨ÏŞ¡£Õâ¾Í¼«´óµØ¼ò»¯ÁËÈ¨ÏŞµÄ¹ÜÀí¡£ÕâÑù¹ÜÀí¶¼ÊÇ²ã¼¶Ïà»¥ÒÀÀµµÄ£¬È¨ÏŞ¸³Óè¸ø½ÇÉ«£¬¶ø°Ñ½ÇÉ«ÓÖ¸³ÓèÓÃ»§£¬ÕâÑùµÄÈ¨ÏŞÉè¼ÆºÜÇå³ş£¬¹ÜÀíÆğÀ´ºÜ·½±ã¡£
+RBAC æ˜¯åŸºäºè§’è‰²çš„è®¿é—®æ§åˆ¶ï¼ˆRole-Based Access Control ï¼‰åœ¨ RBAC ä¸­ï¼Œæƒé™ä¸è§’è‰²ç›¸å…³è”ï¼Œç”¨æˆ·é€šè¿‡æˆä¸ºé€‚å½“è§’è‰²çš„æˆå‘˜è€Œå¾—åˆ°è¿™äº›è§’è‰²çš„æƒé™ã€‚è¿™å°±æå¤§åœ°ç®€åŒ–äº†æƒé™çš„ç®¡ç†ã€‚è¿™æ ·ç®¡ç†éƒ½æ˜¯å±‚çº§ç›¸äº’ä¾èµ–çš„ï¼Œæƒé™èµ‹äºˆç»™è§’è‰²ï¼Œè€ŒæŠŠè§’è‰²åˆèµ‹äºˆç”¨æˆ·ï¼Œè¿™æ ·çš„æƒé™è®¾è®¡å¾ˆæ¸…æ¥šï¼Œç®¡ç†èµ·æ¥å¾ˆæ–¹ä¾¿ã€‚
 
-²ÉÓÃjpa¼¼ÊõÀ´×Ô¶¯Éú³É»ù´¡±í¸ñ£¬¶ÔÓ¦µÄentityÈçÏÂ£º
+é‡‡ç”¨jpaæŠ€æœ¯æ¥è‡ªåŠ¨ç”ŸæˆåŸºç¡€è¡¨æ ¼ï¼Œå¯¹åº”çš„entityå¦‚ä¸‹ï¼š
 
-ÓÃ»§ĞÅÏ¢
+ç”¨æˆ·ä¿¡æ¯
 
 ``` java
 @Entity
@@ -190,78 +188,78 @@ public class UserInfo implements Serializable {
     @GeneratedValue
     private Integer uid;
     @Column(unique =true)
-    private String username;//ÕÊºÅ
-    private String name;//Ãû³Æ£¨êÇ³Æ»òÕßÕæÊµĞÕÃû£¬²»Í¬ÏµÍ³²»Í¬¶¨Òå£©
-    private String password; //ÃÜÂë;
-    private String salt;//¼ÓÃÜÃÜÂëµÄÑÎ
-    private byte state;//ÓÃ»§×´Ì¬,0:´´½¨Î´ÈÏÖ¤£¨±ÈÈçÃ»ÓĞ¼¤»î£¬Ã»ÓĞÊäÈëÑéÖ¤ÂëµÈµÈ£©--µÈ´ıÑéÖ¤µÄÓÃ»§ , 1:Õı³£×´Ì¬,2£ºÓÃ»§±»Ëø¶¨.
-    @ManyToMany(fetch= FetchType.EAGER)//Á¢¼´´ÓÊı¾İ¿âÖĞ½øĞĞ¼ÓÔØÊı¾İ;
+    private String username;//å¸å·
+    private String name;//åç§°ï¼ˆæ˜µç§°æˆ–è€…çœŸå®å§“åï¼Œä¸åŒç³»ç»Ÿä¸åŒå®šä¹‰ï¼‰
+    private String password; //å¯†ç ;
+    private String salt;//åŠ å¯†å¯†ç çš„ç›
+    private byte state;//ç”¨æˆ·çŠ¶æ€,0:åˆ›å»ºæœªè®¤è¯ï¼ˆæ¯”å¦‚æ²¡æœ‰æ¿€æ´»ï¼Œæ²¡æœ‰è¾“å…¥éªŒè¯ç ç­‰ç­‰ï¼‰--ç­‰å¾…éªŒè¯çš„ç”¨æˆ· , 1:æ­£å¸¸çŠ¶æ€,2ï¼šç”¨æˆ·è¢«é”å®š.
+    @ManyToMany(fetch= FetchType.EAGER)//ç«‹å³ä»æ•°æ®åº“ä¸­è¿›è¡ŒåŠ è½½æ•°æ®;
     @JoinTable(name = "SysUserRole", joinColumns = { @JoinColumn(name = "uid") }, inverseJoinColumns ={@JoinColumn(name = "roleId") })
-    private List<SysRole> roleList;// Ò»¸öÓÃ»§¾ßÓĞ¶à¸ö½ÇÉ«
+    private List<SysRole> roleList;// ä¸€ä¸ªç”¨æˆ·å…·æœ‰å¤šä¸ªè§’è‰²
 
-    // Ê¡ÂÔ get set ·½·¨
+    // çœç•¥ get set æ–¹æ³•
  }
 ```
 
 
-½ÇÉ«ĞÅÏ¢
+è§’è‰²ä¿¡æ¯
 
 ``` java
 @Entity
 public class SysRole {
     @Id@GeneratedValue
-    private Integer id; // ±àºÅ
-    private String role; // ½ÇÉ«±êÊ¶³ÌĞòÖĞÅĞ¶ÏÊ¹ÓÃ,Èç"admin",Õâ¸öÊÇÎ¨Ò»µÄ:
-    private String description; // ½ÇÉ«ÃèÊö,UI½çÃæÏÔÊ¾Ê¹ÓÃ
-    private Boolean available = Boolean.FALSE; // ÊÇ·ñ¿ÉÓÃ,Èç¹û²»¿ÉÓÃ½«²»»áÌí¼Ó¸øÓÃ»§
+    private Integer id; // ç¼–å·
+    private String role; // è§’è‰²æ ‡è¯†ç¨‹åºä¸­åˆ¤æ–­ä½¿ç”¨,å¦‚"admin",è¿™ä¸ªæ˜¯å”¯ä¸€çš„:
+    private String description; // è§’è‰²æè¿°,UIç•Œé¢æ˜¾ç¤ºä½¿ç”¨
+    private Boolean available = Boolean.FALSE; // æ˜¯å¦å¯ç”¨,å¦‚æœä¸å¯ç”¨å°†ä¸ä¼šæ·»åŠ ç»™ç”¨æˆ·
 
-    //½ÇÉ« -- È¨ÏŞ¹ØÏµ£º¶à¶Ô¶à¹ØÏµ;
+    //è§’è‰² -- æƒé™å…³ç³»ï¼šå¤šå¯¹å¤šå…³ç³»;
     @ManyToMany(fetch= FetchType.EAGER)
     @JoinTable(name="SysRolePermission",joinColumns={@JoinColumn(name="roleId")},inverseJoinColumns={@JoinColumn(name="permissionId")})
     private List<SysPermission> permissions;
 
-    // ÓÃ»§ - ½ÇÉ«¹ØÏµ¶¨Òå;
+    // ç”¨æˆ· - è§’è‰²å…³ç³»å®šä¹‰;
     @ManyToMany
     @JoinTable(name="SysUserRole",joinColumns={@JoinColumn(name="roleId")},inverseJoinColumns={@JoinColumn(name="uid")})
-    private List<UserInfo> userInfos;// Ò»¸ö½ÇÉ«¶ÔÓ¦¶à¸öÓÃ»§
+    private List<UserInfo> userInfos;// ä¸€ä¸ªè§’è‰²å¯¹åº”å¤šä¸ªç”¨æˆ·
 
-    // Ê¡ÂÔ get set ·½·¨
+    // çœç•¥ get set æ–¹æ³•
  }
 ```
 
 
-È¨ÏŞĞÅÏ¢
+æƒé™ä¿¡æ¯
 
 ``` java
 @Entity
 public class SysPermission implements Serializable {
     @Id@GeneratedValue
-    private Integer id;//Ö÷¼ü.
-    private String name;//Ãû³Æ.
+    private Integer id;//ä¸»é”®.
+    private String name;//åç§°.
     @Column(columnDefinition="enum('menu','button')")
-    private String resourceType;//×ÊÔ´ÀàĞÍ£¬[menu|button]
-    private String url;//×ÊÔ´Â·¾¶.
-    private String permission; //È¨ÏŞ×Ö·û´®,menuÀı×Ó£ºrole:*£¬buttonÀı×Ó£ºrole:create,role:update,role:delete,role:view
-    private Long parentId; //¸¸±àºÅ
-    private String parentIds; //¸¸±àºÅÁĞ±í
+    private String resourceType;//èµ„æºç±»å‹ï¼Œ[menu|button]
+    private String url;//èµ„æºè·¯å¾„.
+    private String permission; //æƒé™å­—ç¬¦ä¸²,menuä¾‹å­ï¼šrole:*ï¼Œbuttonä¾‹å­ï¼šrole:create,role:update,role:delete,role:view
+    private Long parentId; //çˆ¶ç¼–å·
+    private String parentIds; //çˆ¶ç¼–å·åˆ—è¡¨
     private Boolean available = Boolean.FALSE;
     @ManyToMany
     @JoinTable(name="SysRolePermission",joinColumns={@JoinColumn(name="permissionId")},inverseJoinColumns={@JoinColumn(name="roleId")})
     private List<SysRole> roles;
 
-    // Ê¡ÂÔ get set ·½·¨
+    // çœç•¥ get set æ–¹æ³•
  }
 ```
 
-¸ù¾İÒÔÉÏµÄ´úÂë»á×Ô¶¯Éú³Éuser_info£¨ÓÃ»§ĞÅÏ¢±í£©¡¢sys_role£¨½ÇÉ«±í£©¡¢sys_permission£¨È¨ÏŞ±í£©¡¢sys_user_role£¨ÓÃ»§½ÇÉ«±í£©¡¢sys_role_permission£¨½ÇÉ«È¨ÏŞ±í£©ÕâÎåÕÅ±í£¬ÎªÁË·½±ã²âÊÔÎÒÃÇ¸øÕâÎåÕÅ±í²åÈëÒ»Ğ©³õÊ¼»¯Êı¾İ£º
+æ ¹æ®ä»¥ä¸Šçš„ä»£ç ä¼šè‡ªåŠ¨ç”Ÿæˆuser_infoï¼ˆç”¨æˆ·ä¿¡æ¯è¡¨ï¼‰ã€sys_roleï¼ˆè§’è‰²è¡¨ï¼‰ã€sys_permissionï¼ˆæƒé™è¡¨ï¼‰ã€sys_user_roleï¼ˆç”¨æˆ·è§’è‰²è¡¨ï¼‰ã€sys_role_permissionï¼ˆè§’è‰²æƒé™è¡¨ï¼‰è¿™äº”å¼ è¡¨ï¼Œä¸ºäº†æ–¹ä¾¿æµ‹è¯•æˆ‘ä»¬ç»™è¿™äº”å¼ è¡¨æ’å…¥ä¸€äº›åˆå§‹åŒ–æ•°æ®ï¼š
 
 ``` sql
-INSERT INTO `user_info` (`uid`,`username`,`name`,`password`,`salt`,`state`) VALUES ('1', 'admin', '¹ÜÀíÔ±', 'd3c59d25033dbf980d29554025c23a75', '8d78869f470951332959580424d4bf4f', 0);
-INSERT INTO `sys_permission` (`id`,`available`,`name`,`parent_id`,`parent_ids`,`permission`,`resource_type`,`url`) VALUES (1,0,'ÓÃ»§¹ÜÀí',0,'0/','userInfo:view','menu','userInfo/userList');
-INSERT INTO `sys_permission` (`id`,`available`,`name`,`parent_id`,`parent_ids`,`permission`,`resource_type`,`url`) VALUES (2,0,'ÓÃ»§Ìí¼Ó',1,'0/1','userInfo:add','button','userInfo/userAdd');
-INSERT INTO `sys_permission` (`id`,`available`,`name`,`parent_id`,`parent_ids`,`permission`,`resource_type`,`url`) VALUES (3,0,'ÓÃ»§É¾³ı',1,'0/1','userInfo:del','button','userInfo/userDel');
-INSERT INTO `sys_role` (`id`,`available`,`description`,`role`) VALUES (1,0,'¹ÜÀíÔ±','admin');
-INSERT INTO `sys_role` (`id`,`available`,`description`,`role`) VALUES (2,0,'VIP»áÔ±','vip');
+INSERT INTO `user_info` (`uid`,`username`,`name`,`password`,`salt`,`state`) VALUES ('1', 'admin', 'ç®¡ç†å‘˜', 'd3c59d25033dbf980d29554025c23a75', '8d78869f470951332959580424d4bf4f', 0);
+INSERT INTO `sys_permission` (`id`,`available`,`name`,`parent_id`,`parent_ids`,`permission`,`resource_type`,`url`) VALUES (1,0,'ç”¨æˆ·ç®¡ç†',0,'0/','userInfo:view','menu','userInfo/userList');
+INSERT INTO `sys_permission` (`id`,`available`,`name`,`parent_id`,`parent_ids`,`permission`,`resource_type`,`url`) VALUES (2,0,'ç”¨æˆ·æ·»åŠ ',1,'0/1','userInfo:add','button','userInfo/userAdd');
+INSERT INTO `sys_permission` (`id`,`available`,`name`,`parent_id`,`parent_ids`,`permission`,`resource_type`,`url`) VALUES (3,0,'ç”¨æˆ·åˆ é™¤',1,'0/1','userInfo:del','button','userInfo/userDel');
+INSERT INTO `sys_role` (`id`,`available`,`description`,`role`) VALUES (1,0,'ç®¡ç†å‘˜','admin');
+INSERT INTO `sys_role` (`id`,`available`,`description`,`role`) VALUES (2,0,'VIPä¼šå‘˜','vip');
 INSERT INTO `sys_role` (`id`,`available`,`description`,`role`) VALUES (3,1,'test','test');
 INSERT INTO `sys_role_permission` VALUES ('1', '1');
 INSERT INTO `sys_role_permission` (`permission_id`,`role_id`) VALUES (1,1);
@@ -270,10 +268,10 @@ INSERT INTO `sys_role_permission` (`permission_id`,`role_id`) VALUES (3,2);
 INSERT INTO `sys_user_role` (`role_id`,`uid`) VALUES (1,1);
 ```
 
-### Shiro ÅäÖÃ
+### Shiro é…ç½®
 
-Ê×ÏÈÒªÅäÖÃµÄÊÇShiroConfigÀà£¬Apache Shiro ºËĞÄÍ¨¹ı Filter À´ÊµÏÖ£¬¾ÍºÃÏñSpringMvc Í¨¹ıDispachServlet À´Ö÷¿ØÖÆÒ»Ñù¡£
-¼ÈÈ»ÊÇÊ¹ÓÃ Filter Ò»°ãÒ²¾ÍÄÜ²Âµ½£¬ÊÇÍ¨¹ıURL¹æÔòÀ´½øĞĞ¹ıÂËºÍÈ¨ÏŞĞ£Ñé£¬ËùÒÔÎÒÃÇĞèÒª¶¨ÒåÒ»ÏµÁĞ¹ØÓÚURLµÄ¹æÔòºÍ·ÃÎÊÈ¨ÏŞ¡£
+é¦–å…ˆè¦é…ç½®çš„æ˜¯ShiroConfigç±»ï¼ŒApache Shiro æ ¸å¿ƒé€šè¿‡ Filter æ¥å®ç°ï¼Œå°±å¥½åƒSpringMvc é€šè¿‡DispachServlet æ¥ä¸»æ§åˆ¶ä¸€æ ·ã€‚
+æ—¢ç„¶æ˜¯ä½¿ç”¨ Filter ä¸€èˆ¬ä¹Ÿå°±èƒ½çŒœåˆ°ï¼Œæ˜¯é€šè¿‡URLè§„åˆ™æ¥è¿›è¡Œè¿‡æ»¤å’Œæƒé™æ ¡éªŒï¼Œæ‰€ä»¥æˆ‘ä»¬éœ€è¦å®šä¹‰ä¸€ç³»åˆ—å…³äºURLçš„è§„åˆ™å’Œè®¿é—®æƒé™ã€‚
 
 
 **ShiroConfig**
@@ -286,21 +284,21 @@ public class ShiroConfig {
 		System.out.println("ShiroConfiguration.shirFilter()");
 		ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 		shiroFilterFactoryBean.setSecurityManager(securityManager);
-		//À¹½ØÆ÷.
+		//æ‹¦æˆªå™¨.
 		Map<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
-		// ÅäÖÃ²»»á±»À¹½ØµÄÁ´½Ó Ë³ĞòÅĞ¶Ï
+		// é…ç½®ä¸ä¼šè¢«æ‹¦æˆªçš„é“¾æ¥ é¡ºåºåˆ¤æ–­
 		filterChainDefinitionMap.put("/static/**", "anon");
-		//ÅäÖÃÍË³ö ¹ıÂËÆ÷,ÆäÖĞµÄ¾ßÌåµÄÍË³ö´úÂëShiroÒÑ¾­ÌæÎÒÃÇÊµÏÖÁË
+		//é…ç½®é€€å‡º è¿‡æ»¤å™¨,å…¶ä¸­çš„å…·ä½“çš„é€€å‡ºä»£ç Shiroå·²ç»æ›¿æˆ‘ä»¬å®ç°äº†
 		filterChainDefinitionMap.put("/logout", "logout");
-		//<!-- ¹ıÂËÁ´¶¨Òå£¬´ÓÉÏÏòÏÂË³ĞòÖ´ĞĞ£¬Ò»°ã½«/**·ÅÔÚ×îÎªÏÂ±ß -->:ÕâÊÇÒ»¸ö¿ÓÄØ£¬Ò»²»Ğ¡ĞÄ´úÂë¾Í²»ºÃÊ¹ÁË;
-		//<!-- authc:ËùÓĞurl¶¼±ØĞëÈÏÖ¤Í¨¹ı²Å¿ÉÒÔ·ÃÎÊ; anon:ËùÓĞurl¶¼¶¼¿ÉÒÔÄäÃû·ÃÎÊ-->
+		//<!-- è¿‡æ»¤é“¾å®šä¹‰ï¼Œä»ä¸Šå‘ä¸‹é¡ºåºæ‰§è¡Œï¼Œä¸€èˆ¬å°†/**æ”¾åœ¨æœ€ä¸ºä¸‹è¾¹ -->:è¿™æ˜¯ä¸€ä¸ªå‘å‘¢ï¼Œä¸€ä¸å°å¿ƒä»£ç å°±ä¸å¥½ä½¿äº†;
+		//<!-- authc:æ‰€æœ‰urléƒ½å¿…é¡»è®¤è¯é€šè¿‡æ‰å¯ä»¥è®¿é—®; anon:æ‰€æœ‰urléƒ½éƒ½å¯ä»¥åŒ¿åè®¿é—®-->
 		filterChainDefinitionMap.put("/**", "authc");
-		// Èç¹û²»ÉèÖÃÄ¬ÈÏ»á×Ô¶¯Ñ°ÕÒWeb¹¤³Ì¸ùÄ¿Â¼ÏÂµÄ"/login.jsp"Ò³Ãæ
+		// å¦‚æœä¸è®¾ç½®é»˜è®¤ä¼šè‡ªåŠ¨å¯»æ‰¾Webå·¥ç¨‹æ ¹ç›®å½•ä¸‹çš„"/login.jsp"é¡µé¢
 		shiroFilterFactoryBean.setLoginUrl("/login");
-		// µÇÂ¼³É¹¦ºóÒªÌø×ªµÄÁ´½Ó
+		// ç™»å½•æˆåŠŸåè¦è·³è½¬çš„é“¾æ¥
 		shiroFilterFactoryBean.setSuccessUrl("/index");
 
-		//Î´ÊÚÈ¨½çÃæ;
+		//æœªæˆæƒç•Œé¢;
 		shiroFilterFactoryBean.setUnauthorizedUrl("/403");
 		shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 		return shiroFilterFactoryBean;
@@ -322,14 +320,14 @@ public class ShiroConfig {
 }
 ```
 
-Filter Chain¶¨ÒåËµÃ÷£º
+Filter Chainå®šä¹‰è¯´æ˜ï¼š
 
-- 1¡¢Ò»¸öURL¿ÉÒÔÅäÖÃ¶à¸öFilter£¬Ê¹ÓÃ¶ººÅ·Ö¸ô
-- 2¡¢µ±ÉèÖÃ¶à¸ö¹ıÂËÆ÷Ê±£¬È«²¿ÑéÖ¤Í¨¹ı£¬²ÅÊÓÎªÍ¨¹ı
-- 3¡¢²¿·Ö¹ıÂËÆ÷¿ÉÖ¸¶¨²ÎÊı£¬Èçperms£¬roles
+- 1ã€ä¸€ä¸ªURLå¯ä»¥é…ç½®å¤šä¸ªFilterï¼Œä½¿ç”¨é€—å·åˆ†éš”
+- 2ã€å½“è®¾ç½®å¤šä¸ªè¿‡æ»¤å™¨æ—¶ï¼Œå…¨éƒ¨éªŒè¯é€šè¿‡ï¼Œæ‰è§†ä¸ºé€šè¿‡
+- 3ã€éƒ¨åˆ†è¿‡æ»¤å™¨å¯æŒ‡å®šå‚æ•°ï¼Œå¦‚permsï¼Œroles
 
 
-ShiroÄÚÖÃµÄFilterChain
+Shiroå†…ç½®çš„FilterChain
 
 Filter Name |  Class
 ---     |  ---      
@@ -343,46 +341,46 @@ roles | org.apache.shiro.web.filter.authz.RolesAuthorizationFilter
 ssl | org.apache.shiro.web.filter.authz.SslFilter
 user | org.apache.shiro.web.filter.authc.UserFilter
 
-- anon:ËùÓĞurl¶¼¶¼¿ÉÒÔÄäÃû·ÃÎÊ 
-- authc: ĞèÒªÈÏÖ¤²ÅÄÜ½øĞĞ·ÃÎÊ 
-- user:ÅäÖÃ¼Ç×¡ÎÒ»òÈÏÖ¤Í¨¹ı¿ÉÒÔ·ÃÎÊ 
+- anon:æ‰€æœ‰urléƒ½éƒ½å¯ä»¥åŒ¿åè®¿é—® 
+- authc: éœ€è¦è®¤è¯æ‰èƒ½è¿›è¡Œè®¿é—® 
+- user:é…ç½®è®°ä½æˆ‘æˆ–è®¤è¯é€šè¿‡å¯ä»¥è®¿é—® 
 
 
-**µÇÂ¼ÈÏÖ¤ÊµÏÖ**
+**ç™»å½•è®¤è¯å®ç°**
 
-ÔÚÈÏÖ¤¡¢ÊÚÈ¨ÄÚ²¿ÊµÏÖ»úÖÆÖĞ¶¼ÓĞÌáµ½£¬×îÖÕ´¦Àí¶¼½«½»¸øReal½øĞĞ´¦Àí¡£ÒòÎªÔÚShiroÖĞ£¬×îÖÕÊÇÍ¨¹ıRealmÀ´»ñÈ¡Ó¦ÓÃ³ÌĞòÖĞµÄÓÃ»§¡¢½ÇÉ«¼°È¨ÏŞĞÅÏ¢µÄ¡£Í¨³£Çé¿öÏÂ£¬ÔÚRealmÖĞ»áÖ±½Ó´ÓÎÒÃÇµÄÊı¾İÔ´ÖĞ»ñÈ¡ShiroĞèÒªµÄÑéÖ¤ĞÅÏ¢¡£¿ÉÒÔËµ£¬RealmÊÇ×¨ÓÃÓÚ°²È«¿ò¼ÜµÄDAO.
-ShiroµÄÈÏÖ¤¹ı³Ì×îÖÕ»á½»ÓÉRealmÖ´ĞĞ£¬ÕâÊ±»áµ÷ÓÃRealmµÄ```getAuthenticationInfo(token)```·½·¨¡£
+åœ¨è®¤è¯ã€æˆæƒå†…éƒ¨å®ç°æœºåˆ¶ä¸­éƒ½æœ‰æåˆ°ï¼Œæœ€ç»ˆå¤„ç†éƒ½å°†äº¤ç»™Realè¿›è¡Œå¤„ç†ã€‚å› ä¸ºåœ¨Shiroä¸­ï¼Œæœ€ç»ˆæ˜¯é€šè¿‡Realmæ¥è·å–åº”ç”¨ç¨‹åºä¸­çš„ç”¨æˆ·ã€è§’è‰²åŠæƒé™ä¿¡æ¯çš„ã€‚é€šå¸¸æƒ…å†µä¸‹ï¼Œåœ¨Realmä¸­ä¼šç›´æ¥ä»æˆ‘ä»¬çš„æ•°æ®æºä¸­è·å–Shiroéœ€è¦çš„éªŒè¯ä¿¡æ¯ã€‚å¯ä»¥è¯´ï¼ŒRealmæ˜¯ä¸“ç”¨äºå®‰å…¨æ¡†æ¶çš„DAO.
+Shiroçš„è®¤è¯è¿‡ç¨‹æœ€ç»ˆä¼šäº¤ç”±Realmæ‰§è¡Œï¼Œè¿™æ—¶ä¼šè°ƒç”¨Realmçš„```getAuthenticationInfo(token)```æ–¹æ³•ã€‚
 
-¸Ã·½·¨Ö÷ÒªÖ´ĞĞÒÔÏÂ²Ù×÷:  
+è¯¥æ–¹æ³•ä¸»è¦æ‰§è¡Œä»¥ä¸‹æ“ä½œ:  
 
-- 1¡¢¼ì²éÌá½»µÄ½øĞĞÈÏÖ¤µÄÁîÅÆĞÅÏ¢  
-- 2¡¢¸ù¾İÁîÅÆĞÅÏ¢´ÓÊı¾İÔ´(Í¨³£ÎªÊı¾İ¿â)ÖĞ»ñÈ¡ÓÃ»§ĞÅÏ¢  
-- 3¡¢¶ÔÓÃ»§ĞÅÏ¢½øĞĞÆ¥ÅäÑéÖ¤¡£   
-- 4¡¢ÑéÖ¤Í¨¹ı½«·µ»ØÒ»¸ö·â×°ÁËÓÃ»§ĞÅÏ¢µÄ```AuthenticationInfo```ÊµÀı¡£  
-- 5¡¢ÑéÖ¤Ê§°ÜÔòÅ×³ö```AuthenticationException```Òì³£ĞÅÏ¢¡£  
+- 1ã€æ£€æŸ¥æäº¤çš„è¿›è¡Œè®¤è¯çš„ä»¤ç‰Œä¿¡æ¯  
+- 2ã€æ ¹æ®ä»¤ç‰Œä¿¡æ¯ä»æ•°æ®æº(é€šå¸¸ä¸ºæ•°æ®åº“)ä¸­è·å–ç”¨æˆ·ä¿¡æ¯  
+- 3ã€å¯¹ç”¨æˆ·ä¿¡æ¯è¿›è¡ŒåŒ¹é…éªŒè¯ã€‚   
+- 4ã€éªŒè¯é€šè¿‡å°†è¿”å›ä¸€ä¸ªå°è£…äº†ç”¨æˆ·ä¿¡æ¯çš„```AuthenticationInfo```å®ä¾‹ã€‚  
+- 5ã€éªŒè¯å¤±è´¥åˆ™æŠ›å‡º```AuthenticationException```å¼‚å¸¸ä¿¡æ¯ã€‚  
 
-¶øÔÚÎÒÃÇµÄÓ¦ÓÃ³ÌĞòÖĞÒª×öµÄ¾ÍÊÇ×Ô¶¨ÒåÒ»¸öRealmÀà£¬¼Ì³ĞAuthorizingRealm³éÏóÀà£¬ÖØÔØdoGetAuthenticationInfo()£¬ÖØĞ´»ñÈ¡ÓÃ»§ĞÅÏ¢µÄ·½·¨¡£
+è€Œåœ¨æˆ‘ä»¬çš„åº”ç”¨ç¨‹åºä¸­è¦åšçš„å°±æ˜¯è‡ªå®šä¹‰ä¸€ä¸ªRealmç±»ï¼Œç»§æ‰¿AuthorizingRealmæŠ½è±¡ç±»ï¼Œé‡è½½doGetAuthenticationInfo()ï¼Œé‡å†™è·å–ç”¨æˆ·ä¿¡æ¯çš„æ–¹æ³•ã€‚
 
-doGetAuthenticationInfoµÄÖØĞ´
+doGetAuthenticationInfoçš„é‡å†™
 
 ``` java
 @Override
 protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token)
         throws AuthenticationException {
     System.out.println("MyShiroRealm.doGetAuthenticationInfo()");
-    //»ñÈ¡ÓÃ»§µÄÊäÈëµÄÕËºÅ.
+    //è·å–ç”¨æˆ·çš„è¾“å…¥çš„è´¦å·.
     String username = (String)token.getPrincipal();
     System.out.println(token.getCredentials());
-    //Í¨¹ıusername´ÓÊı¾İ¿âÖĞ²éÕÒ User¶ÔÏó£¬Èç¹ûÕÒµ½£¬Ã»ÕÒµ½.
-    //Êµ¼ÊÏîÄ¿ÖĞ£¬ÕâÀï¿ÉÒÔ¸ù¾İÊµ¼ÊÇé¿ö×ö»º´æ£¬Èç¹û²»×ö£¬Shiro×Ô¼ºÒ²ÊÇÓĞÊ±¼ä¼ä¸ô»úÖÆ£¬2·ÖÖÓÄÚ²»»áÖØ¸´Ö´ĞĞ¸Ã·½·¨
+    //é€šè¿‡usernameä»æ•°æ®åº“ä¸­æŸ¥æ‰¾ Userå¯¹è±¡ï¼Œå¦‚æœæ‰¾åˆ°ï¼Œæ²¡æ‰¾åˆ°.
+    //å®é™…é¡¹ç›®ä¸­ï¼Œè¿™é‡Œå¯ä»¥æ ¹æ®å®é™…æƒ…å†µåšç¼“å­˜ï¼Œå¦‚æœä¸åšï¼ŒShiroè‡ªå·±ä¹Ÿæ˜¯æœ‰æ—¶é—´é—´éš”æœºåˆ¶ï¼Œ2åˆ†é’Ÿå†…ä¸ä¼šé‡å¤æ‰§è¡Œè¯¥æ–¹æ³•
     UserInfo userInfo = userInfoService.findByUsername(username);
     System.out.println("----->>userInfo="+userInfo);
     if(userInfo == null){
         return null;
     }
     SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
-            userInfo, //ÓÃ»§Ãû
-            userInfo.getPassword(), //ÃÜÂë
+            userInfo, //ç”¨æˆ·å
+            userInfo.getPassword(), //å¯†ç 
             ByteSource.Util.bytes(userInfo.getCredentialsSalt()),//salt=username+salt
             getName()  //realm name
     );
@@ -390,14 +388,14 @@ protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token)
 }
 ```
 
-**Á´½ÓÈ¨ÏŞµÄÊµÏÖ**
+**é“¾æ¥æƒé™çš„å®ç°**
 
-shiroµÄÈ¨ÏŞÊÚÈ¨ÊÇÍ¨¹ı¼Ì³Ğ```AuthorizingRealm```³éÏóÀà£¬ÖØÔØ```doGetAuthorizationInfo();```µ±·ÃÎÊµ½Ò³ÃæµÄÊ±ºò£¬Á´½ÓÅäÖÃÁËÏàÓ¦µÄÈ¨ÏŞ»òÕßshiro±êÇ©²Å»áÖ´ĞĞ´Ë·½·¨·ñÔò²»»áÖ´ĞĞ£¬ËùÒÔÈç¹ûÖ»ÊÇ¼òµ¥µÄÉí·İÈÏÖ¤Ã»ÓĞÈ¨ÏŞµÄ¿ØÖÆµÄ»°£¬ÄÇÃ´Õâ¸ö·½·¨¿ÉÒÔ²»½øĞĞÊµÏÖ£¬Ö±½Ó·µ»Ønull¼´¿É¡£ÔÚÕâ¸ö·½·¨ÖĞÖ÷ÒªÊÇÊ¹ÓÃÀà£º```SimpleAuthorizationInfo```½øĞĞ½ÇÉ«µÄÌí¼ÓºÍÈ¨ÏŞµÄÌí¼Ó¡£
+shiroçš„æƒé™æˆæƒæ˜¯é€šè¿‡ç»§æ‰¿```AuthorizingRealm```æŠ½è±¡ç±»ï¼Œé‡è½½```doGetAuthorizationInfo();```å½“è®¿é—®åˆ°é¡µé¢çš„æ—¶å€™ï¼Œé“¾æ¥é…ç½®äº†ç›¸åº”çš„æƒé™æˆ–è€…shiroæ ‡ç­¾æ‰ä¼šæ‰§è¡Œæ­¤æ–¹æ³•å¦åˆ™ä¸ä¼šæ‰§è¡Œï¼Œæ‰€ä»¥å¦‚æœåªæ˜¯ç®€å•çš„èº«ä»½è®¤è¯æ²¡æœ‰æƒé™çš„æ§åˆ¶çš„è¯ï¼Œé‚£ä¹ˆè¿™ä¸ªæ–¹æ³•å¯ä»¥ä¸è¿›è¡Œå®ç°ï¼Œç›´æ¥è¿”å›nullå³å¯ã€‚åœ¨è¿™ä¸ªæ–¹æ³•ä¸­ä¸»è¦æ˜¯ä½¿ç”¨ç±»ï¼š```SimpleAuthorizationInfo```è¿›è¡Œè§’è‰²çš„æ·»åŠ å’Œæƒé™çš„æ·»åŠ ã€‚
 
 ``` java
 @Override
 protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-    System.out.println("È¨ÏŞÅäÖÃ-->MyShiroRealm.doGetAuthorizationInfo()");
+    System.out.println("æƒé™é…ç½®-->MyShiroRealm.doGetAuthorizationInfo()");
     SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
     UserInfo userInfo  = (UserInfo)principals.getPrimaryPrincipal();
     for(SysRole role:userInfo.getRoleList()){
@@ -410,70 +408,70 @@ protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal
 }
 ```
 
-µ±È»Ò²¿ÉÒÔÌí¼Óset¼¯ºÏ£ºrolesÊÇ´ÓÊı¾İ¿â²éÑ¯µÄµ±Ç°ÓÃ»§µÄ½ÇÉ«£¬stringPermissionsÊÇ´ÓÊı¾İ¿â²éÑ¯µÄµ±Ç°ÓÃ»§¶ÔÓ¦µÄÈ¨ÏŞ
+å½“ç„¶ä¹Ÿå¯ä»¥æ·»åŠ seté›†åˆï¼šrolesæ˜¯ä»æ•°æ®åº“æŸ¥è¯¢çš„å½“å‰ç”¨æˆ·çš„è§’è‰²ï¼ŒstringPermissionsæ˜¯ä»æ•°æ®åº“æŸ¥è¯¢çš„å½“å‰ç”¨æˆ·å¯¹åº”çš„æƒé™
 
 ``` java
 authorizationInfo.setRoles(roles);
 authorizationInfo.setStringPermissions(stringPermissions);
 ```
 
-¾ÍÊÇËµÈç¹ûÔÚshiroÅäÖÃÎÄ¼şÖĞÌí¼ÓÁË```filterChainDefinitionMap.put(¡°/add¡±, ¡°perms[È¨ÏŞÌí¼Ó]¡±);```¾ÍËµÃ÷·ÃÎÊ/addÕâ¸öÁ´½Ó±ØĞëÒªÓĞ¡°È¨ÏŞÌí¼Ó¡±Õâ¸öÈ¨ÏŞ²Å¿ÉÒÔ·ÃÎÊ£¬Èç¹ûÔÚshiroÅäÖÃÎÄ¼şÖĞÌí¼ÓÁË```filterChainDefinitionMap.put(¡°/add¡±, ¡°roles[100002]£¬perms[È¨ÏŞÌí¼Ó]¡±);```¾ÍËµÃ÷·ÃÎÊ```/add```Õâ¸öÁ´½Ó±ØĞëÒªÓĞ¡°È¨ÏŞÌí¼Ó¡±Õâ¸öÈ¨ÏŞºÍ¾ßÓĞ¡°100002¡±Õâ¸ö½ÇÉ«²Å¿ÉÒÔ·ÃÎÊ¡£
+å°±æ˜¯è¯´å¦‚æœåœ¨shiroé…ç½®æ–‡ä»¶ä¸­æ·»åŠ äº†```filterChainDefinitionMap.put(â€œ/addâ€, â€œperms[æƒé™æ·»åŠ ]â€);```å°±è¯´æ˜è®¿é—®/addè¿™ä¸ªé“¾æ¥å¿…é¡»è¦æœ‰â€œæƒé™æ·»åŠ â€è¿™ä¸ªæƒé™æ‰å¯ä»¥è®¿é—®ï¼Œå¦‚æœåœ¨shiroé…ç½®æ–‡ä»¶ä¸­æ·»åŠ äº†```filterChainDefinitionMap.put(â€œ/addâ€, â€œroles[100002]ï¼Œperms[æƒé™æ·»åŠ ]â€);```å°±è¯´æ˜è®¿é—®```/add```è¿™ä¸ªé“¾æ¥å¿…é¡»è¦æœ‰â€œæƒé™æ·»åŠ â€è¿™ä¸ªæƒé™å’Œå…·æœ‰â€œ100002â€è¿™ä¸ªè§’è‰²æ‰å¯ä»¥è®¿é—®ã€‚
 
 
-**µÇÂ¼ÊµÏÖ**
+**ç™»å½•å®ç°**
 
-µÇÂ¼¹ı³ÌÆäÊµÖ»ÊÇ´¦ÀíÒì³£µÄÏà¹ØĞÅÏ¢£¬¾ßÌåµÄµÇÂ¼ÑéÖ¤½»¸øshiroÀ´´¦Àí
+ç™»å½•è¿‡ç¨‹å…¶å®åªæ˜¯å¤„ç†å¼‚å¸¸çš„ç›¸å…³ä¿¡æ¯ï¼Œå…·ä½“çš„ç™»å½•éªŒè¯äº¤ç»™shiroæ¥å¤„ç†
 
 ``` java
 @RequestMapping("/login")
 public String login(HttpServletRequest request, Map<String, Object> map) throws Exception{
     System.out.println("HomeController.login()");
-    // µÇÂ¼Ê§°Ü´ÓrequestÖĞ»ñÈ¡shiro´¦ÀíµÄÒì³£ĞÅÏ¢¡£
-    // shiroLoginFailure:¾ÍÊÇshiroÒì³£ÀàµÄÈ«ÀàÃû.
+    // ç™»å½•å¤±è´¥ä»requestä¸­è·å–shiroå¤„ç†çš„å¼‚å¸¸ä¿¡æ¯ã€‚
+    // shiroLoginFailure:å°±æ˜¯shiroå¼‚å¸¸ç±»çš„å…¨ç±»å.
     String exception = (String) request.getAttribute("shiroLoginFailure");
     System.out.println("exception=" + exception);
     String msg = "";
     if (exception != null) {
         if (UnknownAccountException.class.getName().equals(exception)) {
-            System.out.println("UnknownAccountException -- > ÕËºÅ²»´æÔÚ£º");
-            msg = "UnknownAccountException -- > ÕËºÅ²»´æÔÚ£º";
+            System.out.println("UnknownAccountException -- > è´¦å·ä¸å­˜åœ¨ï¼š");
+            msg = "UnknownAccountException -- > è´¦å·ä¸å­˜åœ¨ï¼š";
         } else if (IncorrectCredentialsException.class.getName().equals(exception)) {
-            System.out.println("IncorrectCredentialsException -- > ÃÜÂë²»ÕıÈ·£º");
-            msg = "IncorrectCredentialsException -- > ÃÜÂë²»ÕıÈ·£º";
+            System.out.println("IncorrectCredentialsException -- > å¯†ç ä¸æ­£ç¡®ï¼š");
+            msg = "IncorrectCredentialsException -- > å¯†ç ä¸æ­£ç¡®ï¼š";
         } else if ("kaptchaValidateFailed".equals(exception)) {
-            System.out.println("kaptchaValidateFailed -- > ÑéÖ¤Âë´íÎó");
-            msg = "kaptchaValidateFailed -- > ÑéÖ¤Âë´íÎó";
+            System.out.println("kaptchaValidateFailed -- > éªŒè¯ç é”™è¯¯");
+            msg = "kaptchaValidateFailed -- > éªŒè¯ç é”™è¯¯";
         } else {
             msg = "else >> "+exception;
             System.out.println("else -- >" + exception);
         }
     }
     map.put("msg", msg);
-    // ´Ë·½·¨²»´¦ÀíµÇÂ¼³É¹¦,ÓÉshiro½øĞĞ´¦Àí
+    // æ­¤æ–¹æ³•ä¸å¤„ç†ç™»å½•æˆåŠŸ,ç”±shiroè¿›è¡Œå¤„ç†
     return "/login";
 }
 ```
 
-ÆäËüdao²ãºÍserviceµÄ´úÂë¾Í²»Ìù³öÀ´ÁË´ó¼ÒÖ±½Ó¿´´úÂë¡£
+å…¶å®ƒdaoå±‚å’Œserviceçš„ä»£ç å°±ä¸è´´å‡ºæ¥äº†å¤§å®¶ç›´æ¥çœ‹ä»£ç ã€‚
 
 
-### ²âÊÔ
+### æµ‹è¯•
 
-1¡¢±àĞ´ºÃºó¾Í¿ÉÒÔÆô¶¯³ÌĞò£¬·ÃÎÊ`http://localhost:8080/userInfo/userList`Ò³Ãæ£¬ÓÉÓÚÃ»ÓĞµÇÂ¼¾Í»áÌø×ªµ½`http://localhost:8080/login`Ò³Ãæ¡£µÇÂ¼Ö®ºó¾Í»áÌø×ªµ½indexÒ³Ãæ£¬µÇÂ¼ºó£¬Ö±½ÓÔÚä¯ÀÀÆ÷ÖĞÊäÈë`http://localhost:8080/userInfo/userList`·ÃÎÊ¾Í»á¿´µ½ÓÃ»§ĞÅÏ¢¡£ÉÏÃæÕâĞ©²Ù×÷Ê±ºò´¥·¢```MyShiroRealm.doGetAuthenticationInfo()```Õâ¸ö·½·¨£¬Ò²¾ÍÊÇµÇÂ¼ÈÏÖ¤µÄ·½·¨¡£
+1ã€ç¼–å†™å¥½åå°±å¯ä»¥å¯åŠ¨ç¨‹åºï¼Œè®¿é—®`http://localhost:8080/userInfo/userList`é¡µé¢ï¼Œç”±äºæ²¡æœ‰ç™»å½•å°±ä¼šè·³è½¬åˆ°`http://localhost:8080/login`é¡µé¢ã€‚ç™»å½•ä¹‹åå°±ä¼šè·³è½¬åˆ°indexé¡µé¢ï¼Œç™»å½•åï¼Œç›´æ¥åœ¨æµè§ˆå™¨ä¸­è¾“å…¥`http://localhost:8080/userInfo/userList`è®¿é—®å°±ä¼šçœ‹åˆ°ç”¨æˆ·ä¿¡æ¯ã€‚ä¸Šé¢è¿™äº›æ“ä½œæ—¶å€™è§¦å‘```MyShiroRealm.doGetAuthenticationInfo()```è¿™ä¸ªæ–¹æ³•ï¼Œä¹Ÿå°±æ˜¯ç™»å½•è®¤è¯çš„æ–¹æ³•ã€‚
 
-2¡¢µÇÂ¼adminÕË»§£¬·ÃÎÊ£º```http://127.0.0.1:8080/userInfo/userAdd```ÏÔÊ¾```ÓÃ»§Ìí¼Ó½çÃæ```£¬·ÃÎÊ```http://127.0.0.1:8080/userInfo/userDel```ÏÔÊ¾```403Ã»ÓĞÈ¨ÏŞ```¡£ÉÏÃæÕâĞ©²Ù×÷Ê±ºò´¥·¢```MyShiroRealm.doGetAuthorizationInfo()```Õâ¸ö·½Ãæ£¬Ò²¾ÍÊÇÈ¨ÏŞĞ£ÑéµÄ·½·¨¡£
+2ã€ç™»å½•adminè´¦æˆ·ï¼Œè®¿é—®ï¼š```http://127.0.0.1:8080/userInfo/userAdd```æ˜¾ç¤º```ç”¨æˆ·æ·»åŠ ç•Œé¢```ï¼Œè®¿é—®```http://127.0.0.1:8080/userInfo/userDel```æ˜¾ç¤º```403æ²¡æœ‰æƒé™```ã€‚ä¸Šé¢è¿™äº›æ“ä½œæ—¶å€™è§¦å‘```MyShiroRealm.doGetAuthorizationInfo()```è¿™ä¸ªæ–¹é¢ï¼Œä¹Ÿå°±æ˜¯æƒé™æ ¡éªŒçš„æ–¹æ³•ã€‚
 
-3¡¢ĞŞ¸Äadmin²»Í¬µÄÈ¨ÏŞ½øĞĞ²âÊÔ
+3ã€ä¿®æ”¹adminä¸åŒçš„æƒé™è¿›è¡Œæµ‹è¯•
 
-shiroºÜÇ¿´ó£¬Õâ½ö½öÊÇÍê³ÉÁËµÇÂ¼ÈÏÖ¤ºÍÈ¨ÏŞ¹ÜÀíÕâÁ½¸ö¹¦ÄÜ£¬¸ü¶àÄÚÈİÒÔºóÓĞÊ±¼äÔÙ×öÌ½ÌÖ¡£
+shiroå¾ˆå¼ºå¤§ï¼Œè¿™ä»…ä»…æ˜¯å®Œæˆäº†ç™»å½•è®¤è¯å’Œæƒé™ç®¡ç†è¿™ä¸¤ä¸ªåŠŸèƒ½ï¼Œæ›´å¤šå†…å®¹ä»¥åæœ‰æ—¶é—´å†åšæ¢è®¨ã€‚
 
-**[Ê¾Àı´úÂë-github--ºóÆÚ²¹³ä]()**
-
-
+**[ç¤ºä¾‹ä»£ç -github--åæœŸè¡¥å……]()**
 
 
-²Î¿¼£º
 
-[Apache ShiroÖĞÎÄÊÖ²á](https://waylau.gitbooks.io/apache-shiro-1-2-x-reference/content/)   
-[Spring Boot ShiroÈ¨ÏŞ¹ÜÀí¡¾´ÓÁã¿ªÊ¼Ñ§Spring Boot¡¿](http://412887952-qq-com.iteye.com/blog/2299777)  
-[SpringBoot+shiroÕûºÏÑ§Ï°Ö®µÇÂ¼ÈÏÖ¤ºÍÈ¨ÏŞ¿ØÖÆ](http://z77z.oschina.io/2017/02/13/SpringBoot+shiro%E6%95%B4%E5%90%88%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81%E5%92%8C%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/)
+
+å‚è€ƒï¼š
+
+[Apache Shiroä¸­æ–‡æ‰‹å†Œ](https://waylau.gitbooks.io/apache-shiro-1-2-x-reference/content/)   
+[Spring Boot Shiroæƒé™ç®¡ç†ã€ä»é›¶å¼€å§‹å­¦Spring Bootã€‘](http://412887952-qq-com.iteye.com/blog/2299777)  
+[SpringBoot+shiroæ•´åˆå­¦ä¹ ä¹‹ç™»å½•è®¤è¯å’Œæƒé™æ§åˆ¶](http://z77z.oschina.io/2017/02/13/SpringBoot+shiro%E6%95%B4%E5%90%88%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81%E5%92%8C%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/)
