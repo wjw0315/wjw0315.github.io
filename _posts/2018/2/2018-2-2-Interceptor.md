@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      拦截器验证权限和登录与注销的实现
+title:      SSM 拦截器验证权限和登录与注销的实现
 subtitle:   Interceptor
 date:       2018-2-2
 author:     wjw
