@@ -127,6 +127,18 @@ settings –> Plugins –> Browse repositories，输入Dart，安装。同样的
 
 ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/9.png)
 
+## 4、配置Android 环境变量：
+
+这里就不再截图了，环境变量的配置方式都是一样的，直接给出需要配置的内容
+
+a 新建一个系统环境变量，变量名：ANDROID_HOME，变量值：D:\Program Files\Android\Sdk（以你安装目录为准,确认里面有tools和add-ons等多个文件夹），点击确认。
+
+b 在系统变量PATH后面加上变量值;%ANDROID_HOME%\platform-tools;点击确认即可。 在系统变量path中添加;%ANDROID_HOME%\tools；
+
+c Android SDK配置完成，接下来验证配置是否成功。
+
+d 点击运行——输入cmd——回车——输入adb——回车，如果出现一堆英文，即表示配置成功
+
 
 配置到这里就结束了，接下来就是创建demo进行体验了。请关注后期更新的文章。
 
