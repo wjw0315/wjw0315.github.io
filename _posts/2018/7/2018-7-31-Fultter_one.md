@@ -1,6 +1,6 @@
 ---
 layout:     post                  
-title:      Win搭建flutter开发环境       
+title:      Win搭建Flutter开发环境--聊一聊搭建过程中的坑      
 date:       2018-7-31             
 author:     Mr.W                   
 header-img: img/post-bg-rwd.jpg  
