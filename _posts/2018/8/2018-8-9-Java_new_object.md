@@ -37,4 +37,4 @@ tags:
 2、之后改成了创建引用在循环外部`Terminal terminal=null;`再到循环的内部创建对象`termianl = new Terminal();` 这样就1个引用调用了创建的50个对象，这时候当后面的一个对象初始化（init）之后，前一个对象就会是**无引用的状态**很快就会被GC回收。
 
 
-**PS：**可以看看这篇[Java优化编程的37条法则]()
+**PS：**可以看看这篇[Java优化编程的37条法则](http://wjwcloud.com/java/2018/08/09/Java_optimization/)
