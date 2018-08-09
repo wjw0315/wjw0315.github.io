@@ -1,39 +1,39 @@
 ---
 layout:     post                  
-title:      JavaÓÅ»¯±à³ÌµÄ37Ìõ·¨Ôò£¨×ª£©   
+title:      Javaä¼˜åŒ–ç¼–ç¨‹çš„37æ¡æ³•åˆ™ï¼ˆè½¬ï¼‰   
 date:       2018-8-9             
 author:     Mr.W                   
 header-img: img/post-bg-rwd.jpg  
 category: Java   
 catalog: true  
 tags:                             
--  JavaÓÅ»¯Æª
+-  Javaä¼˜åŒ–ç¯‡
 ---
 
-1.JVM¹ÜÀíÁ½ÖÖÀàÐÍµÄÄÚ´æ:¶ÑÄÚ´æ(heap),Õ»ÄÚ´æ(stack),¶ÑÄÚÔÚÖ÷ÒªÓÃÀ´´æ´¢³ÌÐòÔÚÔËÐÐÊ±´´½¨»òÊµÀý»¯µÄ¶ÔÏóÓë±äÁ¿.¶øÕ»ÄÚ´æÔòÊÇÓÃÀ´´æ´¢³ÌÐò´úÂëÖÐÉùÃ÷Îª¾²Ì¬(static)(»ò·Ç¾²Ì¬)µÄ·½·¨.
+1.JVMç®¡ç†ä¸¤ç§ç±»åž‹çš„å†…å­˜:å †å†…å­˜(heap),æ ˆå†…å­˜(stack),å †å†…åœ¨ä¸»è¦ç”¨æ¥å­˜å‚¨ç¨‹åºåœ¨è¿è¡Œæ—¶åˆ›å»ºæˆ–å®žä¾‹åŒ–çš„å¯¹è±¡ä¸Žå˜é‡.è€Œæ ˆå†…å­˜åˆ™æ˜¯ç”¨æ¥å­˜å‚¨ç¨‹åºä»£ç ä¸­å£°æ˜Žä¸ºé™æ€(static)(æˆ–éžé™æ€)çš„æ–¹æ³•.
 
-2 .JVMÖÐ¶ÔÏóµÄÉúÃüÖÜÆÚ,´´½¨½×¶Î,Ó¦ÓÃ½×¶Î,²»¿ÉÊÓ½×¶Î,²»¿Éµ½´ï½×¶Î,¿ÉÊÕ¼¯½×¶Î,ÖÕ½á½×¶Î,ÊÍ·Å½×¶Î
+2 .JVMä¸­å¯¹è±¡çš„ç”Ÿå‘½å‘¨æœŸ,åˆ›å»ºé˜¶æ®µ,åº”ç”¨é˜¶æ®µ,ä¸å¯è§†é˜¶æ®µ,ä¸å¯åˆ°è¾¾é˜¶æ®µ,å¯æ”¶é›†é˜¶æ®µ,ç»ˆç»“é˜¶æ®µ,é‡Šæ”¾é˜¶æ®µ
 
-3.±ÜÃâÔÚÑ­»·ÌåÖÐ´´½¨¶ÔÏó,¼´Ê¹¸Ã¶ÔÏóÕ¼ÓÃÄÚ´æ¿Õ¼ä²»´ó.
+3.é¿å…åœ¨å¾ªçŽ¯ä½“ä¸­åˆ›å»ºå¯¹è±¡,å³ä½¿è¯¥å¯¹è±¡å ç”¨å†…å­˜ç©ºé—´ä¸å¤§.
 
 ```
 for(int i=0;i<10000;++i){   
-¡¡¡¡Object obj = new Object();   
-¡¡¡¡System.out.println("obj="+obj);   
-¡¡¡¡}  
+ã€€ã€€Object obj = new Object();   
+ã€€ã€€System.out.println("obj="+obj);   
+ã€€ã€€}  
 ```
 
-¸Ä³É
+æ”¹æˆ
 
 ```
 Object obj = null;   
-¡¡for(int i=0;i<10000;++i){   
-¡¡obj = new Object();   
-¡¡System.out.println("obj="+obj);   
-¡¡}  
+ã€€for(int i=0;i<10000;++i){   
+ã€€obj = new Object();   
+ã€€System.out.println("obj="+obj);   
+ã€€}  
 ```
 
-4.ÈíÒýÓÃµÄÖ÷ÒªÌØµãÊÇ¾ßÓÐ½ÏÇ¿µÄÒýÓÃ¹¦ÄÜ.Ö»ÓÐµ±ÄÚ´æ²»¹»µÄÊ±ºò,²Å»ØÊÕÕâÀàÄÚ´æ,Òò´ËÔÚÄÚ´æ×ã¹»µÄÊ±ºò,ËüÃÇÍ¨³£²»±»»ØÊÕ.Ëü¿ÉÒÔÓÃÓÚÊµÏÖÒ»Ð©³£ÓÃ×ÊÔ´µÄ»º´æ,ÊµÏÖCacheµÄ¹¦ÄÜ
+4.è½¯å¼•ç”¨çš„ä¸»è¦ç‰¹ç‚¹æ˜¯å…·æœ‰è¾ƒå¼ºçš„å¼•ç”¨åŠŸèƒ½.åªæœ‰å½“å†…å­˜ä¸å¤Ÿçš„æ—¶å€™,æ‰å›žæ”¶è¿™ç±»å†…å­˜,å› æ­¤åœ¨å†…å­˜è¶³å¤Ÿçš„æ—¶å€™,å®ƒä»¬é€šå¸¸ä¸è¢«å›žæ”¶.å®ƒå¯ä»¥ç”¨äºŽå®žçŽ°ä¸€äº›å¸¸ç”¨èµ„æºçš„ç¼“å­˜,å®žçŽ°Cacheçš„åŠŸèƒ½
 
 ```
  A a = new A();   
@@ -47,167 +47,168 @@ sr = new SoftReference(a);
 }  
 ```
 
-5.ÈõÒýÓÃ¶ÔÏóÓëSoftÒýÓÃ¶ÔÏó×î´ó²»Í¬¾ÍÔÚÓÚ:GCÔÚ½øÐÐ»ØÊÕÊ±,ÐèÒªÍ¨¹ýËã·¨¼ì²éÊÇ·ñ»ØÊÕSoftÒýÓÃ¶ÔÏó,¶ø¶ÔÓÚWeakÒýÓÃ¶ÔÏó,GC×ÜÊÇ½øÐÐ»ØÊÕ.
+5.å¼±å¼•ç”¨å¯¹è±¡ä¸ŽSoftå¼•ç”¨å¯¹è±¡æœ€å¤§ä¸åŒå°±åœ¨äºŽ:GCåœ¨è¿›è¡Œå›žæ”¶æ—¶,éœ€è¦é€šè¿‡ç®—æ³•æ£€æŸ¥æ˜¯å¦å›žæ”¶Softå¼•ç”¨å¯¹è±¡,è€Œå¯¹äºŽWeakå¼•ç”¨å¯¹è±¡,GCæ€»æ˜¯è¿›è¡Œå›žæ”¶.
 
 ```
 A a = new A();   
-¡¡WeakReference wr = new WeakReference(a);   
-¡¡a = null;   
-¡¡if(sr !=null){   
-¡¡a = wr.get();   
-¡¡}else{   
-¡¡a = new A();   
-¡¡wr = new WeakReference(a);   
-¡¡}  
+ã€€WeakReference wr = new WeakReference(a);   
+ã€€a = null;   
+ã€€if(sr !=null){   
+ã€€a = wr.get();   
+ã€€}else{   
+ã€€a = new A();   
+ã€€wr = new WeakReference(a);   
+ã€€}  
 ```
 
-6.¹²Ïí¾²Ì¬±äÁ¿´æ´¢¿Õ¼ä
+6.å…±äº«é™æ€å˜é‡å­˜å‚¨ç©ºé—´
 
-7.ÓÐÊ±ºòÎÒÃÇÎªÁËÌá¸ßÏµÍ³ÐÔÄÜ,±ÜÃâÖØ¸´ºÄÊ±µÄ²Ù×÷,Ï£ÍûÄÜ¹»ÖØÓÃÒ»Ð©´´½¨Íê³ÉµÄ¶ÔÏó,ÀûÓÃ¶ÔÏó³ØÊµÏÖ.ÀàËÆJDBCÁ¬½Ó³Ø.
+7.æœ‰æ—¶å€™æˆ‘ä»¬ä¸ºäº†æé«˜ç³»ç»Ÿæ€§èƒ½,é¿å…é‡å¤è€—æ—¶çš„æ“ä½œ,å¸Œæœ›èƒ½å¤Ÿé‡ç”¨ä¸€äº›åˆ›å»ºå®Œæˆçš„å¯¹è±¡,åˆ©ç”¨å¯¹è±¡æ± å®žçŽ°.ç±»ä¼¼JDBCè¿žæŽ¥æ± .
 
-8.Ë²¼äÖµ,ÐòÁÐ»¯¶ÔÏó´ó±äÁ¿Ê±,Èç¹û´Ë´ó±äÁ¿ÓÖÃ»ÓÐÓÃÍ¾,ÔòÊ¹ÓÃtransientÉùÃ÷,²»ÐòÁÐ»¯´Ë±äÁ¿.Í¬Ê±ÍøÂç´«ÊäÖÐÒ²²»´«Êä.
+8.çž¬é—´å€¼,åºåˆ—åŒ–å¯¹è±¡å¤§å˜é‡æ—¶,å¦‚æžœæ­¤å¤§å˜é‡åˆæ²¡æœ‰ç”¨é€”,åˆ™ä½¿ç”¨transientå£°æ˜Ž,ä¸åºåˆ—åŒ–æ­¤å˜é‡.åŒæ—¶ç½‘ç»œä¼ è¾“ä¸­ä¹Ÿä¸ä¼ è¾“.
 
-9.²»ÒªÌáÇ°´´½¨¶ÔÏó
+9.ä¸è¦æå‰åˆ›å»ºå¯¹è±¡
 
 ```
 void f(){   
-¡¡¡¡int i;   
-¡¡¡¡A a = new A();   
-¡¡¡¡if(....){   
-¡¡¡¡a.showMessage();   
-¡¡¡¡}   
-¡¡¡¡}  
+ã€€ã€€int i;   
+ã€€ã€€A a = new A();   
+ã€€ã€€if(....){   
+ã€€ã€€a.showMessage();   
+ã€€ã€€}   
+ã€€ã€€}  
 ```
 
-¸Ä³É
+æ”¹æˆ
 
 ```
  void f(){   
 int i;   
 A a = null;   
 if(....){   
-//ÓÃµ½Ê±²ÅÊµÀý»¯   
+//ç”¨åˆ°æ—¶æ‰å®žä¾‹åŒ–   
 a = new A();   
 a.showMessage();   
 }   
 } 
 ```
 
-10 .(1)×î»ù±¾µÄ½¨Òé¾ÍÊÇ¾¡ÔçÊÍ·ÅÎÞÓÃ¶ÔÏóµÄÒýÓÃ 
+10 .(1)æœ€åŸºæœ¬çš„å»ºè®®å°±æ˜¯å°½æ—©é‡Šæ”¾æ— ç”¨å¯¹è±¡çš„å¼•ç”¨ 
 
-¡¡  ¡¡A a = new A(); 
+ã€€  ã€€A a = new A(); 
 
-¡¡¡¡a = null; //µ±Ê¹ÓÃ¶ÔÏóaÖ®ºóÖ÷¶¯½«ÆäÉèÖÃÎª¿Õ 
+ã€€ã€€a = null; //å½“ä½¿ç”¨å¯¹è±¡aä¹‹åŽä¸»åŠ¨å°†å…¶è®¾ç½®ä¸ºç©º 
 
-¡¡¡¡(2)¾¡Á¿ÉÙÓÃfinalizeº¯Êý. 
+ã€€ã€€(2)å°½é‡å°‘ç”¨finalizeå‡½æ•°. 
 
-¡¡¡¡(3) Èç¹ûÐèÒªÊ¹ÓÃ¾­³£ÓÃµ½µÄÍ¼Æ¬Õ¹,¿ÉÒÔÊ¹ÓÃÈíÒýÓÃ. 
+ã€€ã€€(3) å¦‚æžœéœ€è¦ä½¿ç”¨ç»å¸¸ç”¨åˆ°çš„å›¾ç‰‡å±•,å¯ä»¥ä½¿ç”¨è½¯å¼•ç”¨. 
 
-¡¡¡¡(4) ×¢Òâ¼¯ºÏÊý¾ÝÀàÐÍ,°üÀ¨Êý×é,Ê÷µÈÊý¾Ý,ÕâÐ©Êý¾Ý½á¹¹¶ÔGCÀ´Ëµ,»ØÊÕ¸üÎª¸´ÔÓ, 
+ã€€ã€€(4) æ³¨æ„é›†åˆæ•°æ®ç±»åž‹,åŒ…æ‹¬æ•°ç»„,æ ‘ç­‰æ•°æ®,è¿™äº›æ•°æ®ç»“æž„å¯¹GCæ¥è¯´,å›žæ”¶æ›´ä¸ºå¤æ‚, 
 
-¡¡¡¡(5) ¾¡Á¿±ÜÃâÔÚÀàµÄÄ¬ÈÏ¹¹ÔìÆ÷ÖÐ´´½¨,³õÊ¼»¯´óÁ¿µÄ¶ÔÏó,·ÀÖ¹ÔÚµ÷ÓÃÆä×ÔÀàµÄ¹¹ÔìÆ÷Ê±Ôì³É²»±ØÒªµÄÄÚ´æ×ÊÔ´ÀË·Ñ. 
+ã€€ã€€(5) å°½é‡é¿å…åœ¨ç±»çš„é»˜è®¤æž„é€ å™¨ä¸­åˆ›å»º,åˆå§‹åŒ–å¤§é‡çš„å¯¹è±¡,é˜²æ­¢åœ¨è°ƒç”¨å…¶è‡ªç±»çš„æž„é€ å™¨æ—¶é€ æˆä¸å¿…è¦çš„å†…å­˜èµ„æºæµªè´¹. 
 
-¡¡¡¡(6) ¾¡Á¿±ÜÃâÇ¿ÖÆÏµÍ³×öÀ¬»øÄÚ´æ»ØÊÕ. 
+ã€€ã€€(6) å°½é‡é¿å…å¼ºåˆ¶ç³»ç»Ÿåšåžƒåœ¾å†…å­˜å›žæ”¶. 
 
-¡¡¡¡(7) ¾¡Á¿±ÜÃâÏÔÊ½ÉêÇëÊý×é¿Õ¼ä. 
+ã€€ã€€(7) å°½é‡é¿å…æ˜¾å¼ç”³è¯·æ•°ç»„ç©ºé—´. 
 
-¡¡¡¡(8) ¾¡Á¿ÔÚºÏÊÊµÄ³¡¾°ÏÂÊ¹ÓÃ¶ÔÏó³Ø¼¼ÊõÒÔÌá¸ßÏµÍ³ÐÔÄÜ,Ëõ¼õÏµÍ³ÄÚ´æ¿ªÏú.
-¡¡¡¡
-¡¡¡¡
+ã€€ã€€(8) å°½é‡åœ¨åˆé€‚çš„åœºæ™¯ä¸‹ä½¿ç”¨å¯¹è±¡æ± æŠ€æœ¯ä»¥æé«˜ç³»ç»Ÿæ€§èƒ½,ç¼©å‡ç³»ç»Ÿå†…å­˜å¼€é”€.
+ã€€ã€€
+ã€€ã€€
 
-11.µ±×öÊý×é¿½±´²Ù×÷Ê±,²ÉÓÃSystem.arraycopy()·½·¨Íê³É¿½±´²Ù×÷Òª±È²ÉÓÃÑ­»·µÄ°ì·¨Íê³ÉÊý×é¿½±´²Ù×÷Ð§ÂÊ¸ß
-
-
-12. ¾¡Á¿±ÜÃâÔÚÑ­»·ÌåÖÐµ÷ÓÃ·½·¨,ÒòÎª·½·¨µ÷ÓÃÊÇ±È½Ï°º¹óµÄ.
-
-13. ¾¡Á¿±ÜÃâÔÚÑ­»·ÌåÖÐÊ¹ÓÃtry-catch ¿é,×îºÃÔÚÑ­»·ÌåÍâÊ¹ÓÃtry--catch¿éÒÔÌá¸ßÏµÍ³ÐÔÄÜ.
+11.å½“åšæ•°ç»„æ‹·è´æ“ä½œæ—¶,é‡‡ç”¨System.arraycopy()æ–¹æ³•å®Œæˆæ‹·è´æ“ä½œè¦æ¯”é‡‡ç”¨å¾ªçŽ¯çš„åŠžæ³•å®Œæˆæ•°ç»„æ‹·è´æ“ä½œæ•ˆçŽ‡é«˜
 
 
-14. ÔÚ¶àÖØÑ­»·ÖÐ,Èç¹ûÓÐ¿ÉÄÜ,¾¡Á¿½«×î³¤µÄÑ­»··ÅÔÚ×îÄÚ²ã,×î¶ÌµÄÑ­»··ÅÔÚ×îÍâ²ã,ÒÔ¼õÉÙÑ­»·²ã¼äµÄ±ä»»´ÎÊý.
+12. å°½é‡é¿å…åœ¨å¾ªçŽ¯ä½“ä¸­è°ƒç”¨æ–¹æ³•,å› ä¸ºæ–¹æ³•è°ƒç”¨æ˜¯æ¯”è¾ƒæ˜‚è´µçš„.
 
-15. ÔÚÐèÒªÏß³Ì°²È«µÄÇé¿öÏÂ,Ê¹ÓÃList list = Collections.synchronizedList(new ArrayList());
-
-
-16. Èç¹ûÔ¤Öª³¤¶È,¾ÍÉèÖÃArrayListµÄ³¤¶È.
+13. å°½é‡é¿å…åœ¨å¾ªçŽ¯ä½“ä¸­ä½¿ç”¨try-catch å—,æœ€å¥½åœ¨å¾ªçŽ¯ä½“å¤–ä½¿ç”¨try--catchå—ä»¥æé«˜ç³»ç»Ÿæ€§èƒ½.
 
 
-17. ArrayList Óë LinkedList Ñ¡Ôñ,ÊìÏ¤µ×²ãµÄÊµÏÖÔ­Àí,Ñ¡ÔñÊÊµ±µÄÈÝÆ÷.
+14. åœ¨å¤šé‡å¾ªçŽ¯ä¸­,å¦‚æžœæœ‰å¯èƒ½,å°½é‡å°†æœ€é•¿çš„å¾ªçŽ¯æ”¾åœ¨æœ€å†…å±‚,æœ€çŸ­çš„å¾ªçŽ¯æ”¾åœ¨æœ€å¤–å±‚,ä»¥å‡å°‘å¾ªçŽ¯å±‚é—´çš„å˜æ¢æ¬¡æ•°.
+
+15. åœ¨éœ€è¦çº¿ç¨‹å®‰å…¨çš„æƒ…å†µä¸‹,ä½¿ç”¨List list = Collections.synchronizedList(new ArrayList());
 
 
-18. ×Ö·û´®ÀÛ¼Ó²ÉÓÃStringBuffer.
+16. å¦‚æžœé¢„çŸ¥é•¿åº¦,å°±è®¾ç½®ArrayListçš„é•¿åº¦.
 
 
-19. ÏµÍ³I/OÓÅ»¯,²ÉÓÃ»º³åºÍÑ¹Ëõ¼¼Êõ.ÓÅ»¯ÐÔÄÜ.
+17. ArrayList ä¸Ž LinkedList é€‰æ‹©,ç†Ÿæ‚‰åº•å±‚çš„å®žçŽ°åŽŸç†,é€‰æ‹©é€‚å½“çš„å®¹å™¨.
 
 
-21 ¾¡Á¿±ÜÃâÔÚ¹¹ÔìÖÐ¶Ô¾²Ì¬±äÁ¿×ö¸³Öµ²Ù×÷
-
-22. ²»ÒªÔÚÀàµÄ¹¹ÔìÆ÷ÖÐ´´½¨ÀàµÄÊµÀý
+18. å­—ç¬¦ä¸²ç´¯åŠ é‡‡ç”¨StringBuffer.
 
 
-23. ×éºÏÓÅ»¯¼Ì³Ð
-
-24. ×îºÃÍ¨¹ýClass.forname() ¶¯Ì¬µÄ×°ÔØÀà
-
-25. JSPÓÅ»¯,²ÉÓÃout ¶ÔÏóÖÐµÄprint·½·¨´úÌæprintln()·½·¨
-
-26 .²ÉÓÃServletOutputStream ¶ÔÏó´úÌæJSPWriter¶ÔÏó
-
-27. ²ÉÓÃÊÊµ±µÄÖµ³õÊ¼»¯out ¶ÔÏó»º³åÇøµÄ´óÐ¡
-
-28. ¾¡Á¿²ÉÓÃforward()·½·¨ÖØ¶¨ÏòÐÂµÄJSP
-
-29. ÀûÓÃÏß³Ì³Ø¼¼Êõ´¦Àí¿Í»§ÇëÇó
-
-30.ServletÓÅ»¯ 
-
-(1) Í¨¹ýinit()·½·¨À´»º´æÒ»Ð©¾²Ì¬Êý¾ÝÒÔÌá¸ßÓ¦ÓÃÐÔÄÜ. 
-
-¡¡¡¡(2) ÓÃprint() ·½·¨È¡´úprintln()·½·¨. 
-
-¡¡¡¡(3) ÓÃServletOutputStream È¡´ú PrintWriter. 
-
-¡¡¡¡(4) ¾¡Á¿ËõÐ¡Í¬²½´úÂëÊýÁ¿ 
-¡¡¡¡
-¡¡¡¡
-31. ¸ÄÉÆServletÓ¦ÓÃÐÔÄÜµÄ·½·¨ 
-
-¡¡¡¡(1)²»ÒªÊ¹ÓÃSingleThreadModel 
-
-¡¡¡¡(2)Ê¹ÓÃÏß³Ì³ØThreadPool
-¡¡¡¡
-
-32. EJBÓÅ»¯ 
-
-¡¡¡¡ÊµÌåEJB: 
-
-¡¡¡¡(1)ÊµÌåEJBÖÐ³£ÓÃÊý¾Ý»º´æÓëÊÍ·Å 
-
-¡¡¡¡(2)²ÉÓÃÑÓ³Ù¼ÓÔØµÄ·½Ê½×°ÔØ¹ØÁªÊý¾Ý 
-
-¡¡¡¡(3)¾¡¿ÉÄÜµØÓ¦ÓÃCMPÀàÐÍÊµÌåEJB 
-
-¡¡¡¡(4)Ö±½Ó²ÉÓÃJDBC¼¼Êõ´¦Àí´óÐÍÊý¾Ý
+19. ç³»ç»ŸI/Oä¼˜åŒ–,é‡‡ç”¨ç¼“å†²å’ŒåŽ‹ç¼©æŠ€æœ¯.ä¼˜åŒ–æ€§èƒ½.
 
 
-33. ÓÅ»¯JDBCÁ¬½Ó 
+21 å°½é‡é¿å…åœ¨æž„é€ ä¸­å¯¹é™æ€å˜é‡åšèµ‹å€¼æ“ä½œ
 
-¡¡¡¡(1)ÉèÖÃºÏÊÊµÄÔ¤È¡ÐÐÖµ 
-
-¡¡¡¡(2)²ÉÓÃÁ¬½Ó³Ø¼¼Êõ 
-
-¡¡¡¡(3)È«ºÏÀíÓ¦ÓÃÊÂÎñ 
-
-¡¡¡¡(4)Ñ¡ÔñºÏÊÊµÄÊÂÎñ¸ôÀë²ãÓë¼°Ê±¹Ø±ÕÁ¬½Ó¶ÔÏó
+22. ä¸è¦åœ¨ç±»çš„æž„é€ å™¨ä¸­åˆ›å»ºç±»çš„å®žä¾‹
 
 
-34. PreparedStatemetnÖ»±àÒë½âÎöÒ»´Î,¶øStatementÃ¿´Î¶¼±àÒë½âÎö.
+23. ç»„åˆä¼˜åŒ–ç»§æ‰¿
 
-35. ¾¡¿ÉÄÜµØ×öÅú´¦Àí¸üÐÂ
+24. æœ€å¥½é€šè¿‡Class.forname() åŠ¨æ€çš„è£…è½½ç±»
 
-36. Í¨¹ý²ÉÓÃºÏÊÊµÄgetXXX·½·¨Ìá¸ßÏµÍ³ÐÔÄÜ
+25. JSPä¼˜åŒ–,é‡‡ç”¨out å¯¹è±¡ä¸­çš„printæ–¹æ³•ä»£æ›¿println()æ–¹æ³•
 
-37. ²ÉÓÃÉè¼ÆÄ£Ê½.
+26 .é‡‡ç”¨ServletOutputStream å¯¹è±¡ä»£æ›¿JSPWriterå¯¹è±¡
+
+27. é‡‡ç”¨é€‚å½“çš„å€¼åˆå§‹åŒ–out å¯¹è±¡ç¼“å†²åŒºçš„å¤§å°
+
+28. å°½é‡é‡‡ç”¨forward()æ–¹æ³•é‡å®šå‘æ–°çš„JSP
+
+29. åˆ©ç”¨çº¿ç¨‹æ± æŠ€æœ¯å¤„ç†å®¢æˆ·è¯·æ±‚
+
+30.Servletä¼˜åŒ– 
+
+(1) é€šè¿‡init()æ–¹æ³•æ¥ç¼“å­˜ä¸€äº›é™æ€æ•°æ®ä»¥æé«˜åº”ç”¨æ€§èƒ½. 
+
+ã€€ã€€(2) ç”¨print() æ–¹æ³•å–ä»£println()æ–¹æ³•. 
+
+ã€€ã€€(3) ç”¨ServletOutputStream å–ä»£ PrintWriter. 
+
+ã€€ã€€(4) å°½é‡ç¼©å°åŒæ­¥ä»£ç æ•°é‡ 
+ã€€ã€€
+ã€€ã€€
+31. æ”¹å–„Servletåº”ç”¨æ€§èƒ½çš„æ–¹æ³• 
+
+ã€€ã€€(1)ä¸è¦ä½¿ç”¨SingleThreadModel 
+
+ã€€ã€€(2)ä½¿ç”¨çº¿ç¨‹æ± ThreadPool
+ã€€ã€€
+
+32. EJBä¼˜åŒ– 
+
+ã€€ã€€å®žä½“EJB: 
+
+ã€€ã€€(1)å®žä½“EJBä¸­å¸¸ç”¨æ•°æ®ç¼“å­˜ä¸Žé‡Šæ”¾ 
+
+ã€€ã€€(2)é‡‡ç”¨å»¶è¿ŸåŠ è½½çš„æ–¹å¼è£…è½½å…³è”æ•°æ® 
+
+ã€€ã€€(3)å°½å¯èƒ½åœ°åº”ç”¨CMPç±»åž‹å®žä½“EJB 
+
+ã€€ã€€(4)ç›´æŽ¥é‡‡ç”¨JDBCæŠ€æœ¯å¤„ç†å¤§åž‹æ•°æ®
 
 
-ÎÄÕÂ³ö´¦£ºhttp://jbeduhai.iteye.com/blog/1412415
+33. ä¼˜åŒ–JDBCè¿žæŽ¥ 
+
+ã€€ã€€(1)è®¾ç½®åˆé€‚çš„é¢„å–è¡Œå€¼ 
+
+ã€€ã€€(2)é‡‡ç”¨è¿žæŽ¥æ± æŠ€æœ¯ 
+
+ã€€ã€€(3)å…¨åˆç†åº”ç”¨äº‹åŠ¡ 
+
+ã€€ã€€(4)é€‰æ‹©åˆé€‚çš„äº‹åŠ¡éš”ç¦»å±‚ä¸ŽåŠæ—¶å…³é—­è¿žæŽ¥å¯¹è±¡
+
+
+34. PreparedStatemetnåªç¼–è¯‘è§£æžä¸€æ¬¡,è€ŒStatementæ¯æ¬¡éƒ½ç¼–è¯‘è§£æž.
+
+35. å°½å¯èƒ½åœ°åšæ‰¹å¤„ç†æ›´æ–°
+
+36. é€šè¿‡é‡‡ç”¨åˆé€‚çš„getXXXæ–¹æ³•æé«˜ç³»ç»Ÿæ€§èƒ½
+
+37. é‡‡ç”¨è®¾è®¡æ¨¡å¼.
+
+
+
+æ–‡ç« å‡ºå¤„ï¼šhttp://jbeduhai.iteye.com/blog/1412415
