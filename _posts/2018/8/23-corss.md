@@ -1,0 +1,159 @@
+---
+layout:     post                  
+title:      springboot跨域请求解决方案+前后端分离跨域问题其他解决方案       
+date:       2018-8-23             
+author:     Mr.W                   
+header-img: img/post-bg-rwd.jpg  
+category: springboot   
+catalog: true  
+tags:                             
+- SpringBoot 
+- 跨域请求
+---
+
+> 如今的这个生态圈百花齐放，前后分离开始热门起来了，前端也要MVC了，那么你最常碰到的问题是什么？跨域请求会不会在你的问题名单中？
+
+这里有有张摘自网络的图片
+
+简述跨域问题
+
+![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/8-23/1.png)
+
+# SpringBoot跨域请求
+
+## 1、直接采用SpringBoot的注解`@CrossOrigin`
+
+
+## 2、处理跨域请求的Configuration
+
+CrossOriginConfig.java
+
+```java
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+/**
+ * AJAX请求跨域
+ * @author Mr.W
+ * @time 2018-08-13
+ */
+@Configuration
+public class CorsConfig extends WebMvcConfigurerAdapter {
+    static final String ORIGINS[] = new String[] { "GET", "POST", "PUT", "DELETE" };
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**").allowedOrigins("*").allowCredentials(true).allowedMethods(ORIGINS)
+                .maxAge(3600);
+    }
+}
+```
+
+
+## 3、采用HTTP请求的接口
+
+```java
+@RestController
+public class HelloController {
+    
+    @Autowired
+    HelloService helloService;
+    
+    @GetMapping(value = "/test", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String query() {
+        return "hello";
+    }
+}
+```
+
+## 4、（稳定操作）采用过滤器的方式
+
+```java
+ private CorsConfiguration buildConfig() {
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        corsConfiguration.addAllowedOrigin("*");
+        corsConfiguration.addAllowedHeader("*");
+        corsConfiguration.addAllowedMethod("*");
+        corsConfiguration.addExposedHeader(HttpHeaderConStant.X_TOTAL_COUNT);
+        return corsConfiguration;
+    }
+
+    /**
+     * 跨域过滤器
+     *
+     * @return
+     */
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", buildConfig()); 
+        return new CorsFilter(source);
+    }
+```
+
+还有些千奇百怪的写法，但是作用都是一个：
+
+```
+//统一过滤器设置
+public class DomainFilter  implements Filter {
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
+
+    @Override
+    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+        HttpServletResponse response = (HttpServletResponse) res;
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+        response.setHeader("Access-Control-Max-Age", "3600");
+        response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        chain.doFilter(req, res);
+    }
+
+    @Override
+    public void destroy() {
+
+    }
+}
+
+
+//spring boot过滤器设置
+    @Bean
+    public FilterRegistrationBean filterRegistrationBean() {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+        DomainFilter domainFilter = new DomainFilter();
+        registrationBean.setFilter(domainFilter);
+        List<String> urlPatterns = new ArrayList<String>();
+        urlPatterns.add("/*");
+        registrationBean.setUrlPatterns(urlPatterns);
+        return registrationBean;
+    }
+```
+
+# 前后分离的跨域问题其他解决方案
+
+## Nginx服务器反向代理
+
+通过反向代理服务器监听同端口，同域名的访问，不同路径映射到不同的地址，比如，在nginx服务器中，监听同一个域名和端口，不同路径转发到客户端和服务器，把不同端口和域名的限制通过反向代理，来解决跨域的问题。
+
+```config
+server {
+        listen       80;
+        server_name  abc.com;
+        #charset koi8-r;
+        #access_log  logs/host.access.log  main;
+
+        location /client { #访问客户端路径
+            proxy_pass http://localhost:81;
+            proxy_redirect default;
+        }
+        location /apis { #访问服务器路径
+            rewrite  ^/apis/(.*)$ /$1 break;
+            proxy_pass   http://localhost:82;
+       }
+}
+```
+
+
+
