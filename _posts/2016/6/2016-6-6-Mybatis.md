@@ -8,4 +8,6 @@ catalog: true
 stickie: false                       
 ---
   
-  
+ [-Mybatis批量更新操作](http://wjwcloud.com/2018/07/13/Mybatis_update_batch/)
+ 
+ 
