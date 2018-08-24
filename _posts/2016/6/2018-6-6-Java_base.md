@@ -9,7 +9,7 @@ stickie: false
 ---
   
 
-[-Java基础知识点](http://http://wjwcloud.com/2018/07/16/Java_base/)
+[-Java基础知识点](http://wjwcloud.com/2018/07/16/Java_base/)
 
 [-字符串反转](http://wjwcloud.com/2018/03/13/StrReverse/)
 
