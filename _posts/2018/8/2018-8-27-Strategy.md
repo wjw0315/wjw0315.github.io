@@ -159,7 +159,7 @@ public enum GranularityEnum {
 ```java
 public interface Strategy {
 
-    public int TimeDiffer(Date startTime , Date endTime , GranularityEnum type);
+    public int TimeDiffer(Date startTime , Date endTime );
 
 }
 
@@ -172,7 +172,7 @@ public interface Strategy {
 ```java
 public class DayStrategy implements Strategy {
     @Override
-    public int TimeDiffer(Date startTime, Date endTime, GranularityEnum type) {
+    public int TimeDiffer(Date startTime, Date endTime) {
         TimeC timeC=new TimeC(startTime,endTime);
         return  timeC.TimeDay();
     }
@@ -182,7 +182,7 @@ public class DayStrategy implements Strategy {
 ```
 public class WeekStrategy implements Strategy {
     @Override
-    public int TimeDiffer(Date startTime, Date endTime, GranularityEnum type) {
+    public int TimeDiffer(Date startTime, Date endTime) {
         TimeC timeC=new TimeC(startTime,endTime);
         return  timeC.TimeWeek();
     }
@@ -192,7 +192,7 @@ public class WeekStrategy implements Strategy {
 ```java
 public class MonthStrategy implements Strategy {
     @Override
-    public int TimeDiffer(Date startTime, Date endTime, GranularityEnum type) {
+    public int TimeDiffer(Date startTime, Date endTime) {
         TimeC timeC=new TimeC(startTime,endTime);
         return  timeC.TimeMonth();
     }
@@ -205,30 +205,32 @@ public class MonthStrategy implements Strategy {
 public class StrategyFactory {
 
     private static StrategyFactory factory = new StrategyFactory();
+    
+    
+    public static StrategyFactory getInstance(){
+
+        return factory;
+
+    }
 
     private StrategyFactory(){
 
     }
+    
     private static Map strategyMap = new HashMap<>();
 
     static{
         strategyMap.put(GranularityEnum.DAY.value(), new DayStrategy());
         
-        strategyMap.put(GranularityEnum.WEEK.value(), new DayStrategy());
+        strategyMap.put(GranularityEnum.WEEK.value(), new WeekStrategy());
         
-        strategyMap.put(GranularityEnum.MONTH.value(), new DayStrategy());
+        strategyMap.put(GranularityEnum.MONTH.value(), new MonthStrategy());
 
 
     }
     public Strategy creator(Integer type){
 
         return (Strategy) strategyMap.get(type);
-
-    }
-
-    public static StrategyFactory getInstance(){
-
-        return factory;
 
     }
 
@@ -255,7 +257,7 @@ public class Context {
 
         strategy = StrategyFactory.getInstance().creator(type);
 
-        return strategy.TimeDiffer(startTime, endTime, GranularityEnum.valueOf(type));
+        return strategy.TimeDiffer(startTime, endTime);
 
     }
 
@@ -267,10 +269,9 @@ public class Context {
 
 6、客户端中使用：
 ```java
+        Integer key =Integer.parseInt(scheduling.getGranularity());
 		Context context = new Context();
-		int s0 = context.TimeDiffer(startTime,endTime, GranularityEnum.DAY.value());
-		int s1 = context.TimeDiffer(startTime,endTime, GranularityEnum.WEEK.value());
-		int s2 = context.TimeDiffer(startTime,endTime, GranularityEnum.MONTH.value());
+		int s = context.TimeDiffer(startTime,endTime, key);
 ```
 
 
