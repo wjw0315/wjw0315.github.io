@@ -9,3 +9,5 @@ stickie: false
 ---
   
  [-设计模式](http://wjwcloud.com/2018/03/30/Design_pattern/)
+ 
+ [-策略模式以及实际开发使用](http://wjwcloud.com/2018/08/27/Strategy/)
