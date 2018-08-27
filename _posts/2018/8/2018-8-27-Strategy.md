@@ -1,6 +1,6 @@
 ---
 layout:     post                  
-title:      策略模式与实际开发中的应用（一）  
+title:      策略模式与避免臃肿的if-else  
 date:       2018-8-27             
 author:     wjw                   
 header-img: img/post-bg-rwd.jpg  
