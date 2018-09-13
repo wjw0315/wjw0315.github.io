@@ -19,7 +19,7 @@ baidu_js_push: false
 
 # Sidebar settings侧边栏
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "欢迎关注公众微信号"
 sidebar-avatar: /img/gzh.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -29,7 +29,7 @@ RSS: false
 # weibo_username:
 zhihu_username:    
 github_username:    wjw0315
-# facebook_username:
+facebook_username: Jiawei Wu
 jianshu_username:   timeline
 #twitter_username:   
 # coding_username: 
