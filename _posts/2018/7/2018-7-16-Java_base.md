@@ -273,9 +273,9 @@ switch 不支持 long，是因为 switch 的设计初衷是对那些只有少数
   Incompatible types. Found: 'long', required: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
  ```
  
- # 四、继承
+# 四、继承
  
- ## 访问权限
+## 访问权限
  
 ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/10-12/1.png)
 
