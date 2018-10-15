@@ -1,9 +1,9 @@
 ---
 layout:     post                  
-title:      Java基础 （未完）     
+title:      Java基础      
 subtitle:   Java_base         
 date:       2018-7-16             
-author:     wjw                   
+author:     JiaweiWu                   
 header-img: img/post-bg-rwd.jpg  
 catalog: true                          
 tags:                             
@@ -286,4 +286,447 @@ switch 不支持 long，是因为 switch 的设计初衷是对那些只有少数
 > 字段决不能是公有的，因为这么做的话就失去了对这个字段修改行为的控制，客户端可以对其随意修改。
 
 ## 抽象类与接口
+
+#### 1. 抽象类
+
+抽象类和抽象方法都使用 abstract 关键字进行声明。抽象类一般会包含抽象方法，抽象方法一定位于抽象类中。
+
+抽象类和普通类最大的区别是，抽象类不能被实例化，需要继承抽象类才能实例化其子类。
+```
+public abstract class AbstractClassExample {
+
+    protected int x;
+    private int y;
+
+    public abstract void func1();
+
+    public void func2() {
+        System.out.println("func2");
+    }
+}
+```
+```
+public class AbstractExtendClassExample extends AbstractClassExample {
+    @Override
+    public void func1() {
+        System.out.println("func1");
+    }
+}
+```
+```
+// AbstractClassExample ac1 = new AbstractClassExample(); // 抽象类不能实例化
+AbstractClassExample ac2 = new AbstractExtendClassExample();
+ac2.func1();
+```
+#### 2. 接口
+
+接口是抽象类的延伸，在 Java 8 之前，它可以看成是一个完全抽象的类，也就是说它不能有任何的方法实现。
+
+从 Java 8 开始，接口也可以拥有默认的方法实现，这是因为不支持默认方法的接口的维护成本太高了。在 Java 8 之前，如果一个接口想要添加新的方法，那么要修改所有实现了该接口的类。
+
+接口的成员（字段 + 方法）默认都是 public 的，并且不允许定义为 private 或者 protected。
+
+接口的字段默认都是 static 和 final 的。
+```
+public interface InterfaceExample {
+
+    void func1();
+
+    default void func2(){
+        System.out.println("func2");
+    }
+
+    int x = 123;
+    // int y;               // 没有进行初始化是不允许的
+    public int z = 0;       //  接口成员默认都是public的，所以此处的public多余
+    // private int k = 0;   // Modifier 'private' not allowed here
+    // protected int l = 0; // Modifier 'protected' not allowed here
+    // private void fun3(); // Modifier 'private' not allowed here
+}
+```
+```
+public class InterfaceImplementExample implements InterfaceExample {
+    @Override
+    public void func1() {
+        System.out.println("func1");
+    }
+}
+```
+```
+// InterfaceExample ie1 = new InterfaceExample(); // 接口是抽象类的延伸，同样的不能进行实例化
+InterfaceExample ie2 = new InterfaceImplementExample();
+ie2.func1();
+System.out.println(InterfaceExample.x);
+```
+#### 3. 比较
+
+- 从设计层面上看，抽象类提供了一种 IS-A 关系，那么就必须满足里式替换原则，即子类对象必须能够替换掉所有父类对象。而接口更像是一种 LIKE-A 关系，它只是提供一种方法实现契约，并不要求接口和实现接口的类具有 IS-A 关系。
+- 从使用上来看，一个类可以实现多个接口，但是不能继承多个抽象类。
+- 接口的字段只能是 static 和 final 类型的，而抽象类的字段没有这种限制。
+- 接口的成员只能是 public 的，而抽象类的成员可以有多种访问权限。
+
+#### 4. 使用选择
+
+**使用接口：**
+
+- 需要让不相关的类都实现一个方法，例如不相关的类都可以实现 Compareable 接口中的 compareTo() 方法；
+- 需要使用多重继承。
+
+**使用抽象类：**
+
+- 需要在几个相关的类中共享代码。
+- 需要能控制继承来的成员的访问权限，而不是都为 public。
+- 需要继承非静态和非常量字段。
+
+> 在很多情况下，接口优先于抽象类。因为接口没有抽象类严格的类层次结构要求，可以灵活地为一个类添加行为。并且从 Java 8 开始，接口也可以有默认的方法实现，使得修改接口的成本也变的很低。
+
+
+## Super 
+
+- 访问父类的构造函数：可以使用 super() 函数访问父类的构造函数，从而委托父类完成一些初始化的工作。
+- 访问父类的成员：如果子类重写了父类的某个方法，可以通过使用 super 关键字来引用父类的方法实现。
+```
+public class SuperExample {
+
+    protected int x;
+    protected int y;
+
+    public SuperExample(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void func() {
+        System.out.println("SuperExample.func()");
+    }
+}
+```
+```
+public class SuperExtendExample extends SuperExample {
+
+    private int z;
+
+    public SuperExtendExample(int x, int y, int z) {
+        super(x, y);
+        this.z = z;
+    }
+
+    @Override
+    public void func() {
+        super.func();
+        System.out.println("SuperExtendExample.func()");
+    }
+}
+```
+```
+SuperExample e = new SuperExtendExample(1, 2, 3);
+e.func();
+```
+```
+SuperExample.func()
+SuperExtendExample.func()
+```
+
+## 重载与重写
+
+#### 1、重载（Overload）
+
+存在于同一个类中，指一个方法与已经存在的方法名称上相同，但是**参数类型、个数、顺序至少有一个不同**。
+
+应该注意的是，返回值可同可不同。
+
+#### 2、重写（Override）
+
+存在于继承体系中，指子类实现了一个与父类在方法声明上完全相同的一个方法。
+
+为了满足里式替换原则，重写有有以下两个限制：
+
+- 子类方法的访问权限必须大于等于父类方法；
+- 子类方法的返回类型必须是父类方法返回类型或为其子类型。
+
+使用 `@Override` 注解，可以让编译器帮忙检查是否满足上面的两个限制条件。
+
+# 五、Object的通用方法
+```
+public native int hashCode()
+
+public boolean equals(Object obj)
+
+protected native Object clone() throws CloneNotSupportedException
+
+public String toString()
+
+public final native Class<?> getClass()
+
+protected void finalize() throws Throwable {}
+
+public final native void notify()
+
+public final native void notifyAll()
+
+public final native void wait(long timeout) throws InterruptedException
+
+public final void wait(long timeout, int nanos) throws InterruptedException
+
+public final void wait() throws InterruptedException
+```
+
+## equals()
+
+#### 1. 等价关系
+
+**Ⅰ 自反性**
+
+`x.equals(x); // true`
+
+**Ⅱ 对称性**
+
+`x.equals(y) == y.equals(x); // true`
+
+**Ⅲ 传递性**
+```
+if (x.equals(y) && y.equals(z))
+    x.equals(z); // true;
+```
+**Ⅳ 一致性**
+
+多次调用 equals() 方法结果不变
+
+`x.equals(y) == x.equals(y); // true`
+
+**Ⅴ 与 null 的比较**
+
+对任何==不是 null 的对象== x 调用 x.equals(null) 结果都为 false
+
+`x.equals(null); // false;`
+
+**[注]：注意是不为NULL的对象，NULL对象调用.equals()会报空指针异常**
+
+#### 2. 等价与相等
+
+对于基本类型，== 判断两个值是否相等，基本类型没有 equals() 方法。
+对于引用类型，== 判断两个变量是否引用同一个对象，而 equals() 判断引用的对象是否等价。
+```
+Integer x = new Integer(1);
+Integer y = new Integer(1);
+System.out.println(x.equals(y)); // true
+System.out.println(x == y);      // false
+```
+#### 3. 实现
+
+检查是否为同一个对象的引用，如果是直接返回 true；
+检查是否是同一个类型，如果不是，直接返回 false；
+将 Object 对象进行转型；
+判断每个关键域是否相等。
+```
+public class EqualExample {
+
+    private int x;
+    private int y;
+    private int z;
+
+    public EqualExample(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        EqualExample that = (EqualExample) o;
+
+        if (x != that.x) return false;
+        if (y != that.y) return false;
+        return z == that.z;
+    }
+}
+```
+
+## hashCode()
+
+hashCode() 返回散列值，而 equals() 是用来判断两个对象是否等价。**等价的两个对象散列值一定相同，但是散列值相同的两个对象不一定等价**。
+
+在覆盖 equals() 方法时应当总是覆盖 hashCode() 方法，保证等价的两个对象散列值也相等。
+
+## clone()
+
+#### 1. cloneable
+
+> clone() 是 Object 的 protected 方法，它不是 public，一个类不显式去重写 clone()，其它类就不能直接去调用该类实例的 clone() 方法。
+```
+public class CloneExample {
+    private int a;
+    private int b;
+}
+```
+```
+CloneExample e1 = new CloneExample();
+// CloneExample e2 = e1.clone(); //  在 'java.lang.Object'中clone()是protected，在没有重写的情况下不能直接调用clone（）方法
+```
+
+重写 clone() 得到以下实现：
+```
+public class CloneExample {
+    private int a;
+    private int b;
+
+    @Override
+    public CloneExample clone() throws CloneNotSupportedException {
+        return (CloneExample)super.clone();
+    }
+}
+CloneExample e1 = new CloneExample();
+try {
+    CloneExample e2 = e1.clone();
+} catch (CloneNotSupportedException e) {
+    e.printStackTrace();
+}
+```
+
+`java.lang.CloneNotSupportedException: CloneExample`
+以上抛出了 `CloneNotSupportedException`，这是因为 CloneExample 没有实现 `Cloneable` 接口。
+
+应该注意的是，clone() 方法并不是 Cloneable 接口的方法，而是 Object 的一个 protected 方法。Cloneable 接口只是规定，如果一个类没有实现 Cloneable 接口又调用了 clone() 方法，就会抛出 `CloneNotSupportedException`。
+```
+public class CloneExample implements Cloneable {
+    private int a;
+    private int b;
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+```
+#### 2. 浅拷贝
+
+拷贝对象和原始对象的引用类型引用同一个对象。
+```
+public class ShallowCloneExample implements Cloneable {
+
+    private int[] arr;
+
+    public ShallowCloneExample() {
+        arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+        }
+    }
+
+    public void set(int index, int value) {
+        arr[index] = value;
+    }
+
+    public int get(int index) {
+        return arr[index];
+    }
+
+    @Override
+    protected ShallowCloneExample clone() throws CloneNotSupportedException {
+        return (ShallowCloneExample) super.clone();
+    }
+}
+```
+
+```
+ShallowCloneExample e1 = new ShallowCloneExample();
+ShallowCloneExample e2 = null;
+try {
+    e2 = e1.clone();
+} catch (CloneNotSupportedException e) {
+    e.printStackTrace();
+}
+e1.set(2, 222);
+System.out.println(e2.get(2)); // 222
+```
+
+#### 3. 深拷贝
+
+拷贝对象和原始对象的引用类型引用不同对象。
+```
+public class DeepCloneExample implements Cloneable {
+
+    private int[] arr;
+
+    public DeepCloneExample() {
+        arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+        }
+    }
+
+    public void set(int index, int value) {
+        arr[index] = value;
+    }
+
+    public int get(int index) {
+        return arr[index];
+    }
+
+    @Override
+    protected DeepCloneExample clone() throws CloneNotSupportedException {
+        DeepCloneExample result = (DeepCloneExample) super.clone();
+        result.arr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            result.arr[i] = arr[i];
+        }
+        return result;
+    }
+}
+```
+```
+DeepCloneExample e1 = new DeepCloneExample();
+DeepCloneExample e2 = null;
+try {
+    e2 = e1.clone();
+} catch (CloneNotSupportedException e) {
+    e.printStackTrace();
+}
+
+e1.set(2, 222);
+System.out.println(e2.get(2)); // 2
+```
+#### 4. clone() 的替代方案
+
+使用 clone() 方法来拷贝一个对象即复杂又有风险，它会抛出异常，并且还需要类型转换。Effective Java 书上讲到，最好不要去使用 clone()，可以使用拷贝构造函数或者拷贝工厂来拷贝一个对象。
+```
+public class CloneConstructorExample {
+
+    private int[] arr;
+
+    public CloneConstructorExample() {
+        arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+        }
+    }
+
+    public CloneConstructorExample(CloneConstructorExample original) {
+        arr = new int[original.arr.length];
+        for (int i = 0; i < original.arr.length; i++) {
+            arr[i] = original.arr[i];
+        }
+    }
+
+    public void set(int index, int value) {
+        arr[index] = value;
+    }
+
+    public int get(int index) {
+        return arr[index];
+    }
+}
+```
+```
+CloneConstructorExample e1 = new CloneConstructorExample();
+CloneConstructorExample e2 = new CloneConstructorExample(e1);
+e1.set(2, 222);
+System.out.println(e2.get(2)); // 2
+```
+
+## 六、关键字
+
 
