@@ -22,20 +22,21 @@ CPU处理程序是通过快速切换完成的，与我们来说是随机的；�
 
 ## Thread 的相关方法
 
-    Thread.currentThread().getName(): 获得当前线程的名称(主线程:main；自定义线程:Thread-N)。
-    isAlive:判断线程是否未终止
-    getPriority:获得线程的优先级数值
-    setPriority:设置线程的优先级数值
-    setName:设置线程的名字
+- Thread.currentThread().getName(): 获得当前线程的名称(主线程:main；自定义线程:Thread-N)。
+- isAlive:判断线程是否未终止
+- getPriority:获得线程的优先级数值
+- setPriority:设置线程的优先级数值
+- setName:设置线程的名字
 
 ## 创建线程的两种方式
 
 ### 一、继承Thread类
 
-    继承Thread类
-    重写Thread的run方法。
-    创建子类对象，即线程对象
-    调用start方法，开启线程并让线程执行，同时告诉jvm去调用run方法。
+- 继承Thread类
+- 重写Thread的run方法。
+- 创建子类对象，即线程对象
+- 调用start方法，开启线程并让线程执行，同时告诉jvm去调用run方法。
+
 ```
 class Demo extends Thread{
     private String name;
@@ -65,22 +66,26 @@ public class ThreadDemo {
 
 **问题**
 
-    线程对象调用run方法和调用start方法的区别？
-    调用run方法不开启线程,仅是对象调用方法.
-    调用start开启线程,并让jvm调用run方法在开启的线程中执行.
+线程对象调用run方法和调用start方法的区别？
+
+> 调用run方法不开启线程,仅是对象调用方法.
+调用start开启线程,并让jvm调用run方法在开启的线程中执行.
 
 **多线程内存**
 
-    多线程执行时,在栈内存中,每一个线程都有一片属于自己的栈内存空间,进行方法的压栈和弹栈.
-    当执行线程的任务结束了,线程自动在栈内存中释放.
-    当所有的执行线程都结束了,进程才结束
+多线程执行时,在栈内存中,每一个线程都有一片属于自己的栈内存空间,进行方法的压栈和弹栈.
+
+当执行线程的任务结束了,线程自动在栈内存中释放.
+
+当所有的执行线程都结束了,进程才结束
 
 ### 二、实现 Runnable 接口
 
-    定义类实现Runnable接口: 避免继承Thread类的单继承局限性
-    覆盖接口中的run方法。将线程任务代码定义到run方法中
-    创建Thread类的对象，并将Runnable接口的子类对象作为参数传递给Thread类的构造函数。因为线程被封装到Runnable接口的run方法中，而这个run方法所属于Runnable接口的子类对象，所以将这个子类对象作为参数传递给THread的构造函数。这样，线程对象创建时就可以明确要运行的线程任务。
-    调用Thread类的start方法开启线程
+定义类实现Runnable接口: 避免继承Thread类的单继承局限性
+覆盖接口中的run方法。将线程任务代码定义到run方法中
+创建Thread类的对象，并将Runnable接口的子类对象作为参数传递给Thread类的构造函数。因为线程被封装到Runnable接口的run方法中，而这个run方法所属于Runnable接口的子类对象，所以将这个子类对象作为参数传递给THread的构造函数。这样，线程对象创建时就可以明确要运行的线程任务。
+调用Thread类的start方法开启线程
+
 ```
 class Demo implements Runnable{
     private String name;
@@ -113,10 +118,10 @@ public class ThreadDemo {
 
 **优势**
 
-    实现Runnable接口避免了单继承的局限性，所以较为常用。
-    实现Runnable接口的方式，更加符合面向对象。线程分为两部分，一部分线程对象，一部分线程任务。
-        继承Thread类，线程对象和任务耦合在一起，一旦创建Thread子类对象，即使线程对象，又是线程任务。
-        实现Runnable接口，将线程任务单独分离出来封装成对象，类型就是Runnable接口，实现了解耦。
+- 实现Runnable接口避免了单继承的局限性，所以较为常用。
+- 实现Runnable接口的方式，更加符合面向对象。线程分为两部分，一部分线程对象，一部分线程任务。
+- 继承Thread类，线程对象和任务耦合在一起，一旦创建Thread子类对象，即使线程对象，又是线程任务。
+- 实现Runnable接口，将线程任务单独分离出来封装成对象，类型就是Runnable接口，实现了解耦。
 
 ## 线程状态
 
@@ -128,8 +133,8 @@ public class ThreadDemo {
 
 **原因**
 
-    线程任务操作共享的数据
-    线程任务操作数据的运算有多个
+线程任务操作共享的数据
+线程任务操作数据的运算有多个
 
 **解决**
 
@@ -145,9 +150,9 @@ synchronized(对象){
 
 线程1读到synchronized，会找后面括号中的对象(可任意，一般写this)并拿到该对象，之后往下执行。当线程2读到synchronized的时候，也会找后面括号中的对象，发现被线程1拿走了，所以线程2进不来了。直到线程1执行完synchronized代码块并释放对象之后，线程2才能继续执行。(对象相当于锁)-->火车上的卫生间
 
-**注意:**必须保证多个线程在同步中使用的同一个锁，即synchronized后面括号中为同一个对象
+**注意:** 必须保证多个线程在同步中使用的同一个锁，即synchronized后面括号中为同一个对象
 
-**同步弊端：**降低了程序性能。
+**同步弊端：** 降低了程序性能。
 
 ### 2、 同步函数
 
@@ -158,13 +163,15 @@ public synchronized void method(){
     // 需要被同步的代码
 }
 ```
-**注意:**static同步函数public static synchronized void method(){}，使用的锁不是this，而是字节码文件对象(类名.class)。因为万物皆对象，字节码文件也被视为对象存在。因此相应的synchronized代码块后的对象也要用类名.class:synchronized(类名.class){}.
+**注意:** static同步函数`public static synchronized void method(){}`，使用的锁不是this，而是字节码文件对象(类名.class)。因为万物皆对象，字节码文件也被视为对象存在。因此相应的synchronized代码块后的对象也要用类名.`class:synchronized(类名.class){}`.
 
 **分析**
 
-    既然是多线程的问题，必然发生在线程任务内
-    分析线程任务内是否有共享数据
-    是否有对数据进行多次运算
+既然是多线程的问题，必然发生在线程任务内
+
+分析线程任务内是否有共享数据
+
+是否有对数据进行多次运算
 
 ### 懒汉式线程安全问题
 
@@ -366,19 +373,21 @@ class Consumer implements Runnable {
 
 **注意:**
 
-    当多个生产消费的时候，为防止被唤醒的线程没有判断标记，要用while判断标记，而不是if。
-    用while时会出现死锁，因为本方唤醒了本方,希望唤醒对方，所以使用notifyAll方法。
+当多个生产消费的时候，为防止被唤醒的线程没有判断标记，要用while判断标记，而不是if。
+
+用while时会出现死锁，因为本方唤醒了本方,希望唤醒对方，所以使用notifyAll方法。
 
 ### 等待唤醒机制
 
-    wait(): 会让线程处于等待状态，将线程临时存进了线程池中
-    notify(): 会唤醒线程池中的任意一个等待线程。
-    notifyAll(): 会唤醒线程池中所有的等待线程。
+- wait(): 会让线程处于等待状态，将线程临时存进了线程池中
+- notify(): 会唤醒线程池中的任意一个等待线程。
+- notifyAll(): 会唤醒线程池中所有的等待线程。
 
 **注意:**
 
-    这些方法必须使用在同步中，因为必须要标识wait、notify等方法所使用的锁。同一个锁上的notify，只能唤醒该锁上的wait方法。
-    这些方法必须标识所属的锁，而锁可以是任意对象，任意对象可以调用的方法必须是Object的方法，所以这些方法定义在Object类中
+这些方法必须使用在同步中，因为必须要标识wait、notify等方法所使用的锁。同一个锁上的notify，只能唤醒该锁上的wait方法。
+
+这些方法必须标识所属的锁，而锁可以是任意对象，任意对象可以调用的方法必须是Object的方法，所以这些方法定义在Object类中
 
 ## Lock
 
@@ -449,24 +458,24 @@ class BoundedBuffer {
 ## 多线程的细节问题
 
 ### 1. sleep 和 wait 方法的异同点
-
-    - 相同点
-        都可以让线程处于冻结状态
-    - 不同点
-        sleep 必须指定时间；wait 可以指定时间，也可以不指定时间
-        sleep 时间到，线程处于临时阻塞或者运行；wait 如果没指定时间，必须通过notify 或者 notifyAll唤醒。
-        sleep 不一定非要定义在同步中；wait 必须定义在同步中。
-        都定义在同步中
-            线程执行到 sleep，不会释放所
-            线程执行到 wait，会释放锁
-
+```
+- 相同点
+    都可以让线程处于冻结状态
+- 不同点
+    sleep 必须指定时间；wait 可以指定时间，也可以不指定时间
+    sleep 时间到，线程处于临时阻塞或者运行；wait 如果没指定时间，必须通过notify 或者 notifyAll唤醒。
+    sleep 不一定非要定义在同步中；wait 必须定义在同步中。
+    都定义在同步中
+        线程执行到 sleep，不会释放所
+        线程执行到 wait，会释放锁
+```
 ### 2. 线程如何停止
 
-所谓线程结束，就是让线程任务代码完成，run方法结束。
+**所谓线程结束，就是让线程任务代码完成，run方法结束。**
 
-    stop 方法(过时):具有固定的不安全性，用Thread.stop来终止线程，将释放它已经锁定的所有监视器。
-    定义循环，控制住循环就行了
-    如果目标线程等待很长时间(处于冻结状态)，应用interrupt方法中断该线程(将线程的冻结状态清除，让线程重新获得cpu的执行资格)，并且收到一个InterruptException，在catch块中捕获，在异常处理中改变标记，让循环结束。
+stop 方法(过时):具有固定的不安全性，用Thread.stop来终止线程，将释放它已经锁定的所有监视器。
+定义循环，控制住循环就行了
+如果目标线程等待很长时间(处于冻结状态)，应用interrupt方法中断该线程(将线程的冻结状态清除，让线程重新获得cpu的执行资格)，并且收到一个InterruptException，在catch块中捕获，在异常处理中改变标记，让循环结束。
 
 ### Interrupt 实例
 ```
@@ -515,24 +524,24 @@ public class InterruptDemo {
 守护线程，可以理解为后台线程，一般创建的为前台线程，前后台运行线程的时候都是一样的，获取cpu的执行权限。但是结束的时候有些不同，前台线程和后台线程只要run方法结束，线程结束，但是在所有前台线程结束的时候，后台线程无论处于什么状态都会结束，从而进程结束。进程结束依赖的都是前台线程。
 
 方法: setDaemon(boolean on)
-
-    该方法必须在线程启动前调用:t.setDaemon(true); t.start; // t 线程设置为了守护线程
-    on如果为true，该线程标记为守护线程
-
+```
+该方法必须在线程启动前调用:t.setDaemon(true); t.start; // t 线程设置为了守护线程
+on如果为true，该线程标记为守护线程
+```
 ## 4. 线程的优先级
 
-Thread.currentThread.toString: 返回该线程的字符串表示形式，包括『线程名称』、『优先级』、『线程组』
+`Thread.currentThread.toString:` 返回该线程的字符串表示形式，包括『线程名称』、『优先级』、『线程组』
 
 优先级:
-
-    用数字标识的0-10；其中默认的初始化优先级是5；
-    最明显的三个优先级 : 1，5，10。
-    Thread.MAX_PRIORITY 线程可以具有的最高优先级。
-    Thread.MIN_PRIORITY 线程可以具有的最低优先级。
-    Thread.NORM_PRIORITY 分配给线程的默认优先级。
-    得到线程的优先级:getPriority()
-    更改线程的优先级:setPriority()
-
+```
+用数字标识的0-10；其中默认的初始化优先级是5；
+最明显的三个优先级 : 1，5，10。
+Thread.MAX_PRIORITY 线程可以具有的最高优先级。
+Thread.MIN_PRIORITY 线程可以具有的最低优先级。
+Thread.NORM_PRIORITY 分配给线程的默认优先级。
+得到线程的优先级:getPriority()
+更改线程的优先级:setPriority()
+```
 ## 5. 线程组
 
 ThreadGroup: 可以通过Thread构造函数明确新线程对象所属的线程组
@@ -606,8 +615,9 @@ new Thread(new Runnable(){
 
 我们的web项目都是部署在服务器上，浏览器端的每一个request就是一个线程，那么服务器需要并发的处理多个请求，就需要线程池技术，下面来看一下Java并发包下如何创建线程池。
 
-    创建一个可重用固定线程集合的线程池，以共享的无界队列方式来运行这些线程。
 ```
+创建一个可重用固定线程集合的线程池，以共享的无界队列方式来运行这些线程。
+
 ExecutorService threadPool = Executors.newFixedThreadPool(3);// 创建可以容纳3个线程的线程池
 
     创建一个可根据需要创建新线程的线程池，但是在以前构造的线程可用时将重用它们。
