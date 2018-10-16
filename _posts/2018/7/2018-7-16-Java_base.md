@@ -888,6 +888,8 @@ Class 和 `java.lang.reflect` 一起对反射提供了支持，`java.lang.reflec
 - Method ：可以使用 invoke() 方法调用与 Method 对象关联的方法；
 - Constructor ：可以用 Constructor 创建新的对象。
 
+[深入解析Java反射-基础篇](http://wjwcloud.com/2018/10/16/Java_Reflection-1/)
+
 # 八、异常
 
 Throwable 可以用来表示任何可以作为异常抛出的类，分为两种： Error 和 Exception。其中 Error 用来表示 JVM 无法处理的错误，Exception 分为两种：
