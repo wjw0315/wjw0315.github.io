@@ -6,7 +6,7 @@ header-img: img/53c02d34e6bec.jpg #显示在首页的背景图片
 email: 821060818@qq.com
 description: "Every failure is leading towards success." #网站介绍
 keyword: "MapleBlog,fengye Blog,枫叶博客,JAVA,wjw" #关键词
-url: "https://wjwcloud.com"          # your host, for absolute URL
+url: "http://wjwcloud.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "blog" # you code repository
 author: Mr.W
@@ -104,7 +104,7 @@ service-worker: true
 friends: [
     {
         title: "fengye",
-        href: "https://wjwcolud.com"
+        href: "http://wjwcolud.com"
     },{
         title: "Maple Blog",
         href: "http://blog.wjwcloud.com"
