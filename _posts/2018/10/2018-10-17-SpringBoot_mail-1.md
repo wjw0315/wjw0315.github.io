@@ -201,12 +201,12 @@ public void sendInlineResourceMail(String to, String subject, String content, St
 public void sendInlineResourceMail() {
     String rscId = "006";
     String content="<html><body>这是有图片的邮件：<img src=\'cid:" + rscId + "\' ></body></html>";
-    String imgPath = "C:\\Users\\summer\\Pictures\\favicon.png";
+    String imgPath = "C:\\Users\\down\\Pictures\\favicon.png";
 
     mailService.sendInlineResourceMail("***@163.com", "主题：这是有图片的邮件", content, imgPath, rscId);
 }
 ```
-**添加多个图片可以使用多条 <img src='cid:" + rscId + "' > 和 helper.addInline(rscId, res) 来实现**
+**添加多个图片可以使用多条 `<img src='cid:" + rscId + "' >` 和 `helper.addInline(rscId, res) `来实现**
 
 # 五、邮件系统
 
@@ -232,7 +232,7 @@ public void sendInlineResourceMail() {
     </head>
     <body>
         您好,这是验证邮件,请点击下面的链接完成验证,<br/>
-        <a href="#" th:href="@{ http://www.ityouknow.com/neo/{id}(id=${id}) }">激活账号</a>
+        <a href="#" th:href="@{ http://www.***.com/n/{id}(id=${id}) }">激活账号</a>
     </body>
 </html>
 ```
