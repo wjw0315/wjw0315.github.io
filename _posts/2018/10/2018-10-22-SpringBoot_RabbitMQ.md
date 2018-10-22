@@ -10,7 +10,7 @@ tags:
 - SpringBoot 
 ---
 
-# SpringBoot集成RabbitMQ
+# SpringBoot集成RabbitMQ 
 
 > springboot集成RabbitMQ非常简单，如果只是简单的使用配置非常少，springboot提供了spring-boot-starter-amqp项目对消息各种支持。
 
