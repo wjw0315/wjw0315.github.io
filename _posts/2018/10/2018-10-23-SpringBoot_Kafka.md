@@ -51,12 +51,12 @@ Kafka依赖Java环境.
 
 解压:
 
-`tar -xzvf kafka_2.11-0.10.0.1.tgz `
+`tar -xzvf kafka_2.11-1.1.0.tgz `
 
 修改kafka配置文件：
 
 ```
-cd kafka_2.11-0.10.0.1/config/
+cd kafka_2.11-1.1.0/config/
 #编辑配置文件
 vi server.properties
 broker.id=0
@@ -66,20 +66,22 @@ port=9092
 host.name=127.0.0.1
 #zookeeper地址和端口， Kafka支持内置的Zookeeper和引用外部的Zookeeper
 zookeeper.connect=localhost:2181
+
+listeners=PLAINTEXT://localhost:9092
 ```
 分别启动Zookeeper和Kafka：
 ```
-./zookeeper-server-start.sh /usr/local/kafka_2.11-0.10.0.1/config/zookeeper.properties &
+./zookeeper-server-start.sh /usr/wjw/opt/kafka/kafka_2.11-1.1.0/config/zookeeper.properties &
 
-./kafka-server-start.sh /usr/local/kafka_2.11-0.10.0.1/config/server.properties &
+./kafka-server-start.sh /usr/wjw/opt/kafka/kafka_2.11-1.1.0/config/server.properties &
 ```
 
 后台运行启动方式：
 
 ```
-./zookeeper-server-start.sh /usr/local/kafka_2.11-0.10.0.1/config/zookeeper.properties  1>/dev/null 2>&1 &
+./zookeeper-server-start.sh /usr/wjw/opt/kafka/kafka_2.11-1.1.0/config/zookeeper.properties  1>/dev/null 2>&1 &
 
-./kafka-server-start.sh /usr/local/kafka_2.11-0.10.0.1/config/server.properties  1>/dev/null 2>&1 &
+./kafka-server-start.sh /usr/wjw/opt/kafka/kafka_2.11-1.1.0/config/server.properties  1>/dev/null 2>&1 &
 ```
 
 SpringBoot集成：
