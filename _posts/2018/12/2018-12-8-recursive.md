@@ -1,4 +1,3 @@
-
 ---
 layout:     post                  
 title:      树形数据--递归的实际应用 
@@ -10,6 +9,7 @@ catalog: true
 tags:                             
 - 算法 
 ---
+
 > 将list数据改变成树形结构
 
 # 1、实体`Category.java`
