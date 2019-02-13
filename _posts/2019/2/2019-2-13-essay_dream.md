@@ -4,7 +4,7 @@ title:      大城市--积郁之城
 date:       2019-02-13             
 author:     JiaweiWu        
 header-img: img/post-bg-rwd.jpg  
-category: springboot   
+category: essay   
 catalog: true  
 tags:                             
 - 杂文 
