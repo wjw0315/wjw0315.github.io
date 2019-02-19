@@ -7,7 +7,8 @@ email: 821060818@qq.com
 description: "Every failure is leading towards success." #网站介绍
 keyword: "MapleBlog,fengye Blog,枫叶博客,JAVA,wjw,JiaweiWu" #关键词
 url: "http://wjwcloud.com"          # your host, for absolute URL
-baseurl: "https://github.com/wjw0315/resume/blob/master/README.md"      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+resumeurl: "https://github.com/wjw0315/resume/blob/master/README.md"  # about me 链接
 github_repo: "blog" # you code repository
 author: Mr.W
 

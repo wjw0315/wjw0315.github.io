@@ -132,11 +132,11 @@ layout: default
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
                    <!--  <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5> -->
-                    <hr><h5><a href="{{ prepend: site.baseurl }}">ABOUT ME</a></h5>
+                    <hr><h5><a href="{{  site.resumeurl }}">ABOUT ME</a></h5>
                     <div class="short-about">
                         {% if site.sidebar-avatar %}
                             <!-- <a href="{{ site.baseurl }}/about"> -->
-                            <a href="{{ site.baseurl }}">
+                            <a href="{{ site.resumeurl }}">
                                 <img src="{{site.sidebar-avatar}}" width="100%" height="100%"/>
                             </a>
                         {% endif %}
