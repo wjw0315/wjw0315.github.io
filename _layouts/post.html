@@ -101,6 +101,7 @@ layout: default
                   <!-- 引入Gitalk评论插件  -->
                   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
                   <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+                  <script src="{{ site.baseurl }}/js/MD5/js/md5.min.js"></script>
                   <div id="gitalk-container"></div>
                     <script type="text/javascript">
                       var gitalk = new Gitalk({
@@ -109,7 +110,8 @@ layout: default
                       repo: '{{site.gitalk.repo}}',
                       owner: '{{site.gitalk.owner}}',
                       admin: ['{{site.gitalk.admin}}'],
-                      id: window.location.pathname,
+                    //   id: window.location.pathname,
+                      id: md5(window.location.pathname),
                       });
                       gitalk.render('gitalk-container');
                   </script>
@@ -117,7 +119,7 @@ layout: default
                 <!-- Gitalk end -->
 
 				<!-- 来必力City版安装代码 -->
-				<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYyMi8xMDE3Nw==">
+				<!-- <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYyMi8xMDE3Nw==">
 				<script type="text/javascript">
 				   (function(d, s) {
 					   var j, e = d.getElementsByTagName(s)[0];
@@ -132,7 +134,7 @@ layout: default
 				   })(document, 'script');
 				</script>
 				<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-				</div>
+				</div> -->
 				<!-- City版安装代码已完成 -->
 
 

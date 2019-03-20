@@ -13,7 +13,7 @@ github_repo: "blog" # you code repository
 author: Mr.W
 
 # 是否托管在Coding_Pages
-Coding_Pages: true
+Coding_Pages: false
 
 #  是否开启百度自动推送JS代码
 baidu_js_push: false
@@ -66,7 +66,7 @@ kramdown:
 # 评论系统
 # Gitalk
 gitalk:
-  enable: false    #是否开启Gitalk评论
+  enable: true    #是否开启Gitalk评论
   clientID: 'f7537253b7d79b78a45e'    #生成的clientID
   clientSecret: '202a0555113df2ed2f81f6149c526b0f9cbb1650'   #同上
   repo: blog_gitalk    #仓库名称(存放评论的项目名称)
