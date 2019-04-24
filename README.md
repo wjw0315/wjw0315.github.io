@@ -72,6 +72,7 @@
 
 - [简单排序](http://wjwcloud.com/2018/03/30/Simple_sorting/)
 
+**应用**
 - [递归应用](http://wjwcloud.com/2018/03/30/Recursive/)
 - [树形数据--递归的实际应用](wjwcloud.com/算法/2018/12/08/recursive/)
 
@@ -107,15 +108,15 @@
   
   - [设计模式](http://wjwcloud.com/2018/03/30/Design_pattern/)
  
- 1、创建型
+ **创建型**
 
 
- 2、行为型
+ **行为型**
  
  - [策略模式与避免臃肿的if-else](http://wjwcloud.com/2018/08/27/Strategy/)
  
  
- 3、结构型
+ **结构型**
 
 ##### 二、 **[面向对象思想](http://wjwcloud.com/2016/06/06/面向对象思想/)**
 
@@ -145,12 +146,13 @@
 
 - [Java基础知识点](http://wjwcloud.com/2018/07/16/Java_base/)
 
-- [字符串反转](http://wjwcloud.com/2018/03/13/StrReverse/)
-
 - [深入浅析Java中Static Class及静态内部类和非静态内部类的不同](http://wjwcloud.com/2018/03/30/Static_class/)
-
 - [Java程序的执行顺序](http://wjwcloud.com/2018/03/30/Java_procedure_order/)
-
+- [Java优化编程的37条法则（转）](http://wjwcloud.com/java/2018/08/09/Java_optimization/)
+- [深入解析Java反射-基础篇](http://wjwcloud.com/2018/10/16/Java_Reflection-1/)
+- [反射机制--Map与JavaBean的相互转换](https://wjwcloud.com/2018/12/10/JavaBean_Map/)
+###### 常见问题
+- [字符串反转](http://wjwcloud.com/2018/03/13/StrReverse/)
 
 - [new 一个对象放在循环内部和外部的区别](http://wjwcloud.com/java/2018/08/09/Java_new_object/)
 
@@ -160,9 +162,6 @@
 
 - [Java后端解析前端传入Json](http://wjwcloud.com/2018/07/16/Java_Json/)
 
-- [Java优化编程的37条法则（转）](http://wjwcloud.com/java/2018/08/09/Java_optimization/)
-- [深入解析Java反射-基础篇](http://wjwcloud.com/2018/10/16/Java_Reflection-1/)
-- [反射机制--Map与JavaBean的相互转换](https://wjwcloud.com/2018/12/10/JavaBean_Map/)
 
 
 ##### 二、 **[Java容器](http://wjwcloud.com/2016/06/06/Java容器/)**
@@ -189,7 +188,7 @@
 
 > NIO 的原理以及实例。
 
-- 
+- [File类](https://wjwcloud.com/java/2019/03/13/File/)
 
 ---
 
@@ -246,6 +245,8 @@
 
 **数据访问**
 
+- [SpringBoot-AOP处理数据过滤](https://wjwcloud.com/springboot/2019/03/01/SpringBoot_AOP_dataAuthority/)
+
 **缓存支持**
 - [SpringBoot-Ehcache](http://wjwcloud.com/springboot/2018/11/06/SpringBoot_EhCache/)
 - [SpringBoot中Redis的使用-1](http://wjwcloud.com/springboot/2018/10/10/SpringBoot_Redis-1/)
@@ -270,7 +271,16 @@
  - [springboot跨域请求解决方案+前后端分离跨域问题其他解决方案](http://wjwcloud.com/springboot/2018/08/23/corss/)
 - [使用Docker部署SpringBoot](http://wjwcloud.com/springboot/2018/10/10/Docker1/)
 
+##### 三、 SpringCloud
+**1、Dalston版本**
 
+**教程**
+- [Dalston-服务注册与发现+服务提供-Eureka-1](http://wjwcloud.com/springcloud/2019/03/21/Dalston-服务注册与发现+服务提供-Eureka-1/)
+- [Dalston-服务消费-2](http://wjwcloud.com/springcloud/2019/03/21/Dalston-服务消费-2/)
+- [Dalston-负载均衡工具包-Ribbon-3](http://wjwcloud.com/springcloud/2019/03/21/Dalston-负载均衡工具包-Ribbon-3/)
+- [Dalston-服务消费工具-Feign-4](http://wjwcloud.com/springcloud/2019/03/21/Dalston-服务消费工具-Feign-4/)
+- [Dalston-服务消费工具-Feign-上传文件-5](http://wjwcloud.com/springcloud/2019/03/21/Dalston-服务消费工具-Feign-上传文件-5/)
+- [Dalston-分布式配置中心-(Config)-6](http://wjwcloud.com/springcloud/2019/03/21/Dalston-分布式配置中心-(Config)-6/)
 
 ---
 
@@ -295,6 +305,12 @@
 
  - [vueJS在windows本地下搭建环境和创建项目](http://wjwcloud.com/vuejs/2018/07/26/VueJS1/)
  
+
+---
+
+## <a id="essay" class="anchor" aria-hidden="true" href="#essay"></a> 📋 杂文
+
+- [大城市--积郁之城](http://wjwcloud.com/essay/2019/02/13/essay_dream/)
 
 ---
 
