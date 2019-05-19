@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Inner Confession</title>
+	<style type="text/css">
+		@font-face {
+			font-family: dight;
+			src: url('digital-7_mono.ttf');
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="http://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+</head>
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br/>
+				<span class="space"/><span class="comments">* 在IT行业流传着这样的一句话，</span><br />
+				<span class="space"/><span class="comments">* 如果你没有对象那么就new一个不久有了，'/>_<'/ </span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Girlfriend u = <span class="keyword">new</span> Girlfriend(<span class="string">"hz"</span>);<br />
+				<span class="comments">// 2019-4-6. </span><br />
+				缘分之间这样的一个传说在我的身上得到应验;<br />
+				<span class="string">我曾经的一度认为</span>
+				<br />
+				踏上条互联网的道路将注定是只与编译器中的代码为舞;<br />
+				<span class="string">我的性格就是那群小孩子认为的那样高冷不再想接触周围，<br /></span>
+				你之前说的也并无错，曾经的很多时候确实会有幻想；<br />
+				<span class="string">而这种幻想就是想满足下自己，<br /></span>
+				能够让自己更加清楚的感受这个真实的世界。<br />
+				
+				<span class="string">然而事实上并不是不想接触，而是需要一把钥匙，<br /></span>
+				需要一把能给自己打开愉悦心情的钥匙。<br />
+				<span class="string">当钥匙出现的时候，很多的烦心事就能够使用另一面解决；<br /></span>
+				内心就能把控出更多的精力去接触其他的事情<br />
+				<span class="keyword">没错，这就是你走我的世界所带给我的色彩<br /></span>
+				<span class="keyword">非常期待与你共同理解的未来！<br /></span>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						<span>今天似乎是一个特殊的日子，远在他乡的程序员以程序员的方式给你带来的一份你不准不接受的内心告白，😁</span>
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						<!-- Love u forever and ever.<br/> -->
+						<!-- <div class="signature">- </div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		let offsetX = $("#loveHeart").width() / 2;
+		let offsetY = $("#loveHeart").height() / 2 - 55;
+		let together = new Date();
+		together.setFullYear(2019, 3, 6); //2019/4/6
+		together.setHours(14);
+		together.setMinutes(45);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		if (!document.createElement('canvas').getContext) {
+			let msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none");
+		} else {
+			setTimeout(function() {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+
+			adjustCodePosition();
+			$("#code").typewriter(); // 打字效果
+		}
+	</script>
+</body>
+</html>
