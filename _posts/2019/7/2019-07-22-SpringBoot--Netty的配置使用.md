@@ -35,7 +35,7 @@ tags:
 
 - 引入netty的包依赖：
 
-```yaml
+```
 <dependency>
   <groupId>io.netty</groupId>
   <artifactId>netty-all</artifactId>
@@ -45,7 +45,7 @@ tags:
 
 - 开启一个服务端：NettyServer.java
 
-```yaml
+```
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelOption;
@@ -134,7 +134,7 @@ public class NettyServer {
 
 - application.properties
 
-```yaml
+```
 # netty 配置
 # 端口
 netty.server.port=9001
@@ -142,7 +142,7 @@ netty.server.port=9001
 
 - MyChatServerInializer.java
 
-```yaml
+```
 import com.jmk.frame.device.server.netty.handler.MyChannelHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -183,7 +183,7 @@ public class MyChatServerInializer extends ChannelInitializer<SocketChannel> {
 
 - 创建MyChannelHandler.java，对消息信号进行监测
 
-```yaml
+```
 import cn.hutool.json.JSONObject;
 import com.jmk.frame.common.constant.ConstantInterface;
 import com.jmk.frame.device.common.netty.utils.GlobalUserUtil;
@@ -455,7 +455,7 @@ public class MyChannelHandler extends SimpleChannelInboundHandler<Object> {
 ```
 上方用到了一个CopyOnWriteArrayList 对设备的数据进行共享<br />DeviceChannelManager.java
 
-```yaml
+```
 import com.jmk.frame.device.common.utils.StringUtils;
 import com.jmk.frame.device.server.netty.entity.DeviceChannel;
 
@@ -534,7 +534,7 @@ public void init(){
 ## 客户端
 客户端我们使用react-native官方提供的连接webSocket的方式进行举例：
 
-```yaml
+```
 //建立websocket连接
         ws = new WebSocket(CONFIG.WEB_SOCKET.wsUrl);
         ws.onopen = () => {
@@ -562,7 +562,7 @@ public void init(){
 
 - 心跳监测 **HeartBeat.js**
 
-```yaml
+```
 export const heartBeat = {
     timeout: 60000, // 60s
     timeoutObj: null,
