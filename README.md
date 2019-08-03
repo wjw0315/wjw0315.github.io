@@ -207,15 +207,17 @@
 ##### 一、 **[Git](http://wjwcloud.com/2016/06/06/Git/)**
 
 - [git仓库删除所有提交历史记录，成为一个干净的新仓库(转)](http://wjwcloud.com/2017/12/14/git_del-history/)
- 
 - [git配置（Windows+Linux）](http://wjwcloud.com/2017/09/10/git_config-windows-linux/)
- 
 - [使用 .gitignore 忽略 Git 仓库中的文件(转)](http://wjwcloud.com/2017/02/22/git_.gitignore/)
- 
 - [Git 代码回滚(转)](http://wjwcloud.com/2017/02/16/git_reset/)
- 
 - [Git指令整理(转)](http://wjwcloud.com/2017/02/15/git_code/)
  
+##### 二、Docker
+- [Docker环境的安装以及常用命令 centos7](http://wjwcloud.com/docker/2019/06/12/Docker%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-centos7/)
+- [Docker私有仓库Registry](http://wjwcloud.com/docker/2019/06/12/Docker%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93Registry/)
+- [Docker-+jenkins+GitLab](http://wjwcloud.com/docker/2019/06/13/Docker-+jenkins+GitLab/)
+- [Docker+FastDFS](http://wjwcloud.com/docker/2019/06/13/Docker+FastDFS/)
+- [Docker中容器的备份、恢复和迁移](http://wjwcloud.com/docker/2019/06/14/Docker%E4%B8%AD%E5%AE%B9%E5%99%A8%E7%9A%84%E5%A4%87%E4%BB%BD-%E6%81%A2%E5%A4%8D%E5%92%8C%E8%BF%81%E7%A7%BB/)
 
 ---
 
@@ -295,10 +297,16 @@
 - [Nacos Config(配置中心)](http://wjwcloud.com/springcloud/2019/04/29/Nacos-Config(%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83)/)
 - [Alibaba-Cloud--Sentinel(限流)](http://wjwcloud.com/springcloud/2019/04/29/Alibaba-Cloud-Sentinel(%E9%99%90%E6%B5%81)/)
 - [Alibaba-Cloud--使用nacos存储Sentinel规则](http://wjwcloud.com/springcloud/2019/04/29/Alibaba-Cloud-使用nacos存储Sentinel规则/)
----
 
 ---
+---
+## <a id="支付" class="anchor" aria-hidden="true" href="#支付"></a> 📙 支付
 
+- [支付宝支付-Java](http://wjwcloud.com/%E6%94%AF%E4%BB%98/2019/06/08/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98-Java/)
+- [微信支付-Java](http://wjwcloud.com/%E6%94%AF%E4%BB%98/2019/06/08/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98-Java/)
+- [js关闭当前支付完成页面](http://wjwcloud.com/%E6%94%AF%E4%BB%98/2019/06/08/js%E5%85%B3%E9%97%AD%E5%BD%93%E5%89%8D%E6%94%AF%E4%BB%98%E5%AE%8C%E6%88%90%E9%A1%B5%E9%9D%A2/)
+---
+---
 
 ## <a id="前端-Web" class="anchor" aria-hidden="true" href="#前端-Web"></a> 📋 前端系列
 
@@ -308,10 +316,8 @@
 
 ##### 二、 **[Flutter](http://wjwcloud.com/2016/06/06/Flutter/)**
 
-  - [Win搭建Flutter开发环境--聊一聊搭建过程中的坑](http://wjwcloud.com/flutter/2018/07/31/Fultter_one/)
-  
-  - [Flutter Project创建](http://wjwcloud.com/flutter/2018/07/31/Flutter_two/)
- 
+- [Win搭建Flutter开发环境--聊一聊搭建过程中的坑](http://wjwcloud.com/flutter/2018/07/31/Fultter_one/)
+- [Flutter Project创建](http://wjwcloud.com/flutter/2018/07/31/Flutter_two/)
 - [Flutter实战-1](http://wjwcloud.com/flutter/2018/12/01/Flutter_action_1/) 
 
 ##### 三、 **[Vue.Js](http://wjwcloud.com/2016/06/06/Vue/)**
