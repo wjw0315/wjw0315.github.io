@@ -206,7 +206,7 @@ tracker_server = 182.254.161.54:22122
 
 <a name="A2QkB"></a>
 ## 上传工具类
-```
+```java
 public class FastDFSClient {
     private static org.slf4j.Logger logger = LoggerFactory.getLogger(FastDFSClient.class);
 
@@ -316,7 +316,7 @@ public class FastDFSClient {
 <a name="uUWdb"></a>
 ## 测试
 
-```
+```java
 @PostMapping("/upload")
     public String singleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
