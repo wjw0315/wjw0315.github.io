@@ -143,34 +143,32 @@
 
 ## <a id="java-coffee" class="anchor" aria-hidden="true" href="#java-coffee"></a> 📗 Java
 
-##### 一、 **[Java基础](http://wjwcloud.com/2016/06/06/Java_base/)**
+##### 一、 **Java基础**
 
 > 一些基础知识以及常用的内容
 
 - [Java基础知识点](http://wjwcloud.com/2018/07/16/Java_base/)
-
 - [深入浅析Java中Static Class及静态内部类和非静态内部类的不同](http://wjwcloud.com/2018/03/30/Static_class/)
 - [Java程序的执行顺序](http://wjwcloud.com/2018/03/30/Java_procedure_order/)
-- [Java优化编程的37条法则（转）](http://wjwcloud.com/java/2018/08/09/Java_optimization/)
 - [深入解析Java反射-基础篇](http://wjwcloud.com/2018/10/16/Java_Reflection-1/)
+
+###### 常用内容
 - [反射机制--Map与JavaBean的相互转换](https://wjwcloud.com/2018/12/10/JavaBean_Map/)
-###### 常见问题
+- [Java优化编程的37条法则（转）](http://wjwcloud.com/java/2018/08/09/Java_optimization/)
 - [字符串反转](http://wjwcloud.com/2018/03/13/StrReverse/)
-
 - [new 一个对象放在循环内部和外部的区别](http://wjwcloud.com/java/2018/08/09/Java_new_object/)
-
 - [对List操作出现的异常和问题](http://wjwcloud.com/java/2018/08/21/Java_List/)
-
 - [BeanUtils.copyProperties](http://wjwcloud.com/java/2018/08/21/copyProperties/)
-
 - [Java后端解析前端传入Json](http://wjwcloud.com/2018/07/16/Java_Json/)
 
 
 
-##### 二、 **[Java容器](http://wjwcloud.com/2016/06/06/Java容器/)**
+##### 二、 **Java容器**
 
 > ArrayList、Vector、CopyOnWriteArrayList、LinkedList、HashMap、ConcurrentHashMap、LinkedHashMap、WeekHashMap 分析。
 
+
+###### 常用内容
 - [List的浅拷贝与深拷贝](http://wjwcloud.com/java/2018/10/08/list_clone/)
 
 ##### 三、 **[Java并发](http://wjwcloud.com/2016/06/06/Java并发/)**
@@ -179,9 +177,7 @@
 
 
 - [理解java内存模型（JMM）](http://wjwcloud.com/2018/02/02/JMM/)
-
 - [Java多线程](http://wjwcloud.com/2018/02/03/java_Thread/)
-
 - [线程优先级](http://wjwcloud.com/2018/07/22/Thread_Priority/)
 
 ##### 四、 **[Java虚拟机](http://wjwcloud.com/2016/06/06/Java虚拟机/)**
