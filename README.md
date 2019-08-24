@@ -1,4 +1,4 @@
-﻿
+
 # 个人博客
 
 记录平时学习的点滴。
@@ -260,8 +260,10 @@
 - [SpringBoot-Ehcache](http://wjwcloud.com/springboot/2018/11/06/SpringBoot_EhCache/)
 - [SpringBoot中Redis的使用](http://wjwcloud.com/springboot/2018/10/10/SpringBoot_Redis-1/)
 
+
 **日志管理**
 - [SpringBoot-AOP处理系统日志](http://wjwcloud.com/springboot/2018/11/06/SpringBoot_AOP_SysLog/)
+- [传统的ELK的部署与使用](http://wjwcloud.com/springboot/2019/08/23/%E4%BC%A0%E7%BB%9F%E7%9A%84ELK%E7%9A%84%E9%83%A8%E7%BD%B2%E4%B8%8E%E4%BD%BF%E7%94%A8/)
 
 **消息服务**
 - [SpringBoot集成RabbitMQ](http://wjwcloud.com/springboot/2018/10/22/SpringBoot_RabbitMQ/)
