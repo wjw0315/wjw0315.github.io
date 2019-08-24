@@ -171,13 +171,13 @@ layout: default
 
                     <div class="tags">
 
-                      {% for post in site.posts limit:18 reversed %}
+                      {% for post in (site.posts reversed) limit:18 %}
                         {% capture ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
                         {% if yearmonth != ym %}
                           {% assign yearmonth = ym %}
 
                           <a href="/date/#a{{ ym }}" rel="5">{{ post.date | date: "%Y年%m月" }}</a>
-
+						
                         {% endif %}
                       {% endfor %}
 
