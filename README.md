@@ -331,7 +331,12 @@
 ##### 三、 **[Vue.Js](http://wjwcloud.com/2016/06/06/Vue/)**
 
  - [vueJS在windows本地下搭建环境和创建项目](http://wjwcloud.com/vuejs/2018/07/26/VueJS1/)
- 
+
+---
+
+## <a id="essay" class="anchor" aria-hidden="true" href="#essay"></a> 📚 运维
+
+- [采用Nginx的HTTP的验证功能加密Elasticsearch](http://wjwcloud.com/%E8%BF%90%E7%BB%B4/2019/08/24/%E9%87%87%E7%94%A8Nginx%E7%9A%84HTTP%E7%9A%84%E9%AA%8C%E8%AF%81%E5%8A%9F%E8%83%BD%E5%8A%A0%E5%AF%86Elasticsearch/)
 
 ---
 
