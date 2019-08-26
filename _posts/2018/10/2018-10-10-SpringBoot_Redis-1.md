@@ -425,4 +425,4 @@ t(spring:session:expirations:1472976480000
 
 # Demo地址
 
-Github: https://github.com/wjw0315/SpringBoot-Demo/tree/master/SpringBoot-Demo-cache-redis
+Github: https://github.com/wjw0315/SpringBoot-Compilations/tree/master/SpringBoot-Demo-cache-redis
