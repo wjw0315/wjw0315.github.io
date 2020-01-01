@@ -242,6 +242,7 @@ tags:
 
 ##### 一、Spring
 
+- [Java反射动态加载类而无法注入对象原由](http://wjwcloud.com/java/2019/12/09/Java反射动态加载类而无法注入对象原由/)
 - [Spring事务](https://wjwcloud.com/spring/2018/12/20/Spring-Transaction/)
 - [spring集成mina](http://wjwcloud.com/2018/04/08/spring_mina/)
 
