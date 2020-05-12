@@ -100,11 +100,11 @@ tags:
  
   **实例：**
  
- ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/8-9/1.png)
+ ![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/8-9/1.png)
  
-  ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/8-9/2.png)
+  ![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/8-9/2.png)
   
-   ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/8-9/3.png)
+   ![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/8-9/3.png)
 
  
  

@@ -105,5 +105,5 @@ public class UserController {
 ```
 最后，启动Spring Boot应用，通过POSTMAN等请求工具，尝试一下这个接口，可以看到请求Xml，并且返回了经过处理后的Xml内容。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/11/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/11/1.png)
 

@@ -13,7 +13,7 @@ tags:
 
 > 这是木瓜脑袋今天犯下的一个错
 
-  ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/8-9/3.png)
+  ![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/8-9/3.png)
   
   这张图片中的是正确的处理方式。开始的时候是把对象new在了循环的外部，导致在批量更新的时候出现更新的数据都是重复的更新一条。这就在于new对象创建在循环内部和外部是不一样的。
   

@@ -193,7 +193,7 @@ Widget _buiddList(int i){
 效果如下：
 
 <center>
-<img src="https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/12/flutter/3.png" width="30%" height="30%" />
+<img src="https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/12/flutter/3.png" width="30%" height="30%" />
 
 效果-1
 </center>
@@ -297,7 +297,7 @@ child:  new ListTile(
 
 
 <center>
-<img src="https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/12/flutter/4.png" width="30%" height="30%" />
+<img src="https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/12/flutter/4.png" width="30%" height="30%" />
 
 效果-2
 </center>

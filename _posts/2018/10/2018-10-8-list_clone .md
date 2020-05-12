@@ -51,17 +51,17 @@ System.out.println(listCopy);
 ```
 输出结果：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/10-8/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/10-8/1.png)
 
 解读：
 
 remove之前：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/10-8/2.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/10-8/2.png)
 
 remove之后：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/10-8/3.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/10-8/3.png)
 
 **所以移除且不修改集合中的元素，只是在List内部的数组中移除了指向元素的地址，可以放心的使用clone。**
 

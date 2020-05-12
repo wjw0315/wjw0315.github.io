@@ -277,7 +277,7 @@ switch 不支持 long，是因为 switch 的设计初衷是对那些只有少数
  
 ## 访问权限
  
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/10-12/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/10-12/1.png)
 
 > 设计良好的模块会隐藏所有的实现细节，把它的 API 与它的实现清晰地隔离开来。模块之间只通过它们的 API 进行通信，一个模块不需要知道其他模块的内部工作情况，这个概念被称为信息隐藏或封装。因此访问权限应当尽可能地使每个类或者成员不被外界访问。
 
@@ -897,7 +897,7 @@ Throwable 可以用来表示任何可以作为异常抛出的类，分为两种�
 - 受检异常 ：需要用 try...catch... 语句捕获并进行处理，并且可以从异常中恢复；
 - 非受检异常 ：是程序运行时错误，例如除 0 会引发 Arithmetic Exception，此时程序崩溃并且无法恢复。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/10-12/2.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/10-12/2.png)
 
 # 九、泛型
 ```

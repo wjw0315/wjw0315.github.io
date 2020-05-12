@@ -12,7 +12,7 @@ tags:
 
 # 事务的属性
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/12/Spring/Spring事务管理_1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/12/Spring/Spring事务管理_1.png)
 
 
 - `value`，在有多个事务管理器存在的情况下，用于标识使用哪个事务管理器

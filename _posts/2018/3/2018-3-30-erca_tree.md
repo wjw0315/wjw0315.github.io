@@ -23,7 +23,7 @@ tags:
 
 - 举个例子，看下图
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/2/1.jpg)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/2/1.jpg)
 
 先序遍历：ABCDEFGHK
 

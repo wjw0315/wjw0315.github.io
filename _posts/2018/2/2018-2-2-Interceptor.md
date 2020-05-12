@@ -107,7 +107,7 @@ login.jsp
 
 为了代码简洁，这里去掉了多余的标签和属性。我这里是扒了 wordpress 的登录页面，这里也用到了 cookie 。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-2-2-MapleBLog_nine/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018-2-2-MapleBLog_nine/1.png)
 
 注意：这里的 form 表单里没有 action 属性，最终发送数据通过 ajax 。同样，也没有 submit 按钮，为了防止 ajax+form+submit 导致 success 里无法页面跳转。
 
@@ -246,6 +246,6 @@ login.jsp
 ## Star
 如果觉得这篇教程还有点用，请点播关注，给我的<a href="https://github.com/wjw0315/wjw0315.github.io" target="view_window">github仓库</a> 点个 **star** 吧，谢谢！
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/star.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/star.png)
 
 点上面 **↑** 那个星星

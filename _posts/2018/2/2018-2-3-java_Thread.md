@@ -125,7 +125,7 @@ public class ThreadDemo {
 
 ## 线程状态
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/2/3/java_Thread/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/2/3/java_Thread/1.png)
 
 ### 多线程的安全问题
 

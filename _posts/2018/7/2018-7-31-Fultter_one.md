@@ -31,7 +31,7 @@ PowerShell
 
 `git clone -b beta https://github.com/flutter/flutter.git`
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/1.png)
 
 
 你可以直接到这个地址下载也行：
@@ -48,9 +48,9 @@ https://github.com/flutter/flutter
  PUB_HOSTED_URL=https://pub.flutter-io.cn //国内用户需要设置
  FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn //国内用户需要设置
  ```
- ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/4.png)
+ ![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/4.png)
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/5.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/5.png)
 
 
 `PUB_HOSTED_URL`和`FLUTTER_STORAGE_BASE_URL`是google为国内开发者搭建的临时镜像。详情请参考 [Using Flutter in China](https://github.com/flutter/flutter/wiki/Using-Flutter-in-China)
@@ -58,23 +58,23 @@ https://github.com/flutter/flutter
 ## 2、在cmd下运行命令：`flutter upgrade ` 查看是否有更新。
 
 我的因为是之前下载过老版本的，下载了就需要更新一下。
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/2.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/2.png)
 
 3、接着在cmd下运行命令：`flutter doctor ` 
 
 
 **可能出现如下问题**（没有出现就跳过此步骤）：
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/3.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/3.png)
 
 **解决：** 管理员方式运行Flutter目录下的`flutter_console.bat`
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/6.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/6.png)
 
 执行命令：`flutter doctor `等待Dart SDK下载完。
 
 出现如下的就说明配置完成：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/7.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/7.png)
 
 可以看到我本机上是已经安装好了Android Studio的，IDEA也是有的，但是IDEA上并没有安装上相应的插件。
 
@@ -123,9 +123,9 @@ h 运行 **flutter run**启动您的设备. 连接的设备名是 **Android SDK 
 
 settings –> Plugins –> Browse repositories，输入Dart，安装。同样的也安装好Flutter。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/8.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/8.png)
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-30/9.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-30/9.png)
 
 ## 4、配置Android 环境变量：
 

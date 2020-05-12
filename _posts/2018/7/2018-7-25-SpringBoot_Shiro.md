@@ -41,7 +41,7 @@ Shiro 致力在所有应用环境下实现上述功能，小到命令行应用�
 Apache Shiro是一个全面的、蕴含丰富功能的安全框架。下图为描述Shiro功能的框架图：
 
  
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-25/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-25/1.png)
 
 Authentication（认证）, Authorization（授权）, Session Management（会话管理）, Cryptography（加密）被 Shiro 框架的开发团队称之为应用安全的四大基石。那么就让我们来看看它们吧：
 
@@ -67,7 +67,7 @@ Authentication（认证）, Authorization（授权）, Session Management（会�
 在概念层，Shiro 架构包含三个主要的理念：Subject,SecurityManager和 Realm。下面的图展示了这些组件如何相互作用，我们将在下面依次对其进行描述。
 
  
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/7-25/2.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/7-25/2.png)
 
 
 - Subject：当前用户，Subject 可以是一个人，但也可以是第三方服务、守护进程帐户、时钟守护任务或者其它--当前和软件交互的任何事件。

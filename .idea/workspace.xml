@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ea19dad-d796-4731-993c-9798aa9b55fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/_posts/2018/1/2018-1-31-markdown_edit.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/1/2018-1-31-markdown_edit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/10/2018-10-8-list_clone .md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/10/2018-10-8-list_clone .md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/11/2018-11-5-SpringBoot_XML.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/11/2018-11-5-SpringBoot_XML.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/12/2018-12-1-Flutter_action_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/12/2018-12-1-Flutter_action_1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/12/2018-12-20-Spring-Transaction.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/12/2018-12-20-Spring-Transaction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/2/2018-2-2-Interceptor.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/2/2018-2-2-Interceptor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/2/2018-2-2-JMM.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/2/2018-2-2-JMM.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/2/2018-2-2-cookie.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/2/2018-2-2-cookie.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/2/2018-2-3-java_Thread.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/2/2018-2-3-java_Thread.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/3/2018-3-30-Java_Thread.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/3/2018-3-30-Java_Thread.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/3/2018-3-30-erca_tree.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/3/2018-3-30-erca_tree.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/7/2018-7-13-Mybatis_update_batch.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/7/2018-7-13-Mybatis_update_batch.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/7/2018-7-16-Java_base.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/7/2018-7-16-Java_base.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/7/2018-7-21-Java_Socket.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/7/2018-7-21-Java_Socket.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/7/2018-7-25-SpringBoot_Shiro.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/7/2018-7-25-SpringBoot_Shiro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/7/2018-7-26-VueJS1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/7/2018-7-26-VueJS1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/7/2018-7-31-Flutter_two.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/7/2018-7-31-Flutter_two.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/7/2018-7-31-Fultter_one.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/7/2018-7-31-Fultter_one.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/8/2018-8-23-corss.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/8/2018-8-23-corss.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/8/2018-8-27-Strategy.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/8/2018-8-27-Strategy.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018/8/2018-8-9-Java_new_object.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018/8/2018-8-9-Java_new_object.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019/2/2019-2-13-essay_dream.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019/2/2019-2-13-essay_dream.md" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/github.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2018/2/2018-2-3-java_Thread.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="293">
+                <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>raw.githubusercontent.com/wjw0315/blog_gitalk</find>
+      <find>gitee.com/wjw0215/blog_gitalk/raw</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>gitee.com/wjw0215/blog_gitalk/raw</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/.idea/wjw0315.github.io.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1030" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="wjw0315.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wjw0315.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wjw0315.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wjw0315.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ea19dad-d796-4731-993c-9798aa9b55fe" name="Default Changelist" comment="" />
+      <created>1589269793202</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589269793202</updated>
+      <workItem from="1589269795353" duration="208000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="208000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="MyBatis Builder" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Word Book" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="RestServices" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/_layouts/github.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018/2/2018-2-3-java_Thread.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="293">
+            <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

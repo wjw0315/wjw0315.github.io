@@ -38,7 +38,7 @@ tags:
 
 这城市周而复始，来来回回的，总是那些想要落地生根，却始终漂泊不定的人。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2019/2/13/1.jpg)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2019/2/13/1.jpg)
 
 <div style="text-align:center;color:blue" ><b>2、你的眼界，影响你的格局</b></div> 
 
@@ -54,7 +54,7 @@ tags:
 
 =="从前我是瞎的，如今我看得见。"人只有真正见过这个世界是如何运转，才能形成成熟的“世界观”。==
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2019/2/13/2.jpg)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2019/2/13/2.jpg)
 
 
 <div style="text-align:center;color:blue" ><b>3、二三线城市，根本装不下灵魂</b></div> 
@@ -73,7 +73,7 @@ tags:
 
 这种情况下，你能否认他们说的就一定是错的吗？不能，因为在他们的认知里，这就是最理想的生活。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2019/2/13/3.jpg)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2019/2/13/3.jpg)
 
 <div style="text-align:center;color:blue" ><b>4、所有在大城市里焦虑的问题
 在小城市都有低配版</b></div> 
@@ -88,7 +88,7 @@ tags:
 
 然而，回到大城市，只有在这里，才能感觉到自己是活着的。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2019/2/13/4.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2019/2/13/4.png)
 
 <div style="text-align:center;color:blue" ><b>5、择一小城终老，是最大的谎言</b></div> 
 
@@ -120,7 +120,7 @@ tags:
 
 总之，==我们这一代人，注定是向城市迁徙的一代，进可守，但已无路可退==。
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2019/2/13/5.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2019/2/13/5.png)
 
 <div style="text-align:center;color:blue" ><b>6、你的选择，决定你的生活高度</b></div> 
 

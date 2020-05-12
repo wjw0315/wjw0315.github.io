@@ -52,7 +52,7 @@ tags:
 
 你可以你的编辑器中尝试输入这六级标题，可以参考下方的截图：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018-1-31-markdown_edit/1.png)
 
 ### 列表
 列表格式也很常用，在 Markdown 中，你只需要在文字前面加上 **-** 就可以了。<br>
@@ -62,7 +62,7 @@ tags:
 >注：`-、1.` 和文本之间要保留一个字符的空格。
 
 列表案例截图如下：
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/2.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018-1-31-markdown_edit/2.png)
 
 ### 链接和图片
 在 Markdown 中，插入链接不需要其他按钮，你只需要使用 `[显示文本](链接地址)` 这样的语法即可，例如：<br>
@@ -70,7 +70,7 @@ tags:
 
 在 Markdown 中，插入图片不需要其他按钮，你只需要使用 `[图片上传失败...(image-5fdc5-1510890177031)]` 这样的语法即可，例如：
 
-`![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/1.png)`
+`![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018-1-31-markdown_edit/1.png)`
 
 ### 引用
 
@@ -98,7 +98,7 @@ Markdown 的粗体和斜体也非常简单，用两个 `*` 包含一段文本就
 如果引用的语句为多行，可以将```置于这段代码的首行和末行。
 代码引用的案例截图：
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-1-31-markdown_edit/3.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018-1-31-markdown_edit/3.png)
 
 ### 表格
 
@@ -142,6 +142,6 @@ baz | baz  | baz
 ## Star
 如果觉得这篇教程还有点用，请点播关注，或者给我的<a href="https://github.com/wjw0315/wjw0315.github.io" target="view_window">github仓库</a> 点个 **star** 吧！
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/star.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/star.png)
 
 点上面 **↑** 那个星星

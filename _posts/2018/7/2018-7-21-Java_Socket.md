@@ -26,7 +26,7 @@ TCP协议是面向连接的、可靠的、有序的、以字节流的方式发�
 
   &nbsp; &nbsp; &nbsp; 服务器端的ServerSocket类
   
-  ![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018-7-21-Socket/1.png)
+  ![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018-7-21-Socket/1.png)
   
 ##   3、Socket通信的步骤
 

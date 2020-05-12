@@ -117,7 +117,7 @@ public class ThreadDemo {
         实现Runnable接口，将线程任务单独分离出来封装成对象，类型就是Runnable接口，实现了解耦。
 
 ## 线程状态
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/2/3/java_Thread/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/2/3/java_Thread/1.png)
 ### 多线程的安全问题
 
 由于线程的随机性，会出现多线程的安全问题。

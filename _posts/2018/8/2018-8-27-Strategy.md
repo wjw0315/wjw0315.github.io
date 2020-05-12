@@ -12,7 +12,7 @@ tags:
 
 ## 类图
 
-![](https://raw.githubusercontent.com/wjw0315/blog_gitalk/master/2018/8-27/1.png)
+![](https://gitee.com/wjw0215/blog_gitalk/raw/master/2018/8-27/1.png)
 
 ## 实现
 
