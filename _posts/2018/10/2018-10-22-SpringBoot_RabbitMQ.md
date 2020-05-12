@@ -186,6 +186,9 @@ public class TopicRabbitConfig {
 
     final static String message = "topic.message";
     final static String messages = "topic.messages";
+    private static final String TOPIC1 = "amqp.topic.message";
+    private static final String TOPIC2 = "amqp.topic.#";
+    private static final String TOPIC_EXCHANGE = "topic.exchange";
 
     @Bean
     public Queue queueMessage() {
@@ -199,36 +202,66 @@ public class TopicRabbitConfig {
 
     @Bean
     TopicExchange exchange() {
-        return new TopicExchange("exchange");
+        return new TopicExchange(TOPIC_EXCHANGE);
     }
 
     @Bean
     Binding bindingExchangeMessage(Queue queueMessage, TopicExchange exchange) {
-        return BindingBuilder.bind(queueMessage).to(exchange).with("topic.message");
+        return BindingBuilder.bind(queueMessage).to(exchange).with(TOPIC1);
     }
 
     @Bean
     Binding bindingExchangeMessages(Queue queueMessages, TopicExchange exchange) {
-        return BindingBuilder.bind(queueMessages).to(exchange).with("topic.#");
+        return BindingBuilder.bind(queueMessages).to(exchange).with(TOPIC2);
     }
 }
 ```
-使用`queueMessages`同时匹配两个队列，`queueMessage`只匹配”`topic.message`”队列
+`queueMessages`能同时匹配两个队列，`queueMessage`只匹配”`amqp.topic.message`”队列
+
+- 生产者
+
 ```
 public void send1() {
 	String context = "hi, i am message 1";
 	System.out.println("Sender : " + context);
-	this.rabbitTemplate.convertAndSend("exchange", "topic.message", context);
+	this.rabbitTemplate.convertAndSend("topic.exchange", "amqp.topic.message", context);
 }
 ```
 ```
 public void send2() {
 	String context = "hi, i am messages 2";
 	System.out.println("Sender : " + context);
-	this.rabbitTemplate.convertAndSend("exchange", "topic.messages", context);
+	this.rabbitTemplate.convertAndSend("topic.exchange", "amqp.topic.message2", context);
 }
 ```
-发送`send1`会匹配到`topic.#`和`topic.message` 两个Receiver都可以收到消息，发送`send2`只有`topic.#`可以匹配所有只有Receiver2监听到消息
+
+- 消费者
+
+```
+@Component
+@RabbitListener(queues = "topic.message")
+public class MessageReceiver implements BaseConnectApi {
+
+    @RabbitHandler
+    public void processMessage1(String message) {
+        System.out.println("Receiver1:" + message);
+    }
+
+}
+```
+```
+@Component
+@RabbitListener(queues = "topic.messages")
+public class MessageReceiver implements BaseConnectApi {
+
+    @RabbitHandler
+    public void processMessage2(String message) {
+        System.out.println("Receiver2:" + message);
+    }
+
+}
+```
+发送`send1`会有`amqp.topic.message`和`amqp.topic.#` 两个Receiver都可以收到消息，发送`send2`只有`amqp.topic.#`一个Receiver监听到消息
 
 ###### Fanout Exchange
 

@@ -1,8 +1,16 @@
-
-# 个人博客
-
-记录平时学习的点滴。
-
+---
+layout:     post                  
+title:      目 录      
+subtitle:   menu         
+date:       2016-6-6             
+author:     JiaweiWu                   
+header-img: img/post-bg-rwd.jpg  
+catalog: true   
+stickie: false                       
+tags:                             
+- 目录 
+---
+  
 博客地址：https://wjwcloud.com
 
 <div>
@@ -234,6 +242,7 @@
 
 ##### 一、Spring
 
+- [Java反射动态加载类而无法注入对象原由](http://wjwcloud.com/java/2019/12/09/Java反射动态加载类而无法注入对象原由/)
 - [Spring事务](https://wjwcloud.com/spring/2018/12/20/Spring-Transaction/)
 - [spring集成mina](http://wjwcloud.com/2018/04/08/spring_mina/)
 
@@ -314,6 +323,12 @@
 - [js关闭当前支付完成页面](http://wjwcloud.com/%E6%94%AF%E4%BB%98/2019/06/08/js%E5%85%B3%E9%97%AD%E5%BD%93%E5%89%8D%E6%94%AF%E4%BB%98%E5%AE%8C%E6%88%90%E9%A1%B5%E9%9D%A2/)
 
 ---
+
+
+## <a id="essay" class="anchor" aria-hidden="true" href="#essay"></a> 📚 运维
+
+- [采用Nginx的HTTP的验证功能加密Elasticsearch](http://wjwcloud.com/%E8%BF%90%E7%BB%B4/2019/08/24/%E9%87%87%E7%94%A8Nginx%E7%9A%84HTTP%E7%9A%84%E9%AA%8C%E8%AF%81%E5%8A%9F%E8%83%BD%E5%8A%A0%E5%AF%86Elasticsearch/)
+
 ---
 
 ## <a id="前端-Web" class="anchor" aria-hidden="true" href="#前端-Web"></a> 📋 前端系列
@@ -331,12 +346,7 @@
 ##### 三、 **[Vue.Js](http://wjwcloud.com/2016/06/06/Vue/)**
 
  - [vueJS在windows本地下搭建环境和创建项目](http://wjwcloud.com/vuejs/2018/07/26/VueJS1/)
-
----
-
-## <a id="essay" class="anchor" aria-hidden="true" href="#essay"></a> 📚 运维
-
-- [采用Nginx的HTTP的验证功能加密Elasticsearch](http://wjwcloud.com/%E8%BF%90%E7%BB%B4/2019/08/24/%E9%87%87%E7%94%A8Nginx%E7%9A%84HTTP%E7%9A%84%E9%AA%8C%E8%AF%81%E5%8A%9F%E8%83%BD%E5%8A%A0%E5%AF%86Elasticsearch/)
+ 
 
 ---
 
