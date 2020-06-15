@@ -37,13 +37,13 @@ tags:
 
 <td align="center" style="white-space:nowrap"><p>操作系统</P><a href="#操作系统-computer">📓</a></td>
 
-<td align="center" style="white-space:nowrap"><p>网络</p><a href="#网络-cloud">📒</a></td>
-
 <td align="center" style="white-space:nowrap"><p>面向对象</p><a href="#面向对象-couple">📔</a></td>
 
 <td align="center" style="white-space:nowrap"><p>数据库</p><a href="#数据库-floppy_disk">📕</a></td>
 
 <td align="center" style="white-space:nowrap"><p>Java</p> <a href="#java-coffee">📗</a></td>
+
+<td align="center" style="white-space:nowrap"><p>网络编程</p><a href="#网络-cloud">📒</a></td>
 
 <td align="center" style="white-space:nowrap"><p>分布式</p> <a href="#分布式-sweat_drops">📘</a></td>
 
@@ -75,15 +75,15 @@ tags:
 
 ##### 一、 **[剑指 Offer ](http://wjwcloud.com/2016/06/06/剑指offer/)**
 
-##### 二、 **[算法](http://wjwcloud.com/2016/06/06/算法/)**
+##### 二、 **算法**
 
+**排序**
 - [快速排序算法](http://wjwcloud.com/2018/03/30/fast_sorting/)
-
 - [二叉树遍历](http://wjwcloud.com/2018/03/30/erca_tree/)
-
-- [时间复杂度和空间复杂度](http://wjwcloud.com/2018/03/30/complexity/)
-
 - [简单排序](http://wjwcloud.com/2018/03/30/Simple_sorting/)
+
+**other**
+- [时间复杂度和空间复杂度](http://wjwcloud.com/2018/03/30/complexity/)
 
 **应用**
 - [递归应用](http://wjwcloud.com/2018/03/30/Recursive/)
@@ -99,16 +99,6 @@ tags:
 
 ---
 
-## <a id="网络-cloud" class="anchor" aria-hidden="true" href="#网络-cloud"></a> 📒 网络
-
-##### 一、 **[Scoket](http://wjwcloud.com/2016/06/06/Socket/)**
-
-- [Java Socket](http://wjwcloud.com/2018/07/21/Java_Socket/)
-
-
----
-
----
 
 ## <a id="面向对象-couple" class="anchor" aria-hidden="true" href="#面向对象-couple"></a> 📔 面向对象
 
@@ -227,6 +217,17 @@ tags:
 - [Docker-+jenkins+GitLab](http://wjwcloud.com/docker/2019/06/13/Docker-+jenkins+GitLab/)
 - [Docker+FastDFS](http://wjwcloud.com/docker/2019/06/13/Docker+FastDFS/)
 - [Docker中容器的备份、恢复和迁移](http://wjwcloud.com/docker/2019/06/14/Docker%E4%B8%AD%E5%AE%B9%E5%99%A8%E7%9A%84%E5%A4%87%E4%BB%BD-%E6%81%A2%E5%A4%8D%E5%92%8C%E8%BF%81%E7%A7%BB/)
+
+---
+
+---
+
+## <a id="网络编程cloud" class="anchor" aria-hidden="true" href="#网络-cloud"></a> 📒 网络
+
+##### 一、 **Scoket**
+
+- [Java Socket](http://wjwcloud.com/2018/07/21/Java_Socket/)
+
 
 ---
 
