@@ -43,7 +43,7 @@ tags:
 
 <td align="center" style="white-space:nowrap"><p>Java</p> <a href="#java-coffee">📗</a></td>
 
-<td align="center" style="white-space:nowrap"><p>网络编程</p><a href="#网络-cloud">📒</a></td>
+<td align="center" style="white-space:nowrap"><p>网络编程</p><a href="#网络编程-cloud">📒</a></td>
 
 <td align="center" style="white-space:nowrap"><p>分布式</p> <a href="#分布式-sweat_drops">📘</a></td>
 
@@ -77,16 +77,16 @@ tags:
 
 ##### 二、 **算法**
 
-**排序**
+**&nbsp;&nbsp;排序**
 
 - [快速排序算法](http://wjwcloud.com/2018/03/30/fast_sorting/)
 - [二叉树遍历](http://wjwcloud.com/2018/03/30/erca_tree/)
 - [简单排序](http://wjwcloud.com/2018/03/30/Simple_sorting/)
 
-**other**
+**&nbsp;&nbsp;other**
 - [时间复杂度和空间复杂度](http://wjwcloud.com/2018/03/30/complexity/)
 
-**应用**
+**&nbsp;&nbsp;应用**
 - [递归应用](http://wjwcloud.com/2018/03/30/Recursive/)
 - [树形数据--递归的实际应用](wjwcloud.com/算法/2018/12/08/recursive/)
 
@@ -110,15 +110,15 @@ tags:
   
   - [设计模式](http://wjwcloud.com/2018/03/30/Design_pattern/)
  
- **创建型**
+ **&nbsp;&nbsp;创建型**
 
 
- **行为型**
+ **&nbsp;&nbsp;行为型**
  
  - [策略模式与避免臃肿的if-else](http://wjwcloud.com/2018/08/27/Strategy/)
  
  
- **结构型**
+ **&nbsp;&nbsp;结构型**
 
 ##### 二、 **面向对象思想**
 
@@ -151,7 +151,7 @@ tags:
 - [Java程序的执行顺序](http://wjwcloud.com/2018/03/30/Java_procedure_order/)
 - [深入解析Java反射-基础篇](http://wjwcloud.com/2018/10/16/Java_Reflection-1/)
 
-**常用内容**
+**&nbsp;&nbsp;常用内容**
 
 - [反射机制--Map与JavaBean的相互转换](https://wjwcloud.com/2018/12/10/JavaBean_Map/)
 - [Java优化编程的37条法则（转）](http://wjwcloud.com/java/2018/08/09/Java_optimization/)
@@ -168,7 +168,7 @@ tags:
 > ArrayList、Vector、CopyOnWriteArrayList、LinkedList、HashMap、ConcurrentHashMap、LinkedHashMap、WeekHashMap 分析。
 
 
-**常用内容**
+**&nbsp;&nbsp;常用内容**
 
 - [List的浅拷贝与深拷贝](http://wjwcloud.com/java/2018/10/08/list_clone/)
 
@@ -223,7 +223,7 @@ tags:
 
 ---
 
-## <a id="网络编程cloud" class="anchor" aria-hidden="true" href="#网络-cloud"></a> 📒 网络
+## <a id="网络编程cloud" class="anchor" aria-hidden="true" href="#网络编程-cloud"></a> 📒 网络编程
 
 ##### 一、 **Scoket**
 
@@ -251,54 +251,54 @@ tags:
 
 ##### 二、 SpringBoot
 
-**快速入门**
+**&nbsp;&nbsp;快速入门**
 
-**Web开发**
+**&nbsp;&nbsp;Web开发**
  - [Spring Boot中如何扩展XML请求和响应的支持](http://wjwcloud.com/springboot/2018/11/05/SpringBoot_XML/)
  - [拦截器-HandlerInterceptorAdapter](http://wjwcloud.com/spring/2018/11/08/Spring_MVC_Filter/)
  
-**安全管理**
+**&nbsp;&nbsp;安全管理**
 
  - [springboot整合shiro-登录认证和权限管理(1)](http://wjwcloud.com/springboot/2018/07/25/SpringBoot_Shiro/)
 
-**数据访问**
+**&nbsp;&nbsp;数据访问**
 
 - [SpringBoot-AOP处理数据过滤](https://wjwcloud.com/springboot/2019/03/01/SpringBoot_AOP_dataAuthority/)
 - [JdbcTemplate](http://wjwcloud.com/jdbctemplate/2019/07/31/JdbcTemplate/)
 
 
-**缓存支持**
+**&nbsp;&nbsp;缓存支持**
 - [SpringBoot-Ehcache](http://wjwcloud.com/springboot/2018/11/06/SpringBoot_EhCache/)
 - [SpringBoot中Redis的使用](http://wjwcloud.com/springboot/2018/10/10/SpringBoot_Redis-1/)
 
 
-**日志管理**
+**&nbsp;&nbsp;日志管理**
 - [SpringBoot-AOP处理系统日志](http://wjwcloud.com/springboot/2018/11/06/SpringBoot_AOP_SysLog/)
 - [传统的ELK的部署与使用](http://wjwcloud.com/springboot/2019/08/23/%E4%BC%A0%E7%BB%9F%E7%9A%84ELK%E7%9A%84%E9%83%A8%E7%BD%B2%E4%B8%8E%E4%BD%BF%E7%94%A8/)
 
-**消息服务**
+**&nbsp;&nbsp;消息服务**
 - [SpringBoot集成RabbitMQ](http://wjwcloud.com/springboot/2018/10/22/SpringBoot_RabbitMQ/)
 - [SpringBoot整合Kafka实现消息队列](http://wjwcloud.com/springboot/2018/10/23/SpringBoot_Kafka/)
 
-**邮件**
+**&nbsp;&nbsp;邮件**
 - [SpringBoot-邮件服务](http://wjwcloud.com/springboot/2018/10/17/SpringBoot_mail-1/)
 
-**监控管理**
+**&nbsp;&nbsp;监控管理**
 
-**其他功能**
+**&nbsp;&nbsp;其他功能**
 
 - [SpringBoot--Netty的配置使用](http://wjwcloud.com/springboot/2019/07/22/SpringBoot-Netty%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/)
 - [SpringBoot整合FastDFS](http://wjwcloud.com/springboot/2019/07/31/SpringBoot%E6%95%B4%E5%90%88FastDFS/)
  - [springboot跨域请求解决方案+前后端分离跨域问题其他解决方案](http://wjwcloud.com/springboot/2018/08/23/corss/)
 - [使用Docker部署SpringBoot](http://wjwcloud.com/springboot/2018/10/10/Docker1/)
 
-**SpringBoot使用Dubbo**
+**&nbsp;&nbsp;SpringBoot使用Dubbo**
 
 
 ##### 三、 SpringCloud
-**1、Dalston版本**
+**&nbsp;&nbsp;1、Dalston版本**
 
-**教程**
+**&nbsp;&nbsp;&nbsp;&nbsp;教程**
 - [Dalston-服务注册与发现+服务提供-Eureka-1](http://wjwcloud.com/springcloud/2019/03/21/Dalston-服务注册与发现+服务提供-Eureka-1/)
 - [Dalston-服务消费-2](http://wjwcloud.com/springcloud/2019/03/21/Dalston-服务消费-2/)
 - [Dalston-负载均衡工具包-Ribbon-3](http://wjwcloud.com/springcloud/2019/03/21/Dalston-负载均衡工具包-Ribbon-3/)
@@ -307,9 +307,9 @@ tags:
 - [Dalston-分布式配置中心-(Config)-6](http://wjwcloud.com/springcloud/2019/03/21/Dalston-分布式配置中心-(Config)-6/)
 - [Dalston--Hystricx断路器（Ribbon、Fegin）-7](http://wjwcloud.com/springcloud/2019/03/22/Dalston-Hystricx%E6%96%AD%E8%B7%AF%E5%99%A8-Ribbon-Fegin-7/)
 
-**2、Alibaba-Cloud**
+**&nbsp;&nbsp;2、Alibaba-Cloud**
 
-**教程**
+**&nbsp;&nbsp;&nbsp;&nbsp;教程**
 
 - [Nacos服务注册与发现](http://wjwcloud.com/springcloud/2019/04/29/Nacos%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/)
 - [Nacos Config(配置中心)](http://wjwcloud.com/springcloud/2019/04/29/Nacos-Config(%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83)/)
