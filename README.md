@@ -10,7 +10,7 @@ stickie: false
 tags:                             
 - 目录 
 ---
-  
+
 博客地址：https://wjwcloud.com
 
 <div>
@@ -34,33 +34,17 @@ tags:
 <tbody>
 <tr>
 <td align="center" style="white-space:nowrap"><p>算法</p><a href="#算法-pencil2">📰</a></td>
-
-<td align="center" style="white-space:nowrap"><p>操作系统</P><a href="#操作系统-computer">📓</a></td>
-
-<td align="center" style="white-space:nowrap"><p>面向对象</p><a href="#面向对象-couple">📔</a></td>
-
-<td align="center" style="white-space:nowrap"><p>数据库</p><a href="#数据库-floppy_disk">📕</a></td>
-
-<td align="center" style="white-space:nowrap"><p>Java</p> <a href="#java-coffee">📗</a></td>
-
-<td align="center" style="white-space:nowrap"><p>网络编程</p><a href="#网络编程-cloud">📒</a></td>
-
-<td align="center" style="white-space:nowrap"><p>分布式</p> <a href="#分布式-sweat_drops">📘</a></td>
-
-<td align="center" style="white-space:nowrap"><p>工具</p><a href="#工具-hammer">📙</a></td>
-
-<td align="center" style="white-space:nowrap"><p>支付</p><a href="#支付">📓</a></td>
-
-<td align="center" style="white-space:nowrap"><p>编码实践</p><a href="#编码实践-speak_no_evil">📚</a></td>
-
-
-<td align="center" style="white-space:nowrap"><p>框架系列</p>
-        <a href="#框架系列-Spring">📖</a>
-    </td>
-    
-<td align="center" style="white-space:nowrap"><p>前端系列</p>
-        <a href="#前端-Web">📋</a>
-    </td>
+  <td align="center" style="white-space:nowrap"><p>操作系统</P><a href="#操作系统-computer">📓</a></td>
+  <td align="center" style="white-space:nowrap"><p>面向对象</p><a href="#面向对象-couple">📔</a></td>
+  <td align="center" style="white-space:nowrap"><p>数据库</p><a href="#数据库-floppy_disk">📕</a></td>
+  <td align="center" style="white-space:nowrap"><p>Java</p> <a href="#java-coffee">📗</a></td>
+  <td align="center" style="white-space:nowrap"><p>网络编程</p><a href="#网络编程-cloud">📒</a></td>
+  <td align="center" style="white-space:nowrap"><p>分布式</p> <a href="#分布式-sweat_drops">📘</a></td>
+  <td align="center" style="white-space:nowrap"><p>工具</p><a href="#工具-hammer">📙</a></td>
+  <td align="center" style="white-space:nowrap"><p>支付</p><a href="#支付">📓</a></td>
+  <td align="center" style="white-space:nowrap"><p>编码实践</p><a href="#编码实践-speak_no_evil">📚</a></td>
+  <td align="center" style="white-space:nowrap"><p>框架系列</p><a href="#框架系列-Spring">📖</a></td>
+  <td align="center" style="white-space:nowrap"><p>前端系列</p><a href="#前端-Web">📋</a></td>
 </tr>
 </tbody>
 </table>
@@ -87,6 +71,7 @@ tags:
 - [时间复杂度和空间复杂度](http://wjwcloud.com/2018/03/30/complexity/)
 
 **&nbsp;&nbsp;应用**
+
 - [递归应用](http://wjwcloud.com/2018/03/30/Recursive/)
 - [树形数据--递归的实际应用](wjwcloud.com/算法/2018/12/08/recursive/)
 
@@ -107,17 +92,17 @@ tags:
 
 > 23种设计模式
 
-  
+
   - [设计模式](http://wjwcloud.com/2018/03/30/Design_pattern/)
- 
+
  **&nbsp;&nbsp;创建型**
 
 
  **&nbsp;&nbsp;行为型**
- 
+
  - [策略模式与避免臃肿的if-else](http://wjwcloud.com/2018/08/27/Strategy/)
- 
- 
+
+
  **&nbsp;&nbsp;结构型**
 
 ##### 二、 **面向对象思想**
@@ -133,7 +118,7 @@ tags:
 ##### 一、 **[Mybatis](http://wjwcloud.com/2016/06/06/Mybatis/)**
 
  - [Mybatis批量更新操作](http://wjwcloud.com/2018/07/13/Mybatis_update_batch/)
- 
+
 
 ---
 
@@ -204,15 +189,15 @@ tags:
 
 ## <a id="工具-hammer" class="anchor" aria-hidden="true" href="#工具-hammer"></a>📙 工具
 
-##### 一、 **[Git](http://wjwcloud.com/2016/06/06/Git/)**
+## 一、 **Git**
 
 - [git仓库删除所有提交历史记录，成为一个干净的新仓库(转)](http://wjwcloud.com/2017/12/14/git_del-history/)
 - [git配置（Windows+Linux）](http://wjwcloud.com/2017/09/10/git_config-windows-linux/)
 - [使用 .gitignore 忽略 Git 仓库中的文件(转)](http://wjwcloud.com/2017/02/22/git_.gitignore/)
 - [Git 代码回滚(转)](http://wjwcloud.com/2017/02/16/git_reset/)
 - [Git指令整理(转)](http://wjwcloud.com/2017/02/15/git_code/)
- 
-##### 二、Docker
+
+## 二、Docker
 - [Docker环境的安装以及常用命令 centos7](http://wjwcloud.com/docker/2019/06/12/Docker%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-centos7/)
 - [Docker私有仓库Registry](http://wjwcloud.com/docker/2019/06/12/Docker%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93Registry/)
 - [Docker-+jenkins+GitLab](http://wjwcloud.com/docker/2019/06/13/Docker-+jenkins+GitLab/)
@@ -225,7 +210,7 @@ tags:
 
 ## <a id="网络编程cloud" class="anchor" aria-hidden="true" href="#网络编程-cloud"></a> 📒 网络编程
 
-##### 一、 **Scoket**
+## 一、 **Scoket**
 
 - [Java Socket](http://wjwcloud.com/2018/07/21/Java_Socket/)
 
@@ -236,27 +221,30 @@ tags:
 
 ## <a id="编码实践-speak_no_evil" class="anchor" aria-hidden="true" href="#编码实践-speak_no_evil"></a>  📚 编码实践
 
+
+
+
+
 ---
 
 ---
 
 ## <a id="框架系列-Spring" class="anchor" aria-hidden="true" href="#框架系列-Spring"></a>📖 框架系列
 
-##### 一、Spring
+## 一、Spring
 
 - [Java反射动态加载类而无法注入对象原由](http://wjwcloud.com/java/2019/12/09/Java反射动态加载类而无法注入对象原由/)
 - [Spring事务](https://wjwcloud.com/spring/2018/12/20/Spring-Transaction/)
 - [spring集成mina](http://wjwcloud.com/2018/04/08/spring_mina/)
 
 
-##### 二、 SpringBoot
-
-**&nbsp;&nbsp;快速入门**
+## 二、 SpringBoot
 
 **&nbsp;&nbsp;Web开发**
+
  - [Spring Boot中如何扩展XML请求和响应的支持](http://wjwcloud.com/springboot/2018/11/05/SpringBoot_XML/)
  - [拦截器-HandlerInterceptorAdapter](http://wjwcloud.com/spring/2018/11/08/Spring_MVC_Filter/)
- 
+
 **&nbsp;&nbsp;安全管理**
 
  - [springboot整合shiro-登录认证和权限管理(1)](http://wjwcloud.com/springboot/2018/07/25/SpringBoot_Shiro/)
@@ -295,7 +283,7 @@ tags:
 **&nbsp;&nbsp;SpringBoot使用Dubbo**
 
 
-##### 三、 SpringCloud
+## 三、 SpringCloud
 **&nbsp;&nbsp;1、Dalston版本**
 
 **&nbsp;&nbsp;&nbsp;&nbsp;教程**
@@ -335,20 +323,20 @@ tags:
 
 ## <a id="前端-Web" class="anchor" aria-hidden="true" href="#前端-Web"></a> 📋 前端系列
 
-##### 一、 **[插件](http://wjwcloud.com/2016/06/06/插件/)**
+## 一、 **插件**
 
 - [My97插件使用记录（未完...）](http://wjwcloud.com/web/2018/08/22/My97/)
 
-##### 二、 **[Flutter](http://wjwcloud.com/2016/06/06/Flutter/)**
+## 二、 **Flutter**
 
 - [Win搭建Flutter开发环境--聊一聊搭建过程中的坑](http://wjwcloud.com/flutter/2018/07/31/Fultter_one/)
 - [Flutter Project创建](http://wjwcloud.com/flutter/2018/07/31/Flutter_two/)
 - [Flutter实战-1](http://wjwcloud.com/flutter/2018/12/01/Flutter_action_1/) 
 
-##### 三、 **[Vue.Js](http://wjwcloud.com/2016/06/06/Vue/)**
+## 三、 **Vue.Js**
 
  - [vueJS在windows本地下搭建环境和创建项目](http://wjwcloud.com/vuejs/2018/07/26/VueJS1/)
- 
+
 
 ---
 
